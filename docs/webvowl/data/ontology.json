@@ -1,0 +1,587 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "https://w3id.org/ecfo", "http://www.w3.org/2001/XMLSchema", "https://qudt.org/2.1/schema/qudt", "http://www.w3.org/2008/05/skos", "http://www.w3.org/2006/time" ],
+    "title" : {
+      "en" : "The Emission Conversion Factor Ontology"
+    },
+    "iri" : "https://w3id.org/ecfo",
+    "version" : "0.0.1",
+    "author" : [ "Milan Markovic", "Iman Naja", "Stefano Germano", "Daniel Garijo" ],
+    "description" : {
+      "en" : "The ontology defines a vocabulary for describing carbon emission conversion factors (CF). These are values typically used to calculate carbon emissions where the CF multiplies a quantified estimate of the energy (e.g., kWh of electricity, litters of fuel, etc.) used by a particular activity."
+    },
+    "comments" : {
+      "undefined" : "0.0.1 release of the Emission Conversion Factor Ontology"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/licenses/by/2.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Stefano Germano",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Iman Naja",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Milan Markovic",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Daniel Garijo",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "en",
+        "value" : "November 15th, 2022",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "en",
+        "value" : "ecfo",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "0.0.1 release of the Emission Conversion Factor Ontology\n\t\t\t\t\tWith the Net Zero agenda gaining significant traction across the world, organisations are often required to report carbon emissions associated with their operation. However, calculating emissions is a non-trivial task and reported scores can differ depending on the choices made by those performing the calculations or the software used to assist with this task. Emission conversion factors are used to calculate greenhouse emissions for different business operations. This ontology aims to describe these conversion factors and their associated properties (e.g., origin, applicable location, etc.) to enhance the transparency of the carbon footprint calculations.",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ecfo#",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "0.0.1",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "The Emission Conversion Factor Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "17",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://qudt.org/2.1/schema/qudt/Unit",
+    "baseIri" : "https://qudt.org/2.1/schema/qudt",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://qudt.org/2.1/schema/qudt",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Unit",
+      "undefined" : "Unit"
+    },
+    "comment" : {
+      "undefined" : "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\\\(Q = nU\\\\)."
+    },
+    "attributes" : [ "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/ecfo#Scope",
+    "baseIri" : "https://w3id.org/ecfo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Scope",
+      "undefined" : "Scope"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ecfo#Scope3",
+      "baseIri" : "https://w3id.org/ecfo",
+      "comment" : {
+        "undefined" : "Scope 3 (other indirect) emissions are a consequence of your actions that occur at sources you do not own or control and are not classed as Scope 2 emissions. Examples of Scope 3 emissions are business travel by means not owned or controlled by your organisation, waste disposal, materials or fuels your organisation purchases. Deciding if emissions from a vehicle, office or factory that you use are Scope 1 or Scope 3 may depend on how you define your operational boundaries. Scope 3 emissions can be from activities that are upstream or downstream of your organisation. More information on Scope 3 and other aspects of reporting can be found in the Greenhouse Gas Protocol Corporate Standard."
+      },
+      "labels" : {
+        "IRI-based" : "Scope3",
+        "undefined" : "scope 3"
+      }
+    }, {
+      "iri" : "https://w3id.org/ecfo#Scope2",
+      "baseIri" : "https://w3id.org/ecfo",
+      "comment" : {
+        "undefined" : "Scope 2 (energy indirect) emissions are those released into the atmosphere that are associated with your consumption of purchased electricity, heat, steam and cooling. These indirect emissions are a consequence of your organisation’s energy use, but occur at sources you do not own or control."
+      },
+      "labels" : {
+        "IRI-based" : "Scope2",
+        "undefined" : "scope 2"
+      }
+    }, {
+      "iri" : "https://w3id.org/ecfo#Scope1",
+      "baseIri" : "https://w3id.org/ecfo",
+      "comment" : {
+        "undefined" : "Scope 1 (direct emissions) emissions are those from activities owned or controlled by your organisation. Examples of Scope 1 emissions include emissions from combustion in owned or controlled boilers, furnaces and vehicles; and emissions from chemical production in owned or controlled process equipment."
+      },
+      "labels" : {
+        "IRI-based" : "Scope1",
+        "undefined" : "scope 1"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Type of emissions a company creates in its own operations and in its wider ‘value chain’. Typically emissions fall under three categories - Scope 1, Scope 2 and Scope 3."
+    },
+    "id" : "1"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "2",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Entity",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/ns/prov-o",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Entity",
+      "undefined" : "Entity"
+    },
+    "subClasses" : [ "4" ],
+    "comment" : {
+      "undefined" : "An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary."
+    },
+    "attributes" : [ "external" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "16",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "17",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Location",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov-0",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Location",
+      "undefined" : "Location"
+    },
+    "comment" : {
+      "undefined" : "A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth."
+    },
+    "attributes" : [ "external" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://www.w3.org/2008/05/skos#Concept",
+    "baseIri" : "http://www.w3.org/2008/05/skos",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2008/05/skos",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Concept",
+      "undefined" : "Concept"
+    },
+    "subClasses" : [ "11" ],
+    "comment" : {
+      "undefined" : "An abstract idea or notion; a unit of thought."
+    },
+    "attributes" : [ "external" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://www.w3.org/2006/time#Instant",
+    "baseIri" : "http://www.w3.org/2006/time",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2006/time",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Instant",
+      "undefined" : "Time instant"
+    },
+    "comment" : {
+      "undefined" : "A temporal entity with zero extent or duration"
+    },
+    "attributes" : [ "external" ],
+    "id" : "14"
+  }, {
+    "iri" : "https://w3id.org/ecfo#Tag",
+    "baseIri" : "https://w3id.org/ecfo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Tag",
+      "undefined" : "Tag"
+    },
+    "comment" : {
+      "undefined" : "A generic class to describe a category/tag that ecfo:EmissionFactor. Use ecfo:hasTag to link the category/tag and rdf:value to provide the name of the category. A single ecfo:EmissionFactor may refer to multiple tags. To identify individual conversion factors a union of tags should be considered."
+    },
+    "id" : "11",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.w3.org/2006/time#TemporalEntity",
+    "baseIri" : "http://www.w3.org/2006/time",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2006/time",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TemporalEntity",
+      "undefined" : "Temporal entity"
+    },
+    "comment" : {
+      "undefined" : "A temporal interval or instant."
+    },
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Agent",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/ns/prov-o",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Agent",
+      "undefined" : "Agent"
+    },
+    "comment" : {
+      "undefined" : "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity."
+    },
+    "attributes" : [ "external" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/ecfo#EmissionConversionFactor",
+    "baseIri" : "https://w3id.org/ecfo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EmissionConversionFactor",
+      "undefined" : "Emission Conversion Factor"
+    },
+    "comment" : {
+      "undefined" : "A concept representing the coefficient value used in greenhouse gas (GHG) emission calculations (activity data x emission conversion factor = GHG emissions)  and additional metadata (e.g., applicable location, publisher, etc.)."
+    },
+    "id" : "4",
+    "superClasses" : [ "8" ]
+  } ],
+  "property" : [ {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "7",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/ecfo#hasApplicablePeriod",
+    "baseIri" : "https://w3id.org/ecfo",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "hasApplicablePeriod",
+      "undefined" : "has applicable period"
+    },
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "A time period for which the emission conversion factor is considered to be most relevant."
+    },
+    "attributes" : [ "object" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/ecfo#targetUnit",
+    "baseIri" : "https://w3id.org/ecfo",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "targetUnit",
+      "undefined" : "target unit"
+    },
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "The unit corresponding to the result of multiplying input data by the ecfo:ConversionFactor"
+    },
+    "attributes" : [ "object" ],
+    "id" : "6"
+  }, {
+    "range" : "8",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "7"
+  }, {
+    "iri" : "https://w3id.org/ecfo#hasScope",
+    "baseIri" : "https://w3id.org/ecfo",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasScope",
+      "undefined" : "has scope"
+    },
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "A property linking conversion factor to the description of the emission scope."
+    },
+    "attributes" : [ "object" ],
+    "id" : "9"
+  }, {
+    "range" : "12",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "10"
+  }, {
+    "iri" : "http://www.w3.org/2006/time#hasBeginning",
+    "baseIri" : "http://www.w3.org/2006/time",
+    "range" : "14",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2006/time",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasBeginning",
+      "undefined" : "has beginning"
+    },
+    "domain" : "5",
+    "comment" : {
+      "undefined" : "Beginning of a temporal entity."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://w3id.org/ecfo#hasTag",
+    "baseIri" : "https://w3id.org/ecfo",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "hasTag",
+      "undefined" : "has tag"
+    },
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "A property to assign a specific category/tag to ecfo:ConversionFactor."
+    },
+    "attributes" : [ "object" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#atLocation",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/ns/prov-o",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "atLocation",
+      "undefined" : "atLocation"
+    },
+    "domain" : "2",
+    "subproperty" : [ "19" ],
+    "comment" : {
+      "undefined" : "A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://w3id.org/ecfo#hasApplicableLocation",
+    "baseIri" : "https://w3id.org/ecfo",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "hasApplicableLocation",
+      "undefined" : "has applicable location"
+    },
+    "superproperty" : [ "18" ],
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "A geographic area (e.g., a country) or a physical location (e.g., a farm) to which a specific ecfo:ConversionFactor may be applied."
+    },
+    "attributes" : [ "object" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://www.w3.org/2006/time#hasEnd",
+    "baseIri" : "http://www.w3.org/2006/time",
+    "range" : "14",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2006/time",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasEnd",
+      "undefined" : "has end"
+    },
+    "domain" : "5",
+    "comment" : {
+      "undefined" : "End of a temporal entity."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "21"
+  }, {
+    "iri" : "http://www.w3.org/2006/time#inXSDDate",
+    "baseIri" : "http://www.w3.org/2006/time",
+    "range" : "16",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2006/time",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "inXSDDate",
+      "undefined" : "in XSD date"
+    },
+    "domain" : "14",
+    "comment" : {
+      "undefined" : "Position of an instant, expressed using xsd:date"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "22"
+  }, {
+    "iri" : "https://w3id.org/ecfo#sourceUnit",
+    "baseIri" : "https://w3id.org/ecfo",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "sourceUnit",
+      "undefined" : "source unit"
+    },
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "The unit corresponding to the source data that is multiplied by the ecfo:ConversionFactor"
+    },
+    "attributes" : [ "object" ],
+    "id" : "24"
+  } ]
+}
