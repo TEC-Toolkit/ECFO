@@ -1,0 +1,14 @@
+"CQ id","CQ","Terms added","Comments"
+1,"What are the emissions of an activity (e.g., training a model)?","prov:Activity, eo:hasEmissionScore, eo:EmissionScore, qudt:value","We can also create EmissionGenerationActivity to specialize prov:Activity"
+2,"Who is responsible for that activity?","prov:Activity, prov:wasAssociatedWith, prov:Agent",
+3,"Can I retrieve all the emissions of the activities I was responsible for a specific year?","eo:hasEmissionScore, eo:EmissionScore, prov:Activity, prov:wasAssociatedWith, prov:Agent, prov:generatedAtTime",
+4,"What Emission Conversion Factor was used to calculate the emissions of this activity?","eo:EmissionConversionFactor, eo:hasEmissionScore, eo:EmissionScore, qudt:value, prov:wasDerivedFrom",
+5,"What other compatible conversion factors (e.g., from previous years, different countries) can be used in this emission calculation for this activity?","eo:EmissionConversionFactor, eo:hasCategory, eo:hasSourceQuantity, eo:hasScope, eo:targetUnit","We need both the quantity kind and the category due to how the data is being modeled in the UK (l1, l2 and l3 categories)"
+6,"What activities (e.g., refrigerated storage) does the emission calculation include?","eo:hasEmissionScore, eo:EmissionScore, eo:EmissionCalculationActivity, prov:Activity","Tou would have to query all the ECAs that have an emission Score"
+7,"Who was responsible for producing the emission calculations (if software/third party, on whose behalf)?","Similar to Q2",
+8,"What was the methodology used for this emission calculation?","??","We need examples"
+9,"What inputs and in what quantities did the calculation process used those inputs to generate the emission score?","prov:used, prov:wasGeneratedBy, eo:EmissionCalculationActivity, eo:EmissionCalculationEntity, qudt:value, qudt:unit",
+10,"What entity (e.g, refrigerator, herd of animals), was used to transform inputs into emissions?","eo:hasEmissionProducer, eo:EmissionGenerationActivity, prov:Entity","Emission producer links the generationActivity with the sources of material, animal, etc., we are interested in."
+11,"What conversion factors can I use to report emissions for my activity for this specific location and time period (ie.., so the conversion factors exist)?","eo:validFrom, eo:validTo, eo:applicableLocation, eo:scope, qudt:quantityKind, qud:unit, eo:emissionSource","emissionSource links eo:EmissionGenerationActivity with emissionCalculationEntity"
+12,"What is the applicable geolocation of this conversion factor?","eo:applicableLocation",
+13,"What is the geolocation associated with activities that this emission calculation includes?","prov:location, eo:EmissionGenerationActivity",
