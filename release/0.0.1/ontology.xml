@@ -22,7 +22,7 @@
         <terms:creator rdf:nodeID="genid2"/>
         <terms:creator rdf:nodeID="genid3"/>
         <terms:creator rdf:nodeID="genid4"/>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by/2.0/"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <vann:preferredNamespacePrefix xml:lang="en">ecfo</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/ecfo#</vann:preferredNamespaceUri>
         <rdfs:comment xml:lang="en">0.0.1 release of the Emission Conversion Factor Ontology</rdfs:comment>
@@ -44,10 +44,10 @@
         <org:memberOf rdf:resource="https://www.cs.ox.ac.uk#this"/>
         <foaf:name xml:lang="en">Stefano Germano</foaf:name>
     </rdf:Description>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -56,70 +56,70 @@
      -->
 
 
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/description -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/title -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/abstract -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/created -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/creator -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/description -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/license -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
-    
+
 
 
     <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
-    
+
 
 
     <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
-    
+
 
 
     <!-- http://www.w3.org/2008/05/skos#prefLabel -->
@@ -128,31 +128,31 @@
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2008/05/skos#prefLabel">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
     </owl:AnnotationProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/org#memberOf -->
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/org#memberOf"/>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/homepage -->
 
 
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/name -->
 
 
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Datatypes
@@ -161,24 +161,24 @@
      -->
 
 
-    
+
 
 
     <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML -->
 
 
     <rdfs:Datatype rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
-    
+
 
 
     <!-- http://www.w3.org/2001/XMLSchema#date -->
 
 
     <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -187,14 +187,14 @@
      -->
 
 
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/publisher -->
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
-    
+
 
 
     <!-- http://www.w3.org/2006/time#hasBeginning -->
@@ -207,7 +207,7 @@
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">has beginning</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/2006/time#hasEnd -->
@@ -220,7 +220,7 @@
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">has end</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/prov#atLocation -->
@@ -231,7 +231,7 @@
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.w3.org/ns/prov-o</rdfs:isDefinedBy>
         <rdfs:label>atLocation</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/ecfo#hasApplicableLocation -->
@@ -243,7 +243,7 @@
         <rdfs:comment>A geographic area (e.g., a country) or a physical location (e.g., a farm) to which a specific ecfo:ConversionFactor may be applied.</rdfs:comment>
         <rdfs:label>has applicable location</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/ecfo#hasApplicablePeriod -->
@@ -255,7 +255,7 @@
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">A time period for which the emission conversion factor is considered to be most relevant.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">has applicable period</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/ecfo#hasScope -->
@@ -267,7 +267,7 @@
         <rdfs:comment>A property linking conversion factor to the description of the emission scope.</rdfs:comment>
         <rdfs:label>has scope</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/ecfo#hasTag -->
@@ -279,7 +279,7 @@
         <rdfs:comment>A property to assign a specific category/tag to ecfo:ConversionFactor.</rdfs:comment>
         <rdfs:label>has tag</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/ecfo#sourceUnit -->
@@ -291,7 +291,7 @@
         <rdfs:comment>The unit corresponding to the source data that is multiplied by the ecfo:ConversionFactor</rdfs:comment>
         <rdfs:label>source unit</rdfs:label>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/ecfo#targetUnit -->
@@ -303,10 +303,10 @@
         <rdfs:comment>The unit corresponding to the result of multiplying input data by the ecfo:ConversionFactor</rdfs:comment>
         <rdfs:label>target unit</rdfs:label>
     </owl:ObjectProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -315,7 +315,7 @@
      -->
 
 
-    
+
 
 
     <!-- http://qudt.org/schema/qudt/value -->
@@ -324,14 +324,14 @@
     <owl:DatatypeProperty rdf:about="http://qudt.org/schema/qudt/value">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#value -->
 
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"/>
-    
+
 
 
     <!-- http://www.w3.org/2006/time#inXSDDate -->
@@ -344,10 +344,10 @@
         <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:label>in XSD date</rdfs:label>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -356,7 +356,7 @@
      -->
 
 
-    
+
 
 
     <!-- http://www.w3.org/2006/time#Instant -->
@@ -367,7 +367,7 @@
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:label>Time instant</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://www.w3.org/2006/time#TemporalEntity -->
@@ -378,7 +378,7 @@
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/2006/time</rdfs:isDefinedBy>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">Temporal entity</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://www.w3.org/2008/05/skos#Concept -->
@@ -389,7 +389,7 @@
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/2008/05/skos</rdfs:isDefinedBy>
         <rdfs:label>Concept</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://www.w3.org/ns/prov#Agent -->
@@ -400,7 +400,7 @@
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.w3.org/ns/prov-o</rdfs:isDefinedBy>
         <rdfs:label>Agent</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://www.w3.org/ns/prov#Entity -->
@@ -411,7 +411,7 @@
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.w3.org/ns/prov-o</rdfs:isDefinedBy>
         <rdfs:label>Entity</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://www.w3.org/ns/prov#Location -->
@@ -422,14 +422,14 @@
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/ns/prov-0</rdfs:isDefinedBy>
         <rdfs:label>Location</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/Organization -->
 
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
-    
+
 
 
     <!-- https://qudt.org/2.1/schema/qudt/Unit -->
@@ -440,7 +440,7 @@
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://qudt.org/2.1/schema/qudt</rdfs:isDefinedBy>
         <rdfs:label>Unit</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/ecfo#EmissionConversionFactor -->
@@ -451,7 +451,7 @@
         <rdfs:comment>A concept representing the coefficient value used in greenhouse gas (GHG) emission calculations (activity data x emission conversion factor = GHG emissions)  and additional metadata (e.g., applicable location, publisher, etc.).</rdfs:comment>
         <rdfs:label>Emission Conversion Factor</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/ecfo#Scope -->
@@ -461,7 +461,7 @@
         <rdfs:comment>Type of emissions a company creates in its own operations and in its wider &apos;value chain&apos;. Typically emissions fall under three categories - Scope 1, Scope 2 and Scope 3.</rdfs:comment>
         <rdfs:label>Scope</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/ecfo#Tag -->
@@ -472,10 +472,10 @@
         <rdfs:comment>A generic class to describe a category/tag that ecfo:EmissionFactor. Use ecfo:hasTag to link the category/tag and rdf:value to provide the name of the category. A single ecfo:EmissionFactor may refer to multiple tags. To identify individual conversion factors a union of tags should be considered.</rdfs:comment>
         <rdfs:label>Tag</rdfs:label>
     </owl:Class>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -484,7 +484,7 @@
      -->
 
 
-    
+
 
 
     <!-- https://w3id.org/ecfo#Scope1 -->
@@ -495,7 +495,7 @@
         <rdfs:comment>Scope 1 (direct emissions) emissions are those from activities owned or controlled by your organisation. Examples of Scope 1 emissions include emissions from combustion in owned or controlled boilers, furnaces and vehicles; and emissions from chemical production in owned or controlled process equipment.</rdfs:comment>
         <rdfs:label>scope 1</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/ecfo#Scope2 -->
@@ -506,7 +506,7 @@
         <rdfs:comment>Scope 2 (energy indirect) emissions are those released into the atmosphere that are associated with your consumption of purchased electricity, heat, steam and cooling. These indirect emissions are a consequence of your organisation’s energy use, but occur at sources you do not own or control.</rdfs:comment>
         <rdfs:label>scope 2</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/ecfo#Scope3 -->
@@ -517,7 +517,7 @@
         <rdfs:comment>Scope 3 (other indirect) emissions are a consequence of your actions that occur at sources you do not own or control and are not classed as Scope 2 emissions. Examples of Scope 3 emissions are business travel by means not owned or controlled by your organisation, waste disposal, materials or fuels your organisation purchases. Deciding if emissions from a vehicle, office or factory that you use are Scope 1 or Scope 3 may depend on how you define your operational boundaries. Scope 3 emissions can be from activities that are upstream or downstream of your organisation. More information on Scope 3 and other aspects of reporting can be found in the Greenhouse Gas Protocol Corporate Standard.</rdfs:comment>
         <rdfs:label>scope 3</rdfs:label>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://www.abdn.ac.uk/#this -->
@@ -528,7 +528,7 @@
         <foaf:homepage>https://www.abdn.ac.uk/</foaf:homepage>
         <foaf:name>University of Aberdeen</foaf:name>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://www.cs.ox.ac.uk#this -->
@@ -539,7 +539,7 @@
         <foaf:homepage>https://www.cs.ox.ac.uk</foaf:homepage>
         <foaf:name>University of Oxford</foaf:name>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://www.open.ac.uk#this -->
@@ -550,7 +550,7 @@
         <foaf:homepage>https://www.open.ac.uk</foaf:homepage>
         <foaf:name>The Open University</foaf:name>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://www.upm.es#this -->
@@ -566,5 +566,3 @@
 
 
 <!-- Generated by the OWL API (version 5.1.18.2021-07-30T21:49:07Z) https://github.com/owlcs/owlapi/ -->
-
-

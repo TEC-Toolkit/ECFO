@@ -27,7 +27,7 @@
                                   foaf:name "Stefano Germano"@en;
                                   org:memberOf <https://www.cs.ox.ac.uk#this>.
                                 ];
-                         <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/2.0/> ;
+                         <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "ecfo"@en ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/ecfo#" ;
                          rdfs:comment "0.0.1 release of the Emission Conversion Factor Ontology"@en ;
