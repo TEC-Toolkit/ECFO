@@ -18,7 +18,7 @@ To see the documentation of the ontology, just open its URI on a browser.
 ## Versioning
 ECFO uses semantic versioning. All ontology releases have their own URI. For example, version 0.0.1 is available at [https://w3id/ecfo/0.0.1](https://w3id.org/ecfo/0.0.1):
 
-[https://w3id/ecfo#](https://w3id.org/ecfo#) redirects to the last available version.
+[https://w3id.org/ecfo#](https://w3id.org/ecfo#) redirects to the last available version.
 
 ## Relevant repositories:
 - [The provenance of emission calculation ontology](https://github.com/EATS-UoA/peco): Repository of an ontology extending the PROV standard with the traces of emission calculations.
