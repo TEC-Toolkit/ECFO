@@ -25,7 +25,7 @@
                                   org:memberOf <https://www.abdn.ac.uk/#this>.
                                 ],[
                                   foaf:name "Stefano Germano"@en;
-                                  org:memberOf <https://www.cs.ox.ac.uk#this>.
+                                  org:memberOf <https://www.ox.ac.uk#this>.
                                 ];
                          <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "ecfo"@en ;
@@ -52,10 +52,10 @@
   foaf:name "University of Aberdeen";
   foaf:homepage "https://www.abdn.ac.uk/" .
 
-<https://www.cs.ox.ac.uk#this> a foaf:Organization;
+<https://www.ox.ac.uk#this> a foaf:Organization;
   a foaf:Organization ;
   foaf:name "University of Oxford";
-  foaf:homepage "https://www.cs.ox.ac.uk" .
+  foaf:homepage "https://www.ox.ac.uk" .
 
 
 #################################################################
