@@ -28,7 +28,7 @@ _:genid1 <http://www.w3.org/ns/org#memberOf> <https://www.open.ac.uk#this> ;
 _:genid2 <http://www.w3.org/ns/org#memberOf> <https://www.upm.es#this> ;
           <http://xmlns.com/foaf/0.1/name> "Daniel Garijo"@en .
 
-_:genid3 <http://www.w3.org/ns/org#memberOf> <https://www.abdn.ac.uk/#this> ;
+_:genid3 <http://www.w3.org/ns/org#memberOf> <https://www.abdn.ac.uk#this> ;
           <http://xmlns.com/foaf/0.1/name> "Milan Markovic"@en .
 
 _:genid4 <http://www.w3.org/ns/org#memberOf> <https://www.ox.ac.uk#this> ;
@@ -308,10 +308,10 @@ rdf:value rdf:type owl:DatatypeProperty .
         rdfs:label "scope 3" .
 
 
-###  https://www.abdn.ac.uk/#this
-<https://www.abdn.ac.uk/#this> rdf:type owl:NamedIndividual ,
+###  https://www.abdn.ac.uk#this
+<https://www.abdn.ac.uk#this> rdf:type owl:NamedIndividual ,
                                         <http://xmlns.com/foaf/0.1/Organization> ;
-                               <http://xmlns.com/foaf/0.1/homepage> "https://www.abdn.ac.uk/" ;
+                               <http://xmlns.com/foaf/0.1/homepage> "https://www.abdn.ac.uk" ;
                                <http://xmlns.com/foaf/0.1/name> "University of Aberdeen" .
 
 

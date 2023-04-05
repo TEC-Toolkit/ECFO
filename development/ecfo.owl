@@ -22,7 +22,7 @@
                                   org:memberOf <https://www.open.ac.uk#this>.
                                  ], [
                                   foaf:name "Milan Markovic"@en;
-                                  org:memberOf <https://www.abdn.ac.uk/#this>.
+                                  org:memberOf <https://www.abdn.ac.uk#this>.
                                 ],[
                                   foaf:name "Stefano Germano"@en;
                                   org:memberOf <https://www.ox.ac.uk#this>.
@@ -47,10 +47,10 @@
   foaf:name "The Open University";
   foaf:homepage "https://www.open.ac.uk" .
 
-<https://www.abdn.ac.uk/#this> a foaf:Organization;
+<https://www.abdn.ac.uk#this> a foaf:Organization;
   a foaf:Organization ;
   foaf:name "University of Aberdeen";
-  foaf:homepage "https://www.abdn.ac.uk/" .
+  foaf:homepage "https://www.abdn.ac.uk" .
 
 <https://www.ox.ac.uk#this> a foaf:Organization;
   a foaf:Organization ;

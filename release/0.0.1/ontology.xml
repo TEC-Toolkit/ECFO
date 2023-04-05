@@ -37,7 +37,7 @@
         <foaf:name xml:lang="en">Daniel Garijo</foaf:name>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid3">
-        <org:memberOf rdf:resource="https://www.abdn.ac.uk/#this"/>
+        <org:memberOf rdf:resource="https://www.abdn.ac.uk#this"/>
         <foaf:name xml:lang="en">Milan Markovic</foaf:name>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid4">
@@ -520,12 +520,12 @@
 
 
 
-    <!-- https://www.abdn.ac.uk/#this -->
+    <!-- https://www.abdn.ac.uk#this -->
 
 
-    <owl:NamedIndividual rdf:about="https://www.abdn.ac.uk/#this">
+    <owl:NamedIndividual rdf:about="https://www.abdn.ac.uk#this">
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-        <foaf:homepage>https://www.abdn.ac.uk/</foaf:homepage>
+        <foaf:homepage>https://www.abdn.ac.uk</foaf:homepage>
         <foaf:name>University of Aberdeen</foaf:name>
     </owl:NamedIndividual>
 
