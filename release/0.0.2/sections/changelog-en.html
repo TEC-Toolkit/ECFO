@@ -1,0 +1,117 @@
+<div id="changelog">
+<h2 id="changes" class="list">Changes from last version</h2>
+<h3 id="changeClass" class="list">Classes</h3>
+<details><summary><u>Added classes</u></summary>
+<ul><li><a href="#http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a>
+</li>
+<li><a href="#ChemicalCompound">https://w3id.org/ecfo#ChemicalCompound</a>
+</li>
+</ul></details><h3 id="changeProp" class="list">Object Properties</h3>
+<details><summary><u>Modified object properties</u></summary>
+<ul><li><a href="#http://www.w3.org/2006/time#hasEnd">http://www.w3.org/2006/time#hasEnd</a>
+<ul>
+<li>Added: rdfs:comment "End of a temporal entity."@en</li>
+<li>Added: rdfs:label "has end"@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "End of a temporal entity."^^xsd:anyURI</li>
+<li>Deleted: rdfs:label "has end"^^xsd:anyURI</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/prov#atLocation">http://www.w3.org/ns/prov#atLocation</a>
+<ul>
+<li>Added: domain http://www.w3.org/ns/prov#Entity</li>
+<li>Added: rdfs:label "atLocation"@en</li>
+<li>Added: Range http://www.w3.org/ns/prov#Location</li>
+<li>Added: rdfs:comment "A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:label "atLocation"^^xsd:string</li>
+<li>Deleted: rdfs:comment "A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#hasApplicableLocation">https://w3id.org/ecfo#hasApplicableLocation</a>
+<ul>
+<li>Added: rdfs:label "has applicable location"@en</li>
+<li>Added: rdfs:comment "A geographic area (e.g., a country) or a physical location (e.g., a farm) to which a specific ecfo:ConversionFactor may be applied."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A geographic area (e.g., a country) or a physical location (e.g., a farm) to which a specific ecfo:ConversionFactor may be applied."^^xsd:string</li>
+<li>Deleted: rdfs:label "has applicable location"^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#hasApplicablePeriod">https://w3id.org/ecfo#hasApplicablePeriod</a>
+<ul>
+<li>Added: rdfs:comment "A time period for which the emission conversion factor is considered to be most relevant."@en</li>
+<li>Added: rdfs:label "has applicable period"@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A time period for which the emission conversion factor is considered to be most relevant."^^xsd:anyURI</li>
+<li>Deleted: rdfs:label "has applicable period"^^xsd:anyURI</li>
+</ul>
+</li>
+<li><a href="#hasScope">https://w3id.org/ecfo#hasScope</a>
+<ul>
+<li>Added: rdfs:label "has scope"@en</li>
+<li>Added: rdfs:comment "A property linking conversion factor to the description of the emission scope."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:label "has scope"^^xsd:string</li>
+<li>Deleted: rdfs:comment "A property linking conversion factor to the description of the emission scope."^^xsd:string</li>
+</ul>
+</li>
+<li><a href="#hasTag">https://w3id.org/ecfo#hasTag</a>
+<ul>
+<li>Added: rdfs:comment "A property to assign a specific category/tag to ecfo:ConversionFactor."@en</li>
+<li>Added: rdfs:label "has tag"@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A property to assign a specific category/tag to ecfo:ConversionFactor."^^xsd:string</li>
+<li>Deleted: rdfs:label "has tag"^^xsd:string</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added object properties</u></summary>
+<ul><li><a href="#http://www.w3.org/ns/prov#wasDerivedFrom">http://www.w3.org/ns/prov#wasDerivedFrom</a>
+<ul>
+<li>Added: domain http://www.w3.org/ns/prov#Entity</li>
+<li>Added: Range http://www.w3.org/ns/prov#Entity</li>
+</ul>
+</li>
+<li><a href="#hasEmissionSource">https://w3id.org/ecfo#hasEmissionSource</a>
+<ul>
+<li>Added: Range http://www.w3.org/2002/07/owl#Thing</li>
+<li>Added: domain https://w3id.org/ecfo#EmissionConversionFactor</li>
+</ul>
+</li>
+<li><a href="#hasEmissionTarget">https://w3id.org/ecfo#hasEmissionTarget</a>
+<ul>
+<li>Added: Range https://w3id.org/ecfo#ChemicalCompound</li>
+<li>Added: domain https://w3id.org/ecfo#EmissionConversionFactor</li>
+</ul>
+</li>
+<li><a href="#hasSourceUnit">https://w3id.org/ecfo#hasSourceUnit</a>
+<ul>
+<li>Added: domain https://w3id.org/ecfo#EmissionConversionFactor</li>
+<li>Added: Range https://qudt.org/2.1/schema/qudt/Unit</li>
+</ul>
+</li>
+<li><a href="#hasTargetUnit">https://w3id.org/ecfo#hasTargetUnit</a>
+<ul>
+<li>Added: domain https://w3id.org/ecfo#EmissionConversionFactor</li>
+<li>Added: Range https://qudt.org/2.1/schema/qudt/Unit</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Deleted object properties</u></summary>
+<ul><li><a href="#sourceUnit">https://w3id.org/ecfo#sourceUnit</a>
+</li>
+<li><a href="#targetUnit">https://w3id.org/ecfo#targetUnit</a>
+</li>
+</ul></details><h3 id="changeDataProp" class="list">Data Properties</h3>
+<details><summary><u>Added data properties</u></summary>
+<ul><li><a href="#hasAdditionalContext">https://w3id.org/ecfo#hasAdditionalContext</a>
+<ul>
+<li>Added: Domain https://w3id.org/ecfo#EmissionConversionFactor</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+</ul>
+</li>
+</ul></details></div>
