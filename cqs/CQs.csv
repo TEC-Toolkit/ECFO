@@ -1,6 +1,12 @@
 CQ id,CQ,Terms added,Comments
-1,"What other compatible conversion factors (e.g., from previous years, different countries) can be used in this emission calculation for this activity?","ecfo:EmissionConversionFactor, ecfo:hasCategory, ecfo:hasSourceQuantity, ecfo:hasScope, ecfo:targetUnit","We need both the quantity kind and the category due to how the data is being modeled in the UK (l1, l2 and l3 categories)"
-2,"What entity (e.g, refrigerator, herd of animals), was used to transform inputs into emissions?","ecfo:hasEmissionProducer, ecfo:EmissionGenerationActivity, prov:Entity","Emission producer links the generationActivity with the sources of material, animal, etc., we are interested in."
-3,"What conversion factors can I use to report emissions for my activity for this specific location and time period (ie.., so the conversion factors exist)?","ecfo:validFrom, ecfo:validTo, ecfo:applicableLocation, ecfo:scope, qudt:quantityKind, qud:unit, ecfo:emissionSource",emissionSource links ecfo:EmissionGenerationActivity with emissionCalculationEntity
-4,What is the applicable geolocation of this conversion factor?,ecfo:applicableLocation,
-5,What are the source and target unit from a conversion factor?,"ecfo:SourceUnit, ecfo:TargetUnit",
+1,"What is the source of the emission in a conversion factor? (e.g., butane, refrigerators, herd of animals)","ecfo:ConversionFactor, ecfo:hasEmissionSource ",
+2,"What are the units in which the emission source is measured (e.g., tonnes of butane, where the unit is tonne)","ecfo:ConversionFactor, ecfo:hasSourceUnit, qudt:Unit",
+3,"What is the target chemical compound of a conversion factor? (e.g., CO2e)","ecfo:ConversionFactor, ecfo:hasEmissionTarget ",
+4,"What are the units of the the chemical compound produced by the emission source (e.g., kg of CO2e, where the unit is Kg)","ecfo:ConversionFactor, ecfo:hasTargetUnit, qudt:Unit",
+5,"What is the applicable region of this conversion factor? (i.e., the region that applies to this CF, like burning tonnes of butane in UK )","ecfo:ConversionFactor, ecfo:hasApplicableLocation, prov:Location",
+6,"What is the applicable period for this conversion factor (e.g., in the UK they are released in a year basis)","ecfo:ConversionFactor, ecfo:hasApplicablePeriod, time:TemporalEntity",
+7,How has a conversion factor varied through the years for a given region?,"ecfo:ConversionFactor, ecfo:hasEmissionSource, ecfo:hasEmissionTarget, ecfo:hasAdditionalContext, ecfo:hasApplicablePeriod",
+8,Who is the publisher of the conversion factor?,"ecfo:ConversionFactor, dc:publisher",
+9,"Does this conversion factor need additional context? (for example, butane is measured as net, not gross value)","ecfo:ConversionFactor, ecfo:hasAdditionalContext, xsd:string",
+10,Do any other conversion factors convert from the emission source to the target emission?,"ecfo:ConversionFactor, ecfo:hasEmissionSource, ecfo:hasEmissionTarget, ecfo:hasAdditionalContext",
+11,Are there any descriptive tags associated with a conversion factor?,"ecfo:ConversionFactor, ecfo:hasTag, xsd:string",

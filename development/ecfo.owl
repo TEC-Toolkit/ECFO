@@ -1,62 +1,36 @@
 @prefix : <https://w3id.org/ecfo#> .
+@prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix org: <http://www.w3.org/ns/org#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <https://w3id.org/ecfo> .
 
 <https://w3id.org/ecfo> rdf:type owl:Ontology ;
-                         owl:versionIRI <https://w3id.org/ecfo/0.0.1> ;
+                         owl:versionIRI <https://w3id.org/ecfo/0.0.2> ;
                          <http://purl.org/dc/elements/1.1/description> "This ontology defines a vocabulary for describing carbon emission conversion factors (CF). These are values typically used to calculate carbon emissions where the CF multiplies a quantified estimate of the energy (e.g., kWh of electricity, litters of fuel, etc.) used by a particular activity."@en ;
                          <http://purl.org/dc/elements/1.1/title> "The Emission Conversion Factor Ontology"@en ;
-                         <http://purl.org/dc/terms/abstract> """With the Net Zero agenda gaining significant traction across the world, organisations are often required to report carbon emissions associated with their operation. However, calculating emissions is a non-trivial task and reported scores can differ depending on the choices made by those performing the calculations or the software used to assist with this task. Emission conversion factors are used to calculate greenhouse emissions for different business operations. This ontology aims to describe these conversion factors and their associated properties (e.g., origin, applicable location, etc.) to enhance the transparency of the carbon footprint calculations."""@en ;
-                         <http://purl.org/dc/terms/created> "November 15th, 2022"@en ;
-                         <http://purl.org/dc/terms/creator> [
-                                  foaf:name "Daniel Garijo"@en;
-                                  org:memberOf <https://www.upm.es#this>.
-                                ] ,[
-                                  foaf:name "Iman Naja"@en;
-                                  org:memberOf <https://www.open.ac.uk#this>.
-                                 ], [
-                                  foaf:name "Milan Markovic"@en;
-                                  org:memberOf <https://www.abdn.ac.uk#this>.
-                                ],[
-                                  foaf:name "Stefano Germano"@en;
-                                  org:memberOf <https://www.ox.ac.uk#this>.
-                                ];
+                         <http://purl.org/dc/terms/abstract> "With the Net Zero agenda gaining significant traction across the world, organisations are often required to report carbon emissions associated with their operation. However, calculating emissions is a non-trivial task and reported scores can differ depending on the choices made by those performing the calculations or the software used to assist with this task. Emission conversion factors are used to calculate greenhouse emissions for different business operations. This ontology aims to describe these conversion factors and their associated properties (e.g., origin, applicable location, etc.) to enhance the transparency of the carbon footprint calculations."@en ;
+                         <http://purl.org/dc/terms/created> "April 20th, 2023"@en ;
+                         <http://purl.org/dc/terms/creator> [ org:memberOf <https://www.open.ac.uk#this> ;
+                                                              foaf:name "Iman Naja"@en
+                                                            ] ,
+                                                            [ org:memberOf <https://www.upm.es#this> ;
+                                                              foaf:name "Daniel Garijo"@en
+                                                            ] ,
+                                                            [ org:memberOf <https://www.cs.ox.ac.uk#this> ;
+                                                              foaf:name "Stefano Germano"@en
+                                                            ] ,
+                                                            [ org:memberOf <https://www.abdn.ac.uk/#this> ;
+                                                              foaf:name "Milan Markovic"@en
+                                                            ] ;
                          <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "ecfo"@en ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/ecfo#" ;
                          rdfs:comment "0.0.1 release of the Emission Conversion Factor Ontology"@en ;
-                         owl:versionInfo "0.0.1"@en .
-
- #################################################################
- #    Organization Metadata.
- #################################################################
-
-<https://www.upm.es#this> a foaf:Organization;
-  a foaf:Organization ;
-  foaf:name "Universidad Politécnica de Madrid";
-  foaf:homepage "https://www.upm.es" .
-
-<https://www.open.ac.uk#this> a foaf:Organization;
-  a foaf:Organization ;
-  foaf:name "The Open University";
-  foaf:homepage "https://www.open.ac.uk" .
-
-<https://www.abdn.ac.uk#this> a foaf:Organization;
-  a foaf:Organization ;
-  foaf:name "University of Aberdeen";
-  foaf:homepage "https://www.abdn.ac.uk" .
-
-<https://www.ox.ac.uk#this> a foaf:Organization;
-  a foaf:Organization ;
-  foaf:name "University of Oxford";
-  foaf:homepage "https://www.ox.ac.uk" .
-
+                         owl:versionInfo "0.0.2"@en .
 
 #################################################################
 #    Annotation properties
@@ -103,6 +77,18 @@
                                            rdfs:subPropertyOf rdfs:label .
 
 
+###  http://www.w3.org/ns/org#memberOf
+org:memberOf rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/homepage
+foaf:homepage rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:AnnotationProperty .
+
+
 #################################################################
 #    Datatypes
 #################################################################
@@ -146,6 +132,13 @@ xsd:date rdf:type rdfs:Datatype .
                                        rdfs:comment "A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth." ;
                                        rdfs:isDefinedBy "https://www.w3.org/ns/prov-o"^^xsd:anyURI ;
                                        rdfs:label "atLocation" .
+
+
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+<http://www.w3.org/ns/prov#wasDerivedFrom> rdf:type owl:ObjectProperty ;
+                                           rdfs:comment "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity."@en ;
+                                           rdfs:isDefinedBy <http://www.w3.org/ns/prov#> ;
+                                           rdfs:label "was derived from"@en .
 
 
 ###  https://w3id.org/ecfo#hasApplicableLocation
@@ -264,6 +257,10 @@ rdf:value rdf:type owl:DatatypeProperty .
                                      rdfs:label "Location" .
 
 
+###  http://xmlns.com/foaf/0.1/Organization
+foaf:Organization rdf:type owl:Class .
+
+
 ###  https://qudt.org/2.1/schema/qudt/Unit
 <https://qudt.org/2.1/schema/qudt/Unit> rdf:type owl:Class ;
                                         rdfs:comment "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\\\(Q = nU\\\\)." ;
@@ -315,5 +312,49 @@ rdf:value rdf:type owl:DatatypeProperty .
         rdfs:comment "Scope 3 (other indirect) emissions are a consequence of your actions that occur at sources you do not own or control and are not classed as Scope 2 emissions. Examples of Scope 3 emissions are business travel by means not owned or controlled by your organisation, waste disposal, materials or fuels your organisation purchases. Deciding if emissions from a vehicle, office or factory that you use are Scope 1 or Scope 3 may depend on how you define your operational boundaries. Scope 3 emissions can be from activities that are upstream or downstream of your organisation. More information on Scope 3 and other aspects of reporting can be found in the Greenhouse Gas Protocol Corporate Standard." ;
         rdfs:label "scope 3" .
 
+
+###  https://www.abdn.ac.uk/#this
+<https://www.abdn.ac.uk/#this> rdf:type owl:NamedIndividual ,
+                                        foaf:Organization ;
+                               foaf:homepage "https://www.abdn.ac.uk/" ;
+                               foaf:name "University of Aberdeen" .
+
+
+###  https://www.cs.ox.ac.uk#this
+<https://www.cs.ox.ac.uk#this> rdf:type owl:NamedIndividual ,
+                                        foaf:Organization ;
+                               foaf:homepage "https://www.cs.ox.ac.uk" ;
+                               foaf:name "University of Oxford" .
+
+
+###  https://www.open.ac.uk#this
+<https://www.open.ac.uk#this> rdf:type owl:NamedIndividual ,
+                                       foaf:Organization ;
+                              foaf:homepage "https://www.open.ac.uk" ;
+                              foaf:name "The Open University" .
+
+
+###  https://www.upm.es#this
+<https://www.upm.es#this> rdf:type owl:NamedIndividual ,
+                                   foaf:Organization ;
+                          foaf:homepage "https://www.upm.es" ;
+                          foaf:name "Universidad Politécnica de Madrid" .
+
+
+[ org:memberOf <https://www.open.ac.uk#this> ;
+  foaf:name "Iman Naja"@en
+] .
+
+[ org:memberOf <https://www.upm.es#this> ;
+   foaf:name "Daniel Garijo"@en
+ ] .
+
+[ org:memberOf <https://www.cs.ox.ac.uk#this> ;
+   foaf:name "Stefano Germano"@en
+ ] .
+
+[ org:memberOf <https://www.abdn.ac.uk/#this> ;
+   foaf:name "Milan Markovic"@en
+ ] .
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
