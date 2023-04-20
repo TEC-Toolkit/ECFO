@@ -1,7 +1,7 @@
 CQ id,CQ,Terms added,Comments
 1,"What is the source of the emission in a conversion factor? (e.g., butane, refrigerators, herd of animals)","ecfo:ConversionFactor, ecfo:hasEmissionSource ",
 2,"What are the units in which the emission source is measured (e.g., tonnes of butane, where the unit is tonne)","ecfo:ConversionFactor, ecfo:hasSourceUnit, qudt:Unit",
-3,"What is the target chemical compound of a conversion factor? (e.g., CO2e)","ecfo:ConversionFactor, ecfo:hasEmissionTarget ",
+3,"What is the target chemical compound of a conversion factor? (e.g., CO2e)","ecfo:ConversionFactor, ecfo:hasEmissionTarget, ecfo:ChemicalCompound",
 4,"What are the units of the the chemical compound produced by the emission source (e.g., kg of CO2e, where the unit is Kg)","ecfo:ConversionFactor, ecfo:hasTargetUnit, qudt:Unit",
 5,"What is the applicable region of this conversion factor? (i.e., the region that applies to this CF, like burning tonnes of butane in UK )","ecfo:ConversionFactor, ecfo:hasApplicableLocation, prov:Location",
 6,"What is the applicable period for this conversion factor (e.g., in the UK they are released in a year basis)","ecfo:ConversionFactor, ecfo:hasApplicablePeriod, time:TemporalEntity",
