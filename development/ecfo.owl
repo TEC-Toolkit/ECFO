@@ -9,33 +9,23 @@
 @base <https://w3id.org/ecfo> .
 
 <https://w3id.org/ecfo> rdf:type owl:Ontology ;
-                         owl:versionIRI <https://w3id.org/ecfo/0.0.2> ;
-                         owl:priorVersion <https://w3id.org/ecfo/0.0.1> ;
+                         owl:versionIRI <https://w3id.org/ecfo/1.0.0> ;
                          <http://purl.org/dc/elements/1.1/description> "This ontology defines a vocabulary for describing carbon emission conversion factors (CF). These are values typically used to calculate carbon emissions where the CF multiplies a quantified estimate of the energy (e.g., kWh of electricity, litters of fuel, etc.) used by a particular activity."@en ;
                          <http://purl.org/dc/elements/1.1/title> "The Emission Conversion Factor Ontology"@en ;
                          <http://purl.org/dc/terms/abstract> "With the Net Zero agenda gaining significant traction across the world, organisations are often required to report carbon emissions associated with their operation. However, calculating emissions is a non-trivial task and reported scores can differ depending on the choices made by those performing the calculations or the software used to assist with this task. Emission conversion factors are used to calculate greenhouse emissions for different business operations. This ontology aims to describe these conversion factors and their associated properties (e.g., origin, applicable location, etc.) to enhance the transparency of the carbon footprint calculations."@en ;
                          <http://purl.org/dc/terms/created> "April 20th, 2023"@en ;
-                           <http://purl.org/dc/terms/creator> :milan ,
-                                                              :daniel ,
-                                                              :iman ,
-                                                              :stefano ;
-                           <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
-                           <http://purl.org/vocab/vann/preferredNamespacePrefix> "ecfo"@en ;
-                           <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/ecfo#" ;
-                           rdfs:comment "0.0.2 release of the Emission Conversion Factor Ontology"@en ;
-                           owl:versionInfo "0.0.2"@en .
-
-  :iman <http://www.w3.org/ns/org#memberOf> <https://www.open.ac.uk#this> ;
-            <http://xmlns.com/foaf/0.1/name> "Iman Naja"@en .
-
-  :daniel <http://www.w3.org/ns/org#memberOf> <https://www.upm.es#this> ;
-            <http://xmlns.com/foaf/0.1/name> "Daniel Garijo"@en .
-
-  :milan <http://www.w3.org/ns/org#memberOf> <https://www.abdn.ac.uk#this> ;
-            <http://xmlns.com/foaf/0.1/name> "Milan Markovic"@en .
-
-  :stefano <http://www.w3.org/ns/org#memberOf> <https://www.ox.ac.uk#this> ;
-            <http://xmlns.com/foaf/0.1/name> "Stefano Germano"@en .
+                         <http://purl.org/dc/terms/creator> :daniel ,
+                                                            :iman ,
+                                                            :milan ,
+                                                            :stefano ;
+                         <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                         <http://purl.org/dc/terms/modified> "May 3rd, 2023"@en ;
+                         <http://purl.org/ontology/bibo/status> "TEC Toolkit specification (stable)"@en ;
+                         <http://purl.org/vocab/vann/preferredNamespacePrefix> "ecfo"@en ;
+                         <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/ecfo#" ;
+                         rdfs:comment "1.0.0 release of the Emission Conversion Factor Ontology"@en ;
+                         owl:priorVersion <https://w3id.org/ecfo/0.0.2> ;
+                         owl:versionInfo "1.0.0"@en .
 
 #################################################################
 #    Annotation properties
@@ -67,6 +57,14 @@
 
 ###  http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
@@ -379,5 +377,26 @@ foaf:Organization rdf:type owl:Class .
                                    foaf:Organization ;
                           foaf:homepage "https://www.upm.es" ;
                           foaf:name "Universidad Politécnica de Madrid" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:daniel org:memberOf <https://www.upm.es#this> ;
+        foaf:name "Daniel Garijo"@en .
+
+
+:iman foaf:name "Iman Naja"@en ;
+      org:memberOf <https://www.open.ac.uk#this> .
+
+
+:milan foaf:name "Milan Markovic"@en ;
+       org:memberOf <https://www.abdn.ac.uk#this> .
+
+
+:stefano foaf:name "Stefano Germano"@en ;
+         org:memberOf <https://www.ox.ac.uk#this> .
+
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
