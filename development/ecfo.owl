@@ -25,7 +25,8 @@
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/ecfo#" ;
                          rdfs:comment "1.0.0 release of the Emission Conversion Factor Ontology"@en ;
                          owl:priorVersion <https://w3id.org/ecfo/0.0.2> ;
-                         owl:versionInfo "1.0.0"@en .
+                         owl:versionInfo "1.0.0"@en ;
+                         <https://schema.org/logo> "https://raw.githubusercontent.com/TEC-Toolkit/ECFO/main/development/logo/ecfo_logo.png"@en .
 
 #################################################################
 #    Annotation properties
@@ -90,6 +91,10 @@ foaf:homepage rdf:type owl:AnnotationProperty .
 
 ###  http://xmlns.com/foaf/0.1/name
 foaf:name rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/logo
+<https://schema.org/logo> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
