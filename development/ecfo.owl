@@ -114,7 +114,10 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 
 ###  http://purl.org/dc/elements/1.1/publisher
-<http://purl.org/dc/elements/1.1/publisher> rdf:type owl:ObjectProperty .
+<http://purl.org/dc/elements/1.1/publisher> rdf:type owl:ObjectProperty ;
+                                            rdfs:comment "An entity responsible for making the resource available."@en ;
+                                            rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                            rdfs:label "publisher"@en .
 
 
 ###  http://www.w3.org/2006/time#hasBeginning
@@ -196,7 +199,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/ecfo#hasSourceUnit
 :hasSourceUnit rdf:type owl:ObjectProperty ;
                rdfs:domain :EmissionConversionFactor ;
-               rdfs:range <https://qudt.org/2.1/schema/qudt/Unit> ;
+               rdfs:range <http://qudt.org/schema/qudt/Unit> ;
                rdfs:comment "The unit corresponding to the source data that is multiplied by the ecfo:ConversionFactor"@en ;
                rdfs:label "has source unit"@en .
 
@@ -212,7 +215,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/ecfo#hasTargetUnit
 :hasTargetUnit rdf:type owl:ObjectProperty ;
                rdfs:domain :EmissionConversionFactor ;
-               rdfs:range <https://qudt.org/2.1/schema/qudt/Unit> ;
+               rdfs:range <http://qudt.org/schema/qudt/Unit> ;
                rdfs:comment "The unit corresponding to the result of multiplying input data by the ecfo:ConversionFactor"@en ;
                rdfs:label "has target unit"@en .
 
@@ -221,13 +224,27 @@ xsd:date rdf:type rdfs:Datatype .
 #    Data properties
 #################################################################
 
+###  http://qudt.org/schema/qudt/abbreviation
+<http://qudt.org/schema/qudt/abbreviation> rdf:type owl:DatatypeProperty ;
+                                           rdfs:range xsd:string ;
+                                           rdfs:comment "An abbreviation for a unit is a short ASCII string that is used in place of the full name for the unit in contexts where non-ASCII characters would be problematic, or where using the abbreviation will enhance readability. When a power of abase unit needs to be expressed, such as squares this can be done using abbreviations rather than symbols. For example, sq ft means square foot, and cu ft means cubic foot."@en ;
+                                           rdfs:isDefinedBy <https://qudt.org/schema/qudt/> ;
+                                           rdfs:label "abbreviation"@en .
+
+
 ###  http://qudt.org/schema/qudt/value
 <http://qudt.org/schema/qudt/value> rdf:type owl:DatatypeProperty ;
-                                    rdfs:subPropertyOf rdf:value .
+                                    rdfs:subPropertyOf rdf:value ;
+                                    rdfs:comment "This property identifies the value associated with a data structure. The value may be a scalar or a reference to another object. The disjoint sub-properties of this data:value distinguish between scalar values and object references."@en ;
+                                    rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt> ;
+                                    rdfs:label "value"@en .
 
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#value
-rdf:value rdf:type owl:DatatypeProperty .
+rdf:value rdf:type owl:DatatypeProperty ;
+          rdfs:comment "Idiomatic property used for structured values"@en ;
+          rdfs:isDefinedBy rdf: ;
+          rdfs:label "value"@en .
 
 
 ###  http://www.w3.org/2006/time#inXSDDate
@@ -239,6 +256,13 @@ rdf:value rdf:type owl:DatatypeProperty .
                                         rdfs:label "in XSD date" .
 
 
+###  https://schema.org/molecularFormula
+<https://schema.org/molecularFormula> rdf:type owl:DatatypeProperty ;
+                                      rdfs:comment "The empirical formula is the simplest whole number ratio of all the atoms in a molecule."@en ;
+                                      rdfs:isDefinedBy <https://schema.org/> ;
+                                      rdfs:label "molecular formula"@en .
+
+
 ###  https://w3id.org/ecfo#hasAdditionalContext
 :hasAdditionalContext rdf:type owl:DatatypeProperty ;
                       rdfs:domain :EmissionConversionFactor ;
@@ -248,9 +272,24 @@ These subteltlies are captured in the \"hasAdditionalContext\" property"""@en ;
                       rdfs:label "has additional context"@en .
 
 
+###  https://w3id.org/ecfo#hasUsageNotes
+:hasUsageNotes rdf:type owl:DatatypeProperty ;
+               rdfs:domain :EmissionConversionFactor ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Property used to describe any limitations, disclaimers or usage notes associated with a CF. For example \"This CF is an estimation based on local data and should be superseeded by governmental sources\""@en ;
+               rdfs:label "has usage notes"@en .
+
+
 #################################################################
 #    Classes
 #################################################################
+
+###  http://qudt.org/schema/qudt/Unit
+<http://qudt.org/schema/qudt/Unit> rdf:type owl:Class ;
+                                   rdfs:comment "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\\\(Q = nU\\\\)." ;
+                                   rdfs:isDefinedBy "http://qudt.org/schema/qudt/"^^xsd:anyURI ;
+                                   rdfs:label "Unit" .
+
 
 ###  http://www.w3.org/2006/time#Instant
 <http://www.w3.org/2006/time#Instant> rdf:type owl:Class ;
@@ -296,13 +335,6 @@ These subteltlies are captured in the \"hasAdditionalContext\" property"""@en ;
 
 ###  http://xmlns.com/foaf/0.1/Organization
 foaf:Organization rdf:type owl:Class .
-
-
-###  https://qudt.org/2.1/schema/qudt/Unit
-<https://qudt.org/2.1/schema/qudt/Unit> rdf:type owl:Class ;
-                                        rdfs:comment "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\\\(Q = nU\\\\)." ;
-                                        rdfs:isDefinedBy "https://qudt.org/2.1/schema/qudt"^^xsd:anyURI ;
-                                        rdfs:label "Unit" .
 
 
 ###  https://w3id.org/ecfo#ChemicalCompound

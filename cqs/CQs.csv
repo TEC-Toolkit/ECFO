@@ -10,3 +10,7 @@ CQ id,CQ,Terms added,Comments
 9,"Does this conversion factor need additional context? (for example, butane is measured as net, not gross value)","ecfo:ConversionFactor, ecfo:hasAdditionalContext, xsd:string",
 10,Do any other conversion factors convert from the emission source to the target emission?,"ecfo:ConversionFactor, ecfo:hasEmissionSource, ecfo:hasEmissionTarget, ecfo:hasAdditionalContext",
 11,Are there any descriptive tags associated with a conversion factor?,"ecfo:ConversionFactor, ecfo:hasTag, xsd:string",
+12,"Are there any warnings, disclaimer or usage notes for a conversion factor?","ecfo:ConversionFactor, ecfo:hasUsageNotes, xsd:string",
+13,What is the value of a conversion factor?,"ecfo:ConversionFactor, rdf:value",
+14,What is the molecular formula associated with the target emission?,"ecfo:ChemicalCompund, schema:molecularFormula",
+15,What is the symbol used in the units?,"qudt:Unit, qudt:symbol",
