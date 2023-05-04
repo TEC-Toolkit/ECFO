@@ -67,7 +67,7 @@ For this SPARQL query we switch to CNG, because Butane is not available in many 
 We also focus only on the "Net CV" value (there are other conversion factors for gross CV)
 ```
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-select ?cf ?value ?start ?end ?context ?scope where{
+select ?cf ?value ?start ?end ?context where{
     <https://w3id.org/ecfkg/i/UK/BEIS/2020/CF_1> <https://w3id.org/ecfo#hasEmissionSource> ?e;
     <https://w3id.org/ecfo#hasEmissionTarget> ?t.
    ?cf <https://w3id.org/ecfo#hasEmissionSource> ?e;
@@ -75,11 +75,12 @@ select ?cf ?value ?start ?end ?context ?scope where{
     <https://w3id.org/ecfo#hasAdditionalContext> ?context;
     <https://w3id.org/ecfo#hasApplicableLocation> ?region;
     rdf:value ?value;
-    <https://w3id.org/ecfo#hasScope> ?scope ;
+    <https://w3id.org/ecfo#hasScope> <https://w3id.org/ecfo#Scope1> ;
     <https://w3id.org/ecfo#hasApplicablePeriod> ?period.
  ?period <http://www.w3.org/2006/time#hasBeginning>/<http://www.w3.org/2006/time#inXSDDate> ?start;
          <http://www.w3.org/2006/time#hasEnd>/<http://www.w3.org/2006/time#inXSDDate> ?end
   filter(regex(?context,"Net cv","i"))
+}
 ```
 Answer: 
 
