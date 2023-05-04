@@ -1,7 +1,12 @@
-## SPARQL queries used for implementing the CQs: 
-- Using the KG: https://sparql.cf.linkeddata.es/
+# Competency Questions
 
-Queries can be performed urlencoding the query under the following URL: `https://sparql.cf.linkeddata.es/dataset.html#query={query}`, whhere `{query}` is the SPARQL query URL encoded.
+The list of ECFO competency questions.
+
+## SPARQL queries used for implementing the CQs
+
+- Using the KG: https://sparql.cf.linkeddata.es
+
+Queries can be performed urlencoding the query under the following URL: `https://sparql.cf.linkeddata.es/dataset.html#query={query}`, where `{query}` is the SPARQL query URL encoded.
 
 All queries assume a single conversion factor. We will use: Kilowatt hours of Butane into Kgs of CO2e
 
