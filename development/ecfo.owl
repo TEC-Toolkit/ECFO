@@ -25,8 +25,7 @@
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/ecfo#" ;
                          rdfs:comment "1.0.0 release of the Emission Conversion Factor Ontology"@en ;
                          owl:priorVersion <https://w3id.org/ecfo/0.0.2> ;
-                         owl:versionInfo "1.0.0"@en ;
-                         <https://schema.org/logo> "https://raw.githubusercontent.com/TEC-Toolkit/ECFO/main/development/logo/ecfo_logo.png"@en .
+                         owl:versionInfo "1.0.0"@en .
 
 #################################################################
 #    Annotation properties
