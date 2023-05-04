@@ -4,7 +4,9 @@ The list of ECFO competency questions.
 
 ## SPARQL queries used for implementing the CQs
 
-- Using the KG: https://sparql.cf.linkeddata.es
+Using the KG available at:
+
+> https://sparql.cf.linkeddata.es
 
 Queries can be performed urlencoding the query under the following URL:
 
@@ -275,7 +277,7 @@ WHERE {
 
 ### CQ15: What is the symbol used in the source and target units?
 
-```
+```sparql
 prefix ecfo: <https://w3id.org/ecfo#>
 prefix qudt: <http://qudt.org/schema/qudt/>
 SELECT ?source ?target
