@@ -23,9 +23,12 @@ All queries assume a single conversion factor:
 ### CQ1: What is the source of the emission factor <https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1>?
 
 ```sparql
+PREFIX ecfo: <https://w3id.org/ecfo#>
+PREFIX ecfo_instance: <https://w3id.org/ecfkg/i/UK/BEIS/2021/>
+
 SELECT ?source
 WHERE {
-<https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> <https://w3id.org/ecfo#hasEmissionSource>/rdfs:label ?source
+    ecfo_instance:CF_1 ecfo:hasEmissionSource/rdfs:label ?source
 }
 ```
 
@@ -40,9 +43,12 @@ WHERE {
 (e.g., tonnes of butane, where the unit is tonne)
 
 ```sparql
+PREFIX ecfo: <https://w3id.org/ecfo#>
+PREFIX ecfo_instance: <https://w3id.org/ecfkg/i/UK/BEIS/2021/>
+
 SELECT ?unit
 WHERE {
-<https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> <https://w3id.org/ecfo#hasSourceUnit>/rdfs:label ?unit
+    ecfo_instance:CF_1 ecfo:hasSourceUnit/rdfs:label ?unit
 }
 ```
 
@@ -57,9 +63,12 @@ WHERE {
 (e.g., CO2e)
 
 ```sparql
+PREFIX ecfo: <https://w3id.org/ecfo#>
+PREFIX ecfo_instance: <https://w3id.org/ecfkg/i/UK/BEIS/2021/>
+
 SELECT ?target
 WHERE {
-<https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> <https://w3id.org/ecfo#hasEmissionTarget>/rdfs:label ?target
+    ecfo_instance:CF_1 ecfo:hasEmissionTarget/rdfs:label ?target
 }
 ```
 
@@ -74,9 +83,12 @@ WHERE {
 (e.g., kg of CO2e, where the unit is Kg)
 
 ```sparql
+PREFIX ecfo: <https://w3id.org/ecfo#>
+PREFIX ecfo_instance: <https://w3id.org/ecfkg/i/UK/BEIS/2021/>
+
 SELECT ?unit
 WHERE {
-<https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> <https://w3id.org/ecfo#hasTargetUnit>/rdfs:label ?unit
+    ecfo_instance:CF_1 ecfo:hasTargetUnit/rdfs:label ?unit
 }
 ```
 
@@ -92,9 +104,12 @@ WHERE {
 (i.e., the region that applies to this CF, like burning tonnes of butane in UK)
 
 ```sparql
+PREFIX ecfo: <https://w3id.org/ecfo#>
+PREFIX ecfo_instance: <https://w3id.org/ecfkg/i/UK/BEIS/2021/>
+
 SELECT ?location
 WHERE {
-<https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> <https://w3id.org/ecfo#hasApplicableLocation> ?location
+    ecfo_instance:CF_1 ecfo:hasApplicableLocation ?location
 }
 ```
 
@@ -109,12 +124,17 @@ WHERE {
 (e.g., in the UK they are released in a year basis)
 
 ```sparql
+PREFIX ecfo: <https://w3id.org/ecfo#>
+PREFIX ecfo_instance: <https://w3id.org/ecfkg/i/UK/BEIS/2021/>
+PREFIX time: <http://www.w3.org/2006/time#>
+
 SELECT ?start ?end
 WHERE {
-<https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> <https://w3id.org/ecfo#hasApplicablePeriod> ?t.
-?t <http://www.w3.org/2006/time#hasBeginning>/<http://www.w3.org/2006/time#inXSDDate> ?start.
-?t <http://www.w3.org/2006/time#hasEnd>/<http://www.w3.org/2006/time#inXSDDate> ?end
+    ecfo_instance:CF_1 ecfo:hasApplicablePeriod ?t.
+    ?t time:hasBeginning/time:inXSDDate ?start.
+    ?t time:hasEnd/time:inXSDDate ?end
 }
+
 ```
 Answer:
 
@@ -128,20 +148,24 @@ For this SPARQL query we switch to CNG, because Butane is not available in many 
 We also focus only on the "Net CV" value (there are other conversion factors for "Gross CV").
 
 ```sparql
+PREFIX ecfo: <https://w3id.org/ecfo#>
+PREFIX ecfo_instance: <https://w3id.org/ecfkg/i/UK/BEIS/2020/>
+PREFIX time: <http://www.w3.org/2006/time#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
 SELECT ?cf ?value ?start ?end ?context
 WHERE {
-    <https://w3id.org/ecfkg/i/UK/BEIS/2020/CF_1> <https://w3id.org/ecfo#hasEmissionSource> ?e;
-    <https://w3id.org/ecfo#hasEmissionTarget> ?t.
-   ?cf <https://w3id.org/ecfo#hasEmissionSource> ?e;
-     <https://w3id.org/ecfo#hasEmissionTarget> ?t;
-    <https://w3id.org/ecfo#hasAdditionalContext> ?context;
-    <https://w3id.org/ecfo#hasApplicableLocation> ?region;
-    rdf:value ?value;
-    <https://w3id.org/ecfo#hasScope> <https://w3id.org/ecfo#Scope1> ;
-    <https://w3id.org/ecfo#hasApplicablePeriod> ?period.
- ?period <http://www.w3.org/2006/time#hasBeginning>/<http://www.w3.org/2006/time#inXSDDate> ?start;
-         <http://www.w3.org/2006/time#hasEnd>/<http://www.w3.org/2006/time#inXSDDate> ?end
+    ecfo_instance:CF_1 ecfo:hasEmissionSource ?e;
+        ecfo:hasEmissionTarget ?t.
+    ?cf ecfo:hasEmissionSource ?e;
+        ecfo:hasEmissionTarget ?t;
+        ecfo:hasAdditionalContext ?context;
+        ecfo:hasApplicableLocation ?region;
+        rdf:value ?value;
+        ecfo:hasScope ecfo:Scope1 ;
+        ecfo:hasApplicablePeriod ?period.
+    ?period time:hasBeginning/time:inXSDDate ?start;
+        time:hasEnd/time:inXSDDate ?end
   filter(regex(?context,"Net cv","i"))
 }
 ```
@@ -161,9 +185,12 @@ We can see the evolution of the conversion factor for five years. For one of the
 ### CQ8: Who is the publisher of the conversion factor?
 
 ```sparql
+PREFIX ecfo_instance: <https://w3id.org/ecfkg/i/UK/BEIS/2021/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+
 SELECT ?publisher
 WHERE {
-    <https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> dc:publisher ?publisher.
+    ecfo_instance:CF_1 dc:publisher ?publisher.
 }
 ```
 
@@ -178,9 +205,12 @@ WHERE {
 (for example, butane is measured as net, not gross value)
 
 ```sparql
+PREFIX ecfo: <https://w3id.org/ecfo#>
+PREFIX ecfo_instance: <https://w3id.org/ecfkg/i/UK/BEIS/2021/>
+
 SELECT ?context
 WHERE {
-    <https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> <https://w3id.org/ecfo#hasAdditionalContext> ?context.
+    ecfo_instance:CF_1 ecfo:hasAdditionalContext ?context.
 }
 ```
 
@@ -193,13 +223,16 @@ WHERE {
 ### CQ10: Do any other conversion factors convert from the emission source to the target emission?
 
 ```sparql
+PREFIX ecfo: <https://w3id.org/ecfo#>
+PREFIX ecfo_instance: <https://w3id.org/ecfkg/i/UK/BEIS/2021/>
+
 SELECT ?cf ?context
 WHERE {
-    <https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> <https://w3id.org/ecfo#hasEmissionSource> ?e;
-    <https://w3id.org/ecfo#hasEmissionTarget> ?t.
-   ?cf <https://w3id.org/ecfo#hasEmissionSource> ?e;
-     <https://w3id.org/ecfo#hasEmissionTarget> ?t;
-    <https://w3id.org/ecfo#hasAdditionalContext> ?context.
+    ecfo_instance:CF_1 ecfo:hasEmissionSource ?e;
+        ecfo:hasEmissionTarget ?t.
+    ?cf ecfo:hasEmissionSource ?e;
+        ecfo:hasEmissionTarget ?t;
+        ecfo:hasAdditionalContext ?context.
 }
 ```
 
@@ -215,9 +248,13 @@ Answer:
 ### CQ11: Are there any descriptive tags associated with the source material of a conversion factor?
 
 ```sparql
+PREFIX ecfo: <https://w3id.org/ecfo#>
+PREFIX ecfo_instance: <https://w3id.org/ecfkg/i/UK/BEIS/2021/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
 SELECT ?tag
 WHERE {
-<https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> <https://w3id.org/ecfo#hasTag>/rdfs:label ?tag
+    ecfo_instance:CF_1 ecfo:hasTag/rdfs:label ?tag
 }
 ```
 
@@ -232,9 +269,12 @@ WHERE {
 ### CQ12: Are there any usage notes or disclaimers associated with a conversion factor?
 
 ```sparql
+PREFIX ecfo: <https://w3id.org/ecfo#>
+PREFIX ecfo_instance: <https://w3id.org/ecfkg/i/UK/BEIS/2021/>
+
 SELECT ?notes
 WHERE {
-<https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> <https://w3id.org/ecfo#hasUsageNotes> ?notes
+    ecfo_instance:CF_1 ecfo:hasUsageNotes ?notes
 }
 ```
 
@@ -247,10 +287,12 @@ WHERE {
 ### CQ13: What is the value of a conversion factor?
 
 ```sparql
+PREFIX ecfo_instance: <https://w3id.org/ecfkg/i/UK/BEIS/2021/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
 SELECT ?value
 WHERE {
-<https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> rdf:value ?value
+    ecfo_instance:CF_1 rdf:value ?value
 }
 ```
 
@@ -263,9 +305,13 @@ WHERE {
 ### CQ14: What is the molecular formula associated with the target emission?
 
 ```sparql
+PREFIX ecfo: <https://w3id.org/ecfo#>
+PREFIX ecfo_instance: <https://w3id.org/ecfkg/i/UK/BEIS/2021/>
+PREFIX schema: <https://schema.org/>
+
 SELECT ?formula
 WHERE {
-<https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> <https://w3id.org/ecfo#hasEmissionTarget>/<https://schema.org/molecularFormula> ?formula
+    ecfo_instance:CF_1 ecfo:hasEmissionTarget/schema:molecularFormula ?formula
 }
 ```
 
@@ -278,12 +324,14 @@ WHERE {
 ### CQ15: What is the symbol used in the source and target units?
 
 ```sparql
-prefix ecfo: <https://w3id.org/ecfo#>
-prefix qudt: <http://qudt.org/schema/qudt/>
+PREFIX ecfo: <https://w3id.org/ecfo#>
+PREFIX ecfo_instance: <https://w3id.org/ecfkg/i/UK/BEIS/2021/>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+
 SELECT ?source ?target
 WHERE {
-<https://w3id.org/ecfkg/i/UK/BEIS/2021/CF_1> ecfo:hasSourceUnit/qudt:abbreviation ?source;
- ecfo:hasTargetUnit/qudt:abbreviation ?target;
+    ecfo_instance:CF_1 ecfo:hasSourceUnit/qudt:abbreviation ?source;
+        ecfo:hasTargetUnit/qudt:abbreviation ?target
 }
 ```
 
