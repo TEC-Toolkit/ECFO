@@ -392,10 +392,10 @@ These subteltlies are captured in the \"hasAdditionalContext\" property"""@en ;
                               <http://xmlns.com/foaf/0.1/name> "University of Aberdeen" .
 
 
-###  https://www.cs.ox.ac.uk#this
-<https://www.cs.ox.ac.uk#this> rdf:type owl:NamedIndividual ,
+###  https://www.ox.ac.uk/#this
+<https://www.ox.ac.uk/#this> rdf:type owl:NamedIndividual ,
                                         <http://xmlns.com/foaf/0.1/Organization> ;
-                               <http://xmlns.com/foaf/0.1/homepage> "https://www.cs.ox.ac.uk" ;
+                               <http://xmlns.com/foaf/0.1/homepage> "https://www.ox.ac.uk/" ;
                                <http://xmlns.com/foaf/0.1/name> "University of Oxford" .
 
 
@@ -421,7 +421,7 @@ These subteltlies are captured in the \"hasAdditionalContext\" property"""@en ;
                                         <http://xmlns.com/foaf/0.1/name> "Iman Naja"@en .
 
 
-<https://orcid.org/0000-0001-6993-0618> <http://www.w3.org/ns/org#memberOf> <https://www.cs.ox.ac.uk#this> ;
+<https://orcid.org/0000-0001-6993-0618> <http://www.w3.org/ns/org#memberOf> <https://www.ox.ac.uk/#this> ;
                                         <http://xmlns.com/foaf/0.1/name> "Stefano Germano"@en .
 
 

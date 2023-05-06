@@ -323,7 +323,7 @@
 }, {
   "@id" : "https://orcid.org/0000-0001-6993-0618",
   "http://www.w3.org/ns/org#memberOf" : [ {
-    "@id" : "https://www.cs.ox.ac.uk#this"
+    "@id" : "https://www.ox.ac.uk/#this"
   } ],
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@language" : "en",
@@ -687,13 +687,13 @@
     "@value" : "University of Aberdeen"
   } ]
 }, {
-  "@id" : "https://www.cs.ox.ac.uk#this",
+  "@id" : "https://www.ox.ac.uk/#this",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://xmlns.com/foaf/0.1/Organization"
   } ],
   "http://xmlns.com/foaf/0.1/homepage" : [ {
-    "@value" : "https://www.cs.ox.ac.uk"
+    "@value" : "https://www.ox.ac.uk/"
   } ],
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@value" : "University of Oxford"
