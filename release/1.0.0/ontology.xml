@@ -649,10 +649,10 @@ These subteltlies are captured in the &quot;hasAdditionalContext&quot; property<
 
 
 
-    <!-- https://www.ox.ac.uk/#this -->
+    <!-- https://www.ox.ac.uk#this -->
 
 
-    <owl:NamedIndividual rdf:about="https://www.ox.ac.uk/#this">
+    <owl:NamedIndividual rdf:about="https://www.ox.ac.uk#this">
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
         <foaf:homepage>https://www.ox.ac.uk/</foaf:homepage>
         <foaf:name>University of Oxford</foaf:name>
@@ -696,7 +696,7 @@ These subteltlies are captured in the &quot;hasAdditionalContext&quot; property<
         <foaf:name xml:lang="en">Iman Naja</foaf:name>
     </rdf:Description>
     <rdf:Description rdf:about="https://orcid.org/0000-0001-6993-0618">
-        <org:memberOf rdf:resource="https://www.ox.ac.uk/#this"/>
+        <org:memberOf rdf:resource="https://www.ox.ac.uk#this"/>
         <foaf:name xml:lang="en">Stefano Germano</foaf:name>
     </rdf:Description>
     <rdf:Description rdf:about="https://orcid.org/0000-0002-5477-287X">
