@@ -14,10 +14,10 @@
                          <http://purl.org/dc/elements/1.1/title> "The Emission Conversion Factor Ontology"@en ;
                          <http://purl.org/dc/terms/abstract> "With the Net Zero agenda gaining significant traction across the world, organisations are often required to report carbon emissions associated with their operation. However, calculating emissions is a non-trivial task and reported scores can differ depending on the choices made by those performing the calculations or the software used to assist with this task. Emission conversion factors are used to calculate greenhouse emissions for different business operations. This ontology aims to describe these conversion factors and their associated properties (e.g., origin, applicable location, etc.) to enhance the transparency of the carbon footprint calculations."@en ;
                          <http://purl.org/dc/terms/created> "April 20th, 2023"@en ;
-                         <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0003-0454-7145>  ,
-                                                            <https://orcid.org/0000-0001-6993-0618>  ,
+                         <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-6634-3266> ,
+                                                            <https://orcid.org/0000-0001-6993-0618> ,
                                                             <https://orcid.org/0000-0002-5477-287X> ,
-                                                            <https://orcid.org/0000-0001-6634-3266> ;
+                                                            <https://orcid.org/0000-0003-0454-7145> ;
                          <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                          <http://purl.org/dc/terms/modified> "May 3rd, 2023"@en ;
                          <http://purl.org/ontology/bibo/status> "TEC Toolkit specification (stable)"@en ;
@@ -124,7 +124,7 @@ xsd:date rdf:type rdfs:Datatype .
                                            rdfs:domain <http://www.w3.org/2006/time#TemporalEntity> ;
                                            rdfs:range <http://www.w3.org/2006/time#Instant> ;
                                            rdfs:comment "Beginning of a temporal entity."^^xsd:anyURI ;
-                                           rdfs:isDefinedBy "http://www.w3.org/2006/time"^^xsd:anyURI ;
+                                           rdfs:isDefinedBy <http://www.w3.org/2006/time> ;
                                            rdfs:label "has beginning"^^xsd:anyURI .
 
 
@@ -133,7 +133,7 @@ xsd:date rdf:type rdfs:Datatype .
                                      rdfs:domain <http://www.w3.org/2006/time#TemporalEntity> ;
                                      rdfs:range <http://www.w3.org/2006/time#Instant> ;
                                      rdfs:comment "End of a temporal entity."@en ;
-                                     rdfs:isDefinedBy "http://www.w3.org/2006/time"^^xsd:anyURI ;
+                                     rdfs:isDefinedBy <http://www.w3.org/2006/time> ;
                                      rdfs:label "has end"@en .
 
 
@@ -142,7 +142,7 @@ xsd:date rdf:type rdfs:Datatype .
                                        rdfs:domain <http://www.w3.org/ns/prov#Entity> ;
                                        rdfs:range <http://www.w3.org/ns/prov#Location> ;
                                        rdfs:comment "A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth."@en ;
-                                       rdfs:isDefinedBy "https://www.w3.org/ns/prov-o"^^xsd:anyURI ;
+                                       rdfs:isDefinedBy <https://www.w3.org/ns/prov-o> ;
                                        rdfs:label "atLocation"@en .
 
 
@@ -231,14 +231,6 @@ xsd:date rdf:type rdfs:Datatype .
                                            rdfs:label "abbreviation"@en .
 
 
-###  http://qudt.org/schema/qudt/value
-<http://qudt.org/schema/qudt/value> rdf:type owl:DatatypeProperty ;
-                                    rdfs:subPropertyOf rdf:value ;
-                                    rdfs:comment "This property identifies the value associated with a data structure. The value may be a scalar or a reference to another object. The disjoint sub-properties of this data:value distinguish between scalar values and object references."@en ;
-                                    rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt> ;
-                                    rdfs:label "value"@en .
-
-
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#value
 rdf:value rdf:type owl:DatatypeProperty ;
           rdfs:comment "Idiomatic property used for structured values"@en ;
@@ -286,49 +278,49 @@ These subteltlies are captured in the \"hasAdditionalContext\" property"""@en ;
 ###  http://qudt.org/schema/qudt/Unit
 <http://qudt.org/schema/qudt/Unit> rdf:type owl:Class ;
                                    rdfs:comment "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\\\(Q = nU\\\\)." ;
-                                   rdfs:isDefinedBy "http://qudt.org/schema/qudt/"^^xsd:anyURI ;
+                                   rdfs:isDefinedBy <http://qudt.org/schema/qudt/> ;
                                    rdfs:label "Unit" .
 
 
 ###  http://www.w3.org/2006/time#Instant
 <http://www.w3.org/2006/time#Instant> rdf:type owl:Class ;
                                       rdfs:comment "A temporal entity with zero extent or duration" ;
-                                      rdfs:isDefinedBy "http://www.w3.org/2006/time"^^xsd:anyURI ;
+                                      rdfs:isDefinedBy <http://www.w3.org/2006/time> ;
                                       rdfs:label "Time instant" .
 
 
 ###  http://www.w3.org/2006/time#TemporalEntity
 <http://www.w3.org/2006/time#TemporalEntity> rdf:type owl:Class ;
                                              rdfs:comment "A temporal interval or instant."^^xsd:anyURI ;
-                                             rdfs:isDefinedBy "http://www.w3.org/2006/time"^^xsd:anyURI ;
+                                             rdfs:isDefinedBy <http://www.w3.org/2006/time> ;
                                              rdfs:label "Temporal entity"^^xsd:anyURI .
 
 
 ###  http://www.w3.org/2008/05/skos#Concept
 <http://www.w3.org/2008/05/skos#Concept> rdf:type owl:Class ;
                                          rdfs:comment "An abstract idea or notion; a unit of thought." ;
-                                         rdfs:isDefinedBy "http://www.w3.org/2008/05/skos"^^xsd:anyURI ;
+                                         rdfs:isDefinedBy <http://www.w3.org/2008/05/skos> ;
                                          rdfs:label "Concept" .
 
 
 ###  http://www.w3.org/ns/prov#Agent
 <http://www.w3.org/ns/prov#Agent> rdf:type owl:Class ;
                                   rdfs:comment "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity." ;
-                                  rdfs:isDefinedBy "https://www.w3.org/ns/prov-o"^^xsd:anyURI ;
+                                  rdfs:isDefinedBy <https://www.w3.org/ns/prov-o> ;
                                   rdfs:label "Agent" .
 
 
 ###  http://www.w3.org/ns/prov#Entity
 <http://www.w3.org/ns/prov#Entity> rdf:type owl:Class ;
                                    rdfs:comment "An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary." ;
-                                   rdfs:isDefinedBy "https://www.w3.org/ns/prov-o"^^xsd:anyURI ;
+                                   rdfs:isDefinedBy <https://www.w3.org/ns/prov-o> ;
                                    rdfs:label "Entity" .
 
 
 ###  http://www.w3.org/ns/prov#Location
 <http://www.w3.org/ns/prov#Location> rdf:type owl:Class ;
                                      rdfs:comment "A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth." ;
-                                     rdfs:isDefinedBy "http://www.w3.org/ns/prov-0"^^xsd:anyURI ;
+                                     rdfs:isDefinedBy <https://www.w3.org/ns/prov-o> ;
                                      rdfs:label "Location" .
 
 
@@ -388,25 +380,29 @@ foaf:Organization rdf:type owl:Class .
 
 
 ###  https://www.abdn.ac.uk#this
-<https://www.abdn.ac.uk#this> rdf:type foaf:Organization ;
-                               foaf:homepage "https://www.abdn.ac.uk/" ;
-                               foaf:name "University of Aberdeen" .
-
-
-###  https://www.ox.ac.uk#this
-<https://www.ox.ac.uk#this> rdf:type foaf:Organization ;
-                               foaf:homepage "https://www.ox.ac.uk/" ;
-                               foaf:name "University of Oxford" .
+<https://www.abdn.ac.uk#this> rdf:type owl:NamedIndividual ,
+                                       foaf:Organization ;
+                              foaf:homepage "https://www.abdn.ac.uk/" ;
+                              foaf:name "University of Aberdeen" .
 
 
 ###  https://www.open.ac.uk#this
-<https://www.open.ac.uk#this> rdf:type foaf:Organization ;
+<https://www.open.ac.uk#this> rdf:type owl:NamedIndividual ,
+                                       foaf:Organization ;
                               foaf:homepage "https://www.open.ac.uk" ;
                               foaf:name "The Open University" .
 
 
+###  https://www.ox.ac.uk#this
+<https://www.ox.ac.uk#this> rdf:type owl:NamedIndividual ,
+                                     foaf:Organization ;
+                            foaf:homepage "https://www.ox.ac.uk/" ;
+                            foaf:name "University of Oxford" .
+
+
 ###  https://www.upm.es#this
-<https://www.upm.es#this> rdf:type foaf:Organization ;
+<https://www.upm.es#this> rdf:type owl:NamedIndividual ,
+                                   foaf:Organization ;
                           foaf:homepage "https://www.upm.es" ;
                           foaf:name "Universidad Politécnica de Madrid" .
 
@@ -415,20 +411,20 @@ foaf:Organization rdf:type owl:Class .
 #    Annotations
 #################################################################
 
-<https://orcid.org/0000-0003-0454-7145> org:memberOf <https://www.upm.es#this> ;
-        foaf:name "Daniel Garijo"@en .
+<https://orcid.org/0000-0001-6634-3266> org:memberOf <https://www.open.ac.uk#this> ;
+                                        foaf:name "Iman Naja"@en .
 
 
-<https://orcid.org/0000-0001-6634-3266> foaf:name "Iman Naja"@en ;
-      org:memberOf <https://www.open.ac.uk#this> .
+<https://orcid.org/0000-0001-6993-0618> org:memberOf <https://www.ox.ac.uk#this> ;
+                                        foaf:name "Stefano Germano"@en .
 
 
-<https://orcid.org/0000-0002-5477-287X> foaf:name "Milan Markovic"@en ;
-       org:memberOf <https://www.abdn.ac.uk#this> .
+<https://orcid.org/0000-0002-5477-287X> org:memberOf <https://www.abdn.ac.uk#this> ;
+                                        foaf:name "Milan Markovic"@en .
 
 
-<https://orcid.org/0000-0001-6993-0618> foaf:name "Stefano Germano"@en ;
-         org:memberOf <https://www.ox.ac.uk#this> .
+<https://orcid.org/0000-0003-0454-7145> foaf:name "Daniel Garijo"@en ;
+                                        org:memberOf <https://www.upm.es#this> .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

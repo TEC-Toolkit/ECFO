@@ -52,8 +52,7 @@
     "@value" : "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\\\(Q = nU\\\\)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "http://qudt.org/schema/qudt/"
+    "@id" : "http://qudt.org/schema/qudt/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Unit"
@@ -74,23 +73,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "http://qudt.org/schema/qudt/value",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "This property identifies the value associated with a data structure. The value may be a scalar or a reference to another object. The disjoint sub-properties of this data:value distinguish between scalar values and object references."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://qudt.org/2.1/schema/qudt"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "value"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
   } ]
 }, {
   "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML",
@@ -119,8 +101,7 @@
     "@value" : "A temporal entity with zero extent or duration"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "http://www.w3.org/2006/time"
+    "@id" : "http://www.w3.org/2006/time"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Time instant"
@@ -133,8 +114,7 @@
     "@value" : "A temporal interval or instant."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "http://www.w3.org/2006/time"
+    "@id" : "http://www.w3.org/2006/time"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
@@ -151,8 +131,7 @@
     "@id" : "http://www.w3.org/2006/time#TemporalEntity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "http://www.w3.org/2006/time"
+    "@id" : "http://www.w3.org/2006/time"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
@@ -172,8 +151,7 @@
     "@id" : "http://www.w3.org/2006/time#TemporalEntity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "http://www.w3.org/2006/time"
+    "@id" : "http://www.w3.org/2006/time"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -207,8 +185,7 @@
     "@value" : "An abstract idea or notion; a unit of thought."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "http://www.w3.org/2008/05/skos"
+    "@id" : "http://www.w3.org/2008/05/skos"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Concept"
@@ -229,8 +206,7 @@
     "@value" : "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "https://www.w3.org/ns/prov-o"
+    "@id" : "https://www.w3.org/ns/prov-o"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Agent"
@@ -242,8 +218,7 @@
     "@value" : "An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "https://www.w3.org/ns/prov-o"
+    "@id" : "https://www.w3.org/ns/prov-o"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Entity"
@@ -255,8 +230,7 @@
     "@value" : "A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "http://www.w3.org/ns/prov-0"
+    "@id" : "https://www.w3.org/ns/prov-o"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Location"
@@ -272,8 +246,7 @@
     "@id" : "http://www.w3.org/ns/prov#Entity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "https://www.w3.org/ns/prov-o"
+    "@id" : "https://www.w3.org/ns/prov-o"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -687,18 +660,6 @@
     "@value" : "University of Aberdeen"
   } ]
 }, {
-  "@id" : "https://www.ox.ac.uk#this",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://xmlns.com/foaf/0.1/Organization"
-  } ],
-  "http://xmlns.com/foaf/0.1/homepage" : [ {
-    "@value" : "https://www.ox.ac.uk/"
-  } ],
-  "http://xmlns.com/foaf/0.1/name" : [ {
-    "@value" : "University of Oxford"
-  } ]
-}, {
   "@id" : "https://www.open.ac.uk#this",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -709,6 +670,18 @@
   } ],
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@value" : "The Open University"
+  } ]
+}, {
+  "@id" : "https://www.ox.ac.uk#this",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Organization"
+  } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@value" : "https://www.ox.ac.uk/"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "University of Oxford"
   } ]
 }, {
   "@id" : "https://www.upm.es#this",
