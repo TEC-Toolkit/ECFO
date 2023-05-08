@@ -1,7 +1,56 @@
 <div id="changelog">
 <h2 id="changes" class="list">Changes from last version</h2>
 <h3 id="changeClass" class="list">Classes</h3>
-<details><summary><u>Added classes</u></summary>
+<details><summary><u>Modified classes</u></summary>
+<ul><li><a href="#http://www.w3.org/2006/time#Instant">http://www.w3.org/2006/time#Instant</a>
+<ul>
+<li>Added: rdfs:isDefinedBy http://www.w3.org/2006/time</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:isDefinedBy "http://www.w3.org/2006/time"^^xsd:anyURI</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/2006/time#TemporalEntity">http://www.w3.org/2006/time#TemporalEntity</a>
+<ul>
+<li>Added: rdfs:isDefinedBy http://www.w3.org/2006/time</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:isDefinedBy "http://www.w3.org/2006/time"^^xsd:anyURI</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/2008/05/skos#Concept">http://www.w3.org/2008/05/skos#Concept</a>
+<ul>
+<li>Added: rdfs:isDefinedBy http://www.w3.org/2008/05/skos</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:isDefinedBy "http://www.w3.org/2008/05/skos"^^xsd:anyURI</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/prov#Agent">http://www.w3.org/ns/prov#Agent</a>
+<ul>
+<li>Added: rdfs:isDefinedBy https://www.w3.org/ns/prov-o</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:isDefinedBy "https://www.w3.org/ns/prov-o"^^xsd:anyURI</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/prov#Entity">http://www.w3.org/ns/prov#Entity</a>
+<ul>
+<li>Added: rdfs:isDefinedBy https://www.w3.org/ns/prov-o</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:isDefinedBy "https://www.w3.org/ns/prov-o"^^xsd:anyURI</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/prov#Location">http://www.w3.org/ns/prov#Location</a>
+<ul>
+<li>Added: rdfs:isDefinedBy https://www.w3.org/ns/prov-o</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:isDefinedBy "http://www.w3.org/ns/prov-0"^^xsd:anyURI</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added classes</u></summary>
 <ul><li><a href="#http://qudt.org/schema/qudt/Unit">http://qudt.org/schema/qudt/Unit</a>
 </li>
 </ul></details><details><summary><u>Deleted classes</u></summary>
@@ -14,6 +63,30 @@
 <li>Added: rdfs:isDefinedBy http://purl.org/dc/elements/1.1/</li>
 <li>Added: rdfs:label "publisher"@en</li>
 <li>Added: rdfs:comment "An entity responsible for making the resource available."@en</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/2006/time#hasBeginning">http://www.w3.org/2006/time#hasBeginning</a>
+<ul>
+<li>Added: rdfs:isDefinedBy http://www.w3.org/2006/time</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:isDefinedBy "http://www.w3.org/2006/time"^^xsd:anyURI</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/2006/time#hasEnd">http://www.w3.org/2006/time#hasEnd</a>
+<ul>
+<li>Added: rdfs:isDefinedBy http://www.w3.org/2006/time</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:isDefinedBy "http://www.w3.org/2006/time"^^xsd:anyURI</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/ns/prov#atLocation">http://www.w3.org/ns/prov#atLocation</a>
+<ul>
+<li>Added: rdfs:isDefinedBy https://www.w3.org/ns/prov-o</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:isDefinedBy "https://www.w3.org/ns/prov-o"^^xsd:anyURI</li>
 </ul>
 </li>
 <li><a href="#hasSourceUnit">https://w3id.org/ecfo#hasSourceUnit</a>
@@ -34,18 +107,21 @@
 </li>
 </ul></details><h3 id="changeDataProp" class="list">Data Properties</h3>
 <details><summary><u>Modified data properties</u></summary>
-<ul><li><a href="#http://qudt.org/schema/qudt/value">http://qudt.org/schema/qudt/value</a>
-<ul>
-<li>Added: rdfs:isDefinedBy http://qudt.org/2.1/schema/qudt</li>
-<li>Added: rdfs:comment "This property identifies the value associated with a data structure. The value may be a scalar or a reference to another object. The disjoint sub-properties of this data:value distinguish between scalar values and object references."@en</li>
-<li>Added: rdfs:label "value"@en</li>
-</ul>
-</li>
-<li><a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#value">http://www.w3.org/1999/02/22-rdf-syntax-ns#value</a>
+<ul><li><a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#value">http://www.w3.org/1999/02/22-rdf-syntax-ns#value</a>
 <ul>
 <li>Added: rdfs:isDefinedBy http://www.w3.org/1999/02/22-rdf-syntax-ns#</li>
 <li>Added: rdfs:label "value"@en</li>
 <li>Added: rdfs:comment "Idiomatic property used for structured values"@en</li>
+</ul>
+</li>
+<li><a href="#hasAdditionalContext">https://w3id.org/ecfo#hasAdditionalContext</a>
+<ul>
+<li>Added: rdfs:comment "Conversion factors often have subtelties that contextualize the emission source. For example the emission source may be a transportation method (car), but additional context may indicate that the CF is for \"large cars\", or lars with more than 120 horse power.
+These subteltlies are captured in the \"hasAdditionalContext\" property"@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Conversion factors often have subtelties that contextualize the emission source. For example the emission source may be a transportation method (car), but additional context may indicate that the CF is for \"large cars\", or lars with more than 120 horse power.
+These subteltlies are captured in the \"hasAdditionalContext\" property"@en</li>
 </ul>
 </li>
 </ul></details><details><summary><u>Added data properties</u></summary>
@@ -61,5 +137,8 @@
 <li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
 <li>Added: Domain https://w3id.org/ecfo#EmissionConversionFactor</li>
 </ul>
+</li>
+</ul></details><details><summary><u>Deleted data properties</u></summary>
+<ul><li><a href="#http://qudt.org/schema/qudt/value">http://qudt.org/schema/qudt/value</a>
 </li>
 </ul></details></div>

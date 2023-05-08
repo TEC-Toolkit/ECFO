@@ -8,14 +8,18 @@
 <https://w3id.org/ecfo> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-6993-0618> .
 <https://w3id.org/ecfo> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-5477-287X> .
 <https://w3id.org/ecfo> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0003-0454-7145> .
+<https://w3id.org/ecfo> <http://purl.org/dc/terms/issued> "May 8th, 2023"@en .
 <https://w3id.org/ecfo> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
-<https://w3id.org/ecfo> <http://purl.org/dc/terms/modified> "May 3rd, 2023"@en .
+<https://w3id.org/ecfo> <http://purl.org/dc/terms/modified> "May 8th, 2023"@en .
+<https://w3id.org/ecfo> <http://purl.org/dc/terms/publisher> "TEC-Toolkit on Github"@en .
 <https://w3id.org/ecfo> <http://purl.org/ontology/bibo/status> "TEC Toolkit specification (stable)"@en .
 <https://w3id.org/ecfo> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ecfo"@en .
 <https://w3id.org/ecfo> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/ecfo#" .
 <https://w3id.org/ecfo> <http://www.w3.org/2000/01/rdf-schema#comment> "1.0.0 release of the Emission Conversion Factor Ontology"@en .
 <https://w3id.org/ecfo> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/ecfo/0.0.2> .
 <https://w3id.org/ecfo> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0"@en .
+<https://w3id.org/ecfo> <https://schema.org/includedInDataCatalog> <https://lov.linkeddata.es/dataset/lov/vocabs/ecfo> .
+<https://w3id.org/ecfo> <https://schema.org/logo> <https://raw.githubusercontent.com/TEC-Toolkit/Emission-Conversion-Factors-Ontology/main/logos/Logo%20ECFO.png?token=GHSAT0AAAAAACCJOK27ICC6PGICWLTTLJDIZCZG76Q> .
 # 
 # 
 # #################################################################
@@ -43,11 +47,17 @@
 # http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/modified
 <http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/ontology/bibo/status
 <http://purl.org/ontology/bibo/status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -70,6 +80,9 @@
 # 
 # http://xmlns.com/foaf/0.1/name
 <http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/includedInDataCatalog
+<https://schema.org/includedInDataCatalog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # https://schema.org/logo
 <https://schema.org/logo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -232,7 +245,7 @@
 <https://w3id.org/ecfo#hasAdditionalContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/ecfo#hasAdditionalContext> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ecfo#EmissionConversionFactor> .
 <https://w3id.org/ecfo#hasAdditionalContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/ecfo#hasAdditionalContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Conversion factors often have subtelties that contextualize the emission source. For example the emission source may be a transportation method (car), but additional context may indicate that the CF is for \"large cars\", or lars with more than 120 horse power.\nThese subteltlies are captured in the \"hasAdditionalContext\" property"@en .
+<https://w3id.org/ecfo#hasAdditionalContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Conversion factors often have subtelties that contextualize the emission source. For example the emission source may be a transportation method (car), but additional context may indicate that the CF is for \"large cars\", or lars with more than 120 horse power.\r\nThese subteltlies are captured in the \"hasAdditionalContext\" property"@en .
 <https://w3id.org/ecfo#hasAdditionalContext> <http://www.w3.org/2000/01/rdf-schema#label> "has additional context"@en .
 # 
 # https://w3id.org/ecfo#hasUsageNotes
@@ -390,4 +403,4 @@
 <https://orcid.org/0000-0003-0454-7145> <http://www.w3.org/ns/org#memberOf> <https://www.upm.es#this> .
 <https://orcid.org/0000-0003-0454-7145> <http://xmlns.com/foaf/0.1/name> "Daniel Garijo"@en .
 # 
-# Generated by the OWL API (version 5.1.18.2021-07-30T21:49:07Z) https://github.com/owlcs/owlapi/
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -31,10 +31,16 @@
   "@id" : "http://purl.org/dc/terms/description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/dc/terms/issued",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/terms/license",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/publisher",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/ontology/bibo/status",
@@ -321,6 +327,9 @@
     "@value" : "Daniel Garijo"
   } ]
 }, {
+  "@id" : "https://schema.org/includedInDataCatalog",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "https://schema.org/logo",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -365,12 +374,20 @@
   }, {
     "@id" : "https://orcid.org/0000-0003-0454-7145"
   } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@language" : "en",
+    "@value" : "May 8th, 2023"
+  } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@language" : "en",
-    "@value" : "May 3rd, 2023"
+    "@value" : "May 8th, 2023"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@language" : "en",
+    "@value" : "TEC-Toolkit on Github"
   } ],
   "http://purl.org/ontology/bibo/status" : [ {
     "@language" : "en",
@@ -396,6 +413,12 @@
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
     "@value" : "1.0.0"
+  } ],
+  "https://schema.org/includedInDataCatalog" : [ {
+    "@id" : "https://lov.linkeddata.es/dataset/lov/vocabs/ecfo"
+  } ],
+  "https://schema.org/logo" : [ {
+    "@id" : "https://raw.githubusercontent.com/TEC-Toolkit/Emission-Conversion-Factors-Ontology/main/logos/Logo%20ECFO.png?token=GHSAT0AAAAAACCJOK27ICC6PGICWLTTLJDIZCZG76Q"
   } ]
 }, {
   "@id" : "https://w3id.org/ecfo#ChemicalCompound",
@@ -482,7 +505,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Conversion factors often have subtelties that contextualize the emission source. For example the emission source may be a transportation method (car), but additional context may indicate that the CF is for \"large cars\", or lars with more than 120 horse power.\nThese subteltlies are captured in the \"hasAdditionalContext\" property"
+    "@value" : "Conversion factors often have subtelties that contextualize the emission source. For example the emission source may be a transportation method (car), but additional context may indicate that the CF is for \"large cars\", or lars with more than 120 horse power.\r\nThese subteltlies are captured in the \"hasAdditionalContext\" property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/ecfo#EmissionConversionFactor"

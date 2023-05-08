@@ -22,18 +22,7 @@
         "value" : "https://w3id.org/ecfo/0.0.2",
         "type" : "iri"
       } ],
-      "license" : [ {
-        "identifier" : "license",
-        "language" : "undefined",
-        "value" : "https://creativecommons.org/licenses/by/4.0/",
-        "type" : "iri"
-      } ],
       "creator" : [ {
-        "identifier" : "creator",
-        "language" : "undefined",
-        "value" : "https://orcid.org/0000-0001-6993-0618",
-        "type" : "iri"
-      }, {
         "identifier" : "creator",
         "language" : "undefined",
         "value" : "https://orcid.org/0000-0003-0454-7145",
@@ -41,36 +30,23 @@
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "https://orcid.org/0000-0002-5477-287X",
+        "value" : "https://orcid.org/0000-0001-6993-0618",
         "type" : "iri"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
         "value" : "https://orcid.org/0000-0001-6634-3266",
         "type" : "iri"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0002-5477-287X",
+        "type" : "iri"
       } ],
       "created" : [ {
         "identifier" : "created",
         "language" : "en",
         "value" : "April 20th, 2023",
-        "type" : "label"
-      } ],
-      "preferredNamespacePrefix" : [ {
-        "identifier" : "preferredNamespacePrefix",
-        "language" : "en",
-        "value" : "ecfo",
-        "type" : "label"
-      } ],
-      "modified" : [ {
-        "identifier" : "modified",
-        "language" : "en",
-        "value" : "May 3rd, 2023",
-        "type" : "label"
-      } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "https://w3id.org/ecfo#",
         "type" : "label"
       } ],
       "versionInfo" : [ {
@@ -91,6 +67,54 @@
         "value" : "The Emission Conversion Factor Ontology",
         "type" : "label"
       } ],
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "includedInDataCatalog" : [ {
+        "identifier" : "includedInDataCatalog",
+        "language" : "undefined",
+        "value" : "https://lov.linkeddata.es/dataset/lov/vocabs/ecfo",
+        "type" : "iri"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "en",
+        "value" : "ecfo",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "en",
+        "value" : "TEC-Toolkit on Github",
+        "type" : "label"
+      } ],
+      "logo" : [ {
+        "identifier" : "logo",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/TEC-Toolkit/Emission-Conversion-Factors-Ontology/main/logos/Logo%20ECFO.png?token=GHSAT0AAAAAACCJOK27ICC6PGICWLTTLJDIZCZG76Q",
+        "type" : "iri"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "en",
+        "value" : "May 8th, 2023",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ecfo#",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "en",
+        "value" : "May 8th, 2023",
+        "type" : "label"
+      } ],
       "status" : [ {
         "identifier" : "status",
         "language" : "en",
@@ -101,67 +125,64 @@
   },
   "namespace" : [ ],
   "class" : [ {
-    "id" : "2",
+    "id" : "5",
     "type" : "owl:Class"
   }, {
-    "id" : "8",
-    "type" : "owl:Class"
+    "id" : "6",
+    "type" : "rdfs:Datatype"
   }, {
-    "id" : "1",
-    "type" : "owl:Class"
+    "id" : "11",
+    "type" : "rdfs:Datatype"
   }, {
-    "id" : "9",
-    "type" : "owl:Class"
+    "id" : "10",
+    "type" : "owl:Thing"
   }, {
     "id" : "16",
-    "type" : "owl:Class"
+    "type" : "owl:Thing"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:Literal"
   }, {
     "id" : "19",
     "type" : "owl:Class"
   }, {
+    "id" : "20",
+    "type" : "rdfs:Literal"
+  }, {
     "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "24",
+    "id" : "26",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "27",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "26",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "14",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "18",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "31",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "32",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "35",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "36",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "11",
+    "id" : "28",
     "type" : "owl:Class"
   }, {
-    "id" : "22",
+    "id" : "30",
     "type" : "owl:Class"
   }, {
-    "id" : "7",
+    "id" : "24",
     "type" : "owl:Class"
   }, {
-    "id" : "21",
+    "id" : "15",
     "type" : "owl:Class"
   }, {
-    "id" : "5",
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -186,7 +207,7 @@
       "iri" : "https://w3id.org/ecfo#Scope2",
       "baseIri" : "https://w3id.org/ecfo",
       "comment" : {
-        "undefined" : "Scope 2 (energy indirect) emissions are those released into the atmosphere that are associated with your consumption of purchased electricity, heat, steam and cooling. These indirect emissions are a consequence of your organisationâ€™s energy use, but occur at sources you do not own or control."
+        "undefined" : "Scope 2 (energy indirect) emissions are those released into the atmosphere that are associated with your consumption of purchased electricity, heat, steam and cooling. These indirect emissions are a consequence of your organisation’s energy use, but occur at sources you do not own or control."
       },
       "labels" : {
         "IRI-based" : "Scope2",
@@ -206,7 +227,42 @@
     "comment" : {
       "undefined" : "Type of emissions a company creates in its own operations and in its wider 'value chain'. Typically emissions fall under three categories - Scope 1, Scope 2 and Scope 3."
     },
-    "id" : "2"
+    "id" : "5"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "6",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "11",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "10",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "16",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "17",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
   }, {
     "iri" : "http://qudt.org/schema/qudt/Unit",
     "baseIri" : "http://qudt.org/schema/qudt",
@@ -216,7 +272,7 @@
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "http://qudt.org/schema/qudt/",
-        "type" : "label"
+        "type" : "iri"
       } ]
     },
     "label" : {
@@ -227,7 +283,14 @@
       "undefined" : "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\\\(Q = nU\\\\)."
     },
     "attributes" : [ "external" ],
-    "id" : "8"
+    "id" : "19"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "20",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
   }, {
     "iri" : "http://www.w3.org/ns/prov#Entity",
     "baseIri" : "http://www.w3.org/ns/prov",
@@ -237,19 +300,33 @@
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "https://www.w3.org/ns/prov-o",
-        "type" : "label"
+        "type" : "iri"
       } ]
     },
     "label" : {
       "IRI-based" : "Entity",
       "undefined" : "Entity"
     },
-    "subClasses" : [ "4" ],
+    "subClasses" : [ "1" ],
     "comment" : {
       "undefined" : "An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary."
     },
     "attributes" : [ "external" ],
-    "id" : "1"
+    "id" : "4"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "26",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "date"
+    }
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/Organization",
     "baseIri" : "http://xmlns.com/foaf/0.1",
@@ -264,7 +341,7 @@
         "name" : [ {
           "identifier" : "name",
           "language" : "undefined",
-          "value" : "Universidad PolitÃ©cnica de Madrid",
+          "value" : "Universidad Politécnica de Madrid",
           "type" : "label"
         } ],
         "homepage" : [ {
@@ -298,8 +375,8 @@
         "IRI-based" : "this"
       }
     }, {
-      "iri" : "https://www.cs.ox.ac.uk#this",
-      "baseIri" : "https://www.cs.ox.ac.uk",
+      "iri" : "https://www.ox.ac.uk#this",
+      "baseIri" : "https://www.ox.ac.uk",
       "annotations" : {
         "name" : [ {
           "identifier" : "name",
@@ -310,7 +387,7 @@
         "homepage" : [ {
           "identifier" : "homepage",
           "language" : "undefined",
-          "value" : "https://www.cs.ox.ac.uk",
+          "value" : "https://www.ox.ac.uk/",
           "type" : "label"
         } ]
       },
@@ -339,7 +416,71 @@
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "9"
+    "id" : "28"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Location",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/ns/prov-o",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Location",
+      "undefined" : "Location"
+    },
+    "comment" : {
+      "undefined" : "A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth."
+    },
+    "attributes" : [ "external" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://www.w3.org/2008/05/skos#Concept",
+    "baseIri" : "http://www.w3.org/2008/05/skos",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2008/05/skos",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Concept",
+      "undefined" : "Concept"
+    },
+    "subClasses" : [ "23" ],
+    "comment" : {
+      "undefined" : "An abstract idea or notion; a unit of thought."
+    },
+    "attributes" : [ "external" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://www.w3.org/2006/time#Instant",
+    "baseIri" : "http://www.w3.org/2006/time",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2006/time",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Instant",
+      "undefined" : "Time instant"
+    },
+    "comment" : {
+      "undefined" : "A temporal entity with zero extent or duration"
+    },
+    "attributes" : [ "external" ],
+    "id" : "15"
   }, {
     "iri" : "https://w3id.org/ecfo#ChemicalCompound",
     "baseIri" : "https://w3id.org/ecfo",
@@ -351,168 +492,7 @@
     "comment" : {
       "en" : "Pure chemical substance consisting of two or more different chemical elements (source: https://www.wikidata.org/wiki/Q11173)"
     },
-    "id" : "16"
-  }, {
-    "iri" : "http://www.w3.org/ns/prov#Agent",
-    "baseIri" : "http://www.w3.org/ns/prov",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://www.w3.org/ns/prov-o",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Agent",
-      "undefined" : "Agent"
-    },
-    "comment" : {
-      "undefined" : "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity."
-    },
-    "attributes" : [ "external" ],
-    "id" : "19"
-  }, {
-    "iri" : "https://w3id.org/ecfo#EmissionConversionFactor",
-    "baseIri" : "https://w3id.org/ecfo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "EmissionConversionFactor",
-      "undefined" : "Emission Conversion Factor"
-    },
-    "comment" : {
-      "undefined" : "A concept representing the coefficient value used in greenhouse gas (GHG) emission calculations (activity data x emission conversion factor = GHG emissions)  and additional metadata (e.g., applicable location, publisher, etc.)."
-    },
-    "id" : "4",
-    "superClasses" : [ "1" ]
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "24",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "27",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "26",
-    "label" : {
-      "undefined" : "Thing"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "14",
-    "label" : {
-      "undefined" : "Thing"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "18",
-    "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "31",
-    "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "32",
-    "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "35",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#date",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "36",
-    "label" : {
-      "IRI-based" : "date"
-    }
-  }, {
-    "iri" : "http://www.w3.org/ns/prov#Location",
-    "baseIri" : "http://www.w3.org/ns/prov",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/prov-0",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Location",
-      "undefined" : "Location"
-    },
-    "comment" : {
-      "undefined" : "A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth."
-    },
-    "attributes" : [ "external" ],
-    "id" : "11"
-  }, {
-    "iri" : "http://www.w3.org/2008/05/skos#Concept",
-    "baseIri" : "http://www.w3.org/2008/05/skos",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/2008/05/skos",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Concept",
-      "undefined" : "Concept"
-    },
-    "subClasses" : [ "21" ],
-    "comment" : {
-      "undefined" : "An abstract idea or notion; a unit of thought."
-    },
-    "attributes" : [ "external" ],
-    "id" : "22"
-  }, {
-    "iri" : "http://www.w3.org/2006/time#Instant",
-    "baseIri" : "http://www.w3.org/2006/time",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/2006/time",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Instant",
-      "undefined" : "Time instant"
-    },
-    "comment" : {
-      "undefined" : "A temporal entity with zero extent or duration"
-    },
-    "attributes" : [ "external" ],
-    "id" : "7"
+    "id" : "2"
   }, {
     "iri" : "https://w3id.org/ecfo#Tag",
     "baseIri" : "https://w3id.org/ecfo",
@@ -524,8 +504,8 @@
     "comment" : {
       "undefined" : "A generic class to describe a category/tag that ecfo:EmissionFactor. Use ecfo:hasTag to link the category/tag and rdf:value to provide the name of the category. A single ecfo:EmissionFactor may refer to multiple tags. To identify individual conversion factors a union of tags should be considered."
     },
-    "id" : "21",
-    "superClasses" : [ "22" ]
+    "id" : "23",
+    "superClasses" : [ "24" ]
   }, {
     "iri" : "http://www.w3.org/2006/time#TemporalEntity",
     "baseIri" : "http://www.w3.org/2006/time",
@@ -535,7 +515,7 @@
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "http://www.w3.org/2006/time",
-        "type" : "label"
+        "type" : "iri"
       } ]
     },
     "label" : {
@@ -546,7 +526,41 @@
       "undefined" : "A temporal interval or instant."
     },
     "attributes" : [ "external" ],
-    "id" : "5"
+    "id" : "8"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Agent",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/ns/prov-o",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Agent",
+      "undefined" : "Agent"
+    },
+    "comment" : {
+      "undefined" : "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity."
+    },
+    "attributes" : [ "external" ],
+    "id" : "39"
+  }, {
+    "iri" : "https://w3id.org/ecfo#EmissionConversionFactor",
+    "baseIri" : "https://w3id.org/ecfo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EmissionConversionFactor",
+      "undefined" : "Emission Conversion Factor"
+    },
+    "comment" : {
+      "undefined" : "A concept representing the coefficient value used in greenhouse gas (GHG) emission calculations (activity data x emission conversion factor = GHG emissions)  and additional metadata (e.g., applicable location, publisher, etc.)."
+    },
+    "id" : "1",
+    "superClasses" : [ "4" ]
   } ],
   "property" : [ {
     "id" : "0",
@@ -555,70 +569,81 @@
     "id" : "3",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "6",
+    "id" : "7",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "10",
+    "id" : "9",
     "type" : "owl:objectProperty"
-  }, {
-    "id" : "13",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "15",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "17",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "20",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "23",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "25",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "28",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "29",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "30",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "33",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "34",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "37",
-    "type" : "owl:datatypeProperty"
   }, {
     "id" : "12",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "38",
+    "id" : "13",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "39",
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "31",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "32",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "33",
     "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "35",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "37",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "40",
     "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "41",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "42",
-    "type" : "owl:datatypeProperty"
   } ],
   "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/ecfo#hasEmissionTarget",
+    "baseIri" : "https://w3id.org/ecfo",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasEmissionTarget",
+      "en" : "has emission target"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Target chemical compound of a conversion factor (e.g., CO2e). The target compund is associated with the target unit"
+    },
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
     "iri" : "http://www.w3.org/ns/prov#wasDerivedFrom",
     "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "1",
+    "range" : "4",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -631,75 +656,170 @@
       "IRI-based" : "wasDerivedFrom",
       "en" : "was derived from"
     },
-    "domain" : "1",
+    "domain" : "4",
     "comment" : {
       "en" : "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity."
     },
-    "attributes" : [ "object", "external" ],
-    "id" : "0"
+    "attributes" : [ "external", "object" ],
+    "id" : "3"
   }, {
     "iri" : "https://w3id.org/ecfo#hasApplicablePeriod",
     "baseIri" : "https://w3id.org/ecfo",
-    "range" : "5",
+    "range" : "8",
     "label" : {
       "IRI-based" : "hasApplicablePeriod",
       "en" : "has applicable period"
     },
-    "domain" : "4",
+    "domain" : "1",
     "comment" : {
       "en" : "A time period for which the emission conversion factor is considered to be most relevant."
     },
     "attributes" : [ "object" ],
-    "id" : "3"
+    "id" : "7"
+  }, {
+    "iri" : "https://w3id.org/ecfo#hasEmissionSource",
+    "baseIri" : "https://w3id.org/ecfo",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "hasEmissionSource",
+      "en" : "has emission source"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Source of the emission in a conversion factor (e.g., butane, refrigerator, herd of animals, etc.)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "9"
+  }, {
+    "iri" : "https://w3id.org/ecfo#hasScope",
+    "baseIri" : "https://w3id.org/ecfo",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "hasScope",
+      "en" : "has scope"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "A property linking conversion factor to the description of the emission scope."
+    },
+    "attributes" : [ "object" ],
+    "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/ecfo#hasUsageNotes",
+    "baseIri" : "https://w3id.org/ecfo",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "hasUsageNotes",
+      "en" : "has usage notes"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Property used to describe any limitations, disclaimers or usage notes associated with a CF. For example \"This CF is an estimation based on local data and should be superseeded by governmental sources\""
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "13"
   }, {
     "iri" : "http://www.w3.org/2006/time#hasBeginning",
     "baseIri" : "http://www.w3.org/2006/time",
-    "range" : "7",
+    "range" : "15",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "http://www.w3.org/2006/time",
-        "type" : "label"
+        "type" : "iri"
       } ]
     },
     "label" : {
       "IRI-based" : "hasBeginning",
       "undefined" : "has beginning"
     },
-    "domain" : "5",
+    "domain" : "8",
     "comment" : {
       "undefined" : "Beginning of a temporal entity."
     },
-    "attributes" : [ "object", "external" ],
-    "id" : "6"
+    "attributes" : [ "external", "object" ],
+    "id" : "14"
+  }, {
+    "iri" : "https://w3id.org/ecfo#hasSourceUnit",
+    "baseIri" : "https://w3id.org/ecfo",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasSourceUnit",
+      "en" : "has source unit"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The unit corresponding to the source data that is multiplied by the ecfo:ConversionFactor"
+    },
+    "attributes" : [ "object" ],
+    "id" : "18"
+  }, {
+    "range" : "4",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "21"
+  }, {
+    "range" : "24",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "22"
+  }, {
+    "iri" : "https://w3id.org/ecfo#hasTag",
+    "baseIri" : "https://w3id.org/ecfo",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "hasTag",
+      "en" : "has tag"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "A property to assign a specific category/tag to ecfo:ConversionFactor."
+    },
+    "attributes" : [ "object" ],
+    "id" : "25"
   }, {
     "iri" : "http://www.w3.org/ns/prov#atLocation",
     "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "11",
+    "range" : "30",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "https://www.w3.org/ns/prov-o",
-        "type" : "label"
+        "type" : "iri"
       } ]
     },
     "label" : {
       "IRI-based" : "atLocation",
       "en" : "atLocation"
     },
-    "domain" : "1",
-    "subproperty" : [ "12" ],
+    "domain" : "4",
+    "subproperty" : [ "31" ],
     "comment" : {
       "en" : "A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth."
     },
-    "attributes" : [ "object", "external" ],
-    "id" : "10"
+    "attributes" : [ "external", "object" ],
+    "id" : "29"
+  }, {
+    "iri" : "https://w3id.org/ecfo#hasApplicableLocation",
+    "baseIri" : "https://w3id.org/ecfo",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "hasApplicableLocation",
+      "en" : "has applicable location"
+    },
+    "superproperty" : [ "29" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "A geographic area (e.g., a country) or a physical location (e.g., a farm) to which a specific ecfo:ConversionFactor may be applied."
+    },
+    "attributes" : [ "object" ],
+    "id" : "31"
   }, {
     "iri" : "http://purl.org/dc/elements/1.1/publisher",
     "baseIri" : "http://purl.org/dc/elements/1.1",
-    "range" : "14",
+    "range" : "16",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -712,191 +832,16 @@
       "IRI-based" : "publisher",
       "en" : "publisher"
     },
-    "domain" : "14",
+    "domain" : "16",
     "comment" : {
       "en" : "An entity responsible for making the resource available."
     },
-    "attributes" : [ "object", "external" ],
-    "id" : "13"
-  }, {
-    "iri" : "http://www.w3.org/2006/time#hasEnd",
-    "baseIri" : "http://www.w3.org/2006/time",
-    "range" : "7",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/2006/time",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasEnd",
-      "en" : "has end"
-    },
-    "domain" : "5",
-    "comment" : {
-      "en" : "End of a temporal entity."
-    },
-    "attributes" : [ "object", "external" ],
-    "id" : "15"
-  }, {
-    "iri" : "https://schema.org/molecularFormula",
-    "baseIri" : "https://schema.org",
-    "range" : "18",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://schema.org/",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "molecularFormula",
-      "en" : "molecular formula"
-    },
-    "domain" : "14",
-    "comment" : {
-      "en" : "The empirical formula is the simplest whole number ratio of all the atoms in a molecule."
-    },
-    "attributes" : [ "datatype", "external" ],
-    "id" : "17"
-  }, {
-    "range" : "22",
-    "domain" : "21",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "20"
-  }, {
-    "iri" : "https://w3id.org/ecfo#hasEmissionTarget",
-    "baseIri" : "https://w3id.org/ecfo",
-    "range" : "16",
-    "label" : {
-      "IRI-based" : "hasEmissionTarget",
-      "en" : "has emission target"
-    },
-    "domain" : "4",
-    "comment" : {
-      "en" : "Target chemical compound of a conversion factor (e.g., CO2e). The target compund is associated with the target unit"
-    },
-    "attributes" : [ "object" ],
-    "id" : "23"
-  }, {
-    "iri" : "https://w3id.org/ecfo#hasEmissionSource",
-    "baseIri" : "https://w3id.org/ecfo",
-    "range" : "26",
-    "label" : {
-      "IRI-based" : "hasEmissionSource",
-      "en" : "has emission source"
-    },
-    "domain" : "4",
-    "comment" : {
-      "en" : "Source of the emission in a conversion factor (e.g., butane, refrigerator, herd of animals, etc.)."
-    },
-    "attributes" : [ "object" ],
-    "id" : "25"
-  }, {
-    "iri" : "https://w3id.org/ecfo#hasUsageNotes",
-    "baseIri" : "https://w3id.org/ecfo",
-    "range" : "27",
-    "label" : {
-      "IRI-based" : "hasUsageNotes",
-      "en" : "has usage notes"
-    },
-    "domain" : "4",
-    "comment" : {
-      "en" : "Property used to describe any limitations, disclaimers or usage notes associated with a CF. For example \"This CF is an estimation based on local data and should be superseeded by governmental sources\""
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "28"
-  }, {
-    "iri" : "https://w3id.org/ecfo#hasScope",
-    "baseIri" : "https://w3id.org/ecfo",
-    "range" : "2",
-    "label" : {
-      "IRI-based" : "hasScope",
-      "en" : "has scope"
-    },
-    "domain" : "4",
-    "comment" : {
-      "en" : "A property linking conversion factor to the description of the emission scope."
-    },
-    "attributes" : [ "object" ],
-    "id" : "29"
-  }, {
-    "iri" : "https://w3id.org/ecfo#hasSourceUnit",
-    "baseIri" : "https://w3id.org/ecfo",
-    "range" : "8",
-    "label" : {
-      "IRI-based" : "hasSourceUnit",
-      "en" : "has source unit"
-    },
-    "domain" : "4",
-    "comment" : {
-      "en" : "The unit corresponding to the source data that is multiplied by the ecfo:ConversionFactor"
-    },
-    "attributes" : [ "object" ],
-    "id" : "30"
-  }, {
-    "range" : "1",
-    "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "33"
-  }, {
-    "iri" : "https://w3id.org/ecfo#hasTag",
-    "baseIri" : "https://w3id.org/ecfo",
-    "range" : "21",
-    "label" : {
-      "IRI-based" : "hasTag",
-      "en" : "has tag"
-    },
-    "domain" : "4",
-    "comment" : {
-      "en" : "A property to assign a specific category/tag to ecfo:ConversionFactor."
-    },
-    "attributes" : [ "object" ],
-    "id" : "34"
-  }, {
-    "iri" : "http://qudt.org/schema/qudt/value",
-    "baseIri" : "http://qudt.org/schema/qudt",
-    "range" : "31",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://qudt.org/2.1/schema/qudt",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "value",
-      "en" : "value"
-    },
-    "domain" : "14",
-    "comment" : {
-      "en" : "This property identifies the value associated with a data structure. The value may be a scalar or a reference to another object. The disjoint sub-properties of this data:value distinguish between scalar values and object references."
-    },
-    "attributes" : [ "datatype", "external" ],
-    "id" : "37"
-  }, {
-    "iri" : "https://w3id.org/ecfo#hasApplicableLocation",
-    "baseIri" : "https://w3id.org/ecfo",
-    "range" : "26",
-    "label" : {
-      "IRI-based" : "hasApplicableLocation",
-      "en" : "has applicable location"
-    },
-    "superproperty" : [ "10" ],
-    "domain" : "4",
-    "comment" : {
-      "en" : "A geographic area (e.g., a country) or a physical location (e.g., a farm) to which a specific ecfo:ConversionFactor may be applied."
-    },
-    "attributes" : [ "object" ],
-    "id" : "12"
+    "attributes" : [ "external", "object" ],
+    "id" : "32"
   }, {
     "iri" : "http://qudt.org/schema/qudt/abbreviation",
     "baseIri" : "http://qudt.org/schema/qudt",
-    "range" : "35",
+    "range" : "26",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -909,30 +854,52 @@
       "IRI-based" : "abbreviation",
       "en" : "abbreviation"
     },
-    "domain" : "14",
+    "domain" : "16",
     "comment" : {
       "en" : "An abbreviation for a unit is a short ASCII string that is used in place of the full name for the unit in contexts where non-ASCII characters would be problematic, or where using the abbreviation will enhance readability. When a power of abase unit needs to be expressed, such as squares this can be done using abbreviations rather than symbols. For example, sq ft means square foot, and cu ft means cubic foot."
     },
-    "attributes" : [ "datatype", "external" ],
-    "id" : "38"
+    "attributes" : [ "external", "datatype" ],
+    "id" : "33"
+  }, {
+    "iri" : "http://www.w3.org/2006/time#hasEnd",
+    "baseIri" : "http://www.w3.org/2006/time",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2006/time",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasEnd",
+      "en" : "has end"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "End of a temporal entity."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "34"
   }, {
     "iri" : "https://w3id.org/ecfo#hasAdditionalContext",
     "baseIri" : "https://w3id.org/ecfo",
-    "range" : "24",
+    "range" : "6",
     "label" : {
       "IRI-based" : "hasAdditionalContext",
       "en" : "has additional context"
     },
-    "domain" : "4",
+    "domain" : "1",
     "comment" : {
-      "en" : "Conversion factors often have subtelties that contextualize the emission source. For example the emission source may be a transportation method (car), but additional context may indicate that the CF is for \"large cars\", or lars with more than 120 horse power.\nThese subteltlies are captured in the \"hasAdditionalContext\" property"
+      "en" : "Conversion factors often have subtelties that contextualize the emission source. For example the emission source may be a transportation method (car), but additional context may indicate that the CF is for \"large cars\", or lars with more than 120 horse power.\r\nThese subteltlies are captured in the \"hasAdditionalContext\" property"
     },
     "attributes" : [ "datatype" ],
-    "id" : "39"
+    "id" : "35"
   }, {
     "iri" : "http://www.w3.org/2006/time#inXSDDate",
     "baseIri" : "http://www.w3.org/2006/time",
-    "range" : "36",
+    "range" : "27",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -945,30 +912,52 @@
       "IRI-based" : "inXSDDate",
       "undefined" : "in XSD date"
     },
-    "domain" : "7",
+    "domain" : "15",
     "comment" : {
       "undefined" : "Position of an instant, expressed using xsd:date"
     },
-    "attributes" : [ "datatype", "external" ],
-    "id" : "40"
+    "attributes" : [ "external", "datatype" ],
+    "id" : "36"
+  }, {
+    "iri" : "https://schema.org/molecularFormula",
+    "baseIri" : "https://schema.org",
+    "range" : "17",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "molecularFormula",
+      "en" : "molecular formula"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "The empirical formula is the simplest whole number ratio of all the atoms in a molecule."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "37"
   }, {
     "iri" : "https://w3id.org/ecfo#hasTargetUnit",
     "baseIri" : "https://w3id.org/ecfo",
-    "range" : "8",
+    "range" : "19",
     "label" : {
       "IRI-based" : "hasTargetUnit",
       "en" : "has target unit"
     },
-    "domain" : "4",
+    "domain" : "1",
     "comment" : {
       "en" : "The unit corresponding to the result of multiplying input data by the ecfo:ConversionFactor"
     },
     "attributes" : [ "object" ],
-    "id" : "41"
+    "id" : "38"
   }, {
     "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
     "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
-    "range" : "32",
+    "range" : "20",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -981,11 +970,11 @@
       "IRI-based" : "value",
       "en" : "value"
     },
-    "domain" : "14",
+    "domain" : "16",
     "comment" : {
       "en" : "Idiomatic property used for structured values"
     },
-    "attributes" : [ "datatype", "external" ],
-    "id" : "42"
+    "attributes" : [ "external", "datatype" ],
+    "id" : "40"
   } ]
 }
