@@ -18,14 +18,18 @@
                                                             <https://orcid.org/0000-0001-6993-0618> ,
                                                             <https://orcid.org/0000-0002-5477-287X> ,
                                                             <https://orcid.org/0000-0003-0454-7145> ;
+                         <http://purl.org/dc/terms/issued> "May 8th, 2023"@en ;
                          <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
-                         <http://purl.org/dc/terms/modified> "May 3rd, 2023"@en ;
+                         <http://purl.org/dc/terms/modified> "May 8th, 2023"@en ;
+                         <http://purl.org/dc/terms/publisher> "TEC-Toolkit on Github"@en ;
                          <http://purl.org/ontology/bibo/status> "TEC Toolkit specification (stable)"@en ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "ecfo"@en ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/ecfo#" ;
                          rdfs:comment "1.0.0 release of the Emission Conversion Factor Ontology"@en ;
                          owl:priorVersion <https://w3id.org/ecfo/0.0.2> ;
-                         owl:versionInfo "1.0.0"@en .
+                         owl:versionInfo "1.0.0"@en ;
+                         <https://schema.org/includedInDataCatalog> <https://lov.linkeddata.es/dataset/lov/vocabs/ecfo> ;
+                         <https://schema.org/logo> <https://raw.githubusercontent.com/TEC-Toolkit/Emission-Conversion-Factors-Ontology/main/logos/Logo%20ECFO.png?token=GHSAT0AAAAAACCJOK27ICC6PGICWLTTLJDIZCZG76Q> .
 
 #################################################################
 #    Annotation properties
@@ -55,12 +59,20 @@
 <http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/modified
 <http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/ontology/bibo/status
@@ -90,6 +102,10 @@ foaf:homepage rdf:type owl:AnnotationProperty .
 
 ###  http://xmlns.com/foaf/0.1/name
 foaf:name rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/includedInDataCatalog
+<https://schema.org/includedInDataCatalog> rdf:type owl:AnnotationProperty .
 
 
 ###  https://schema.org/logo
@@ -411,8 +427,8 @@ foaf:Organization rdf:type owl:Class .
 #    Annotations
 #################################################################
 
-<https://orcid.org/0000-0001-6634-3266> org:memberOf <https://www.open.ac.uk#this> ;
-                                        foaf:name "Iman Naja"@en .
+<https://orcid.org/0000-0001-6634-3266> foaf:name "Iman Naja"@en ;
+                                        org:memberOf <https://www.open.ac.uk#this> .
 
 
 <https://orcid.org/0000-0001-6993-0618> org:memberOf <https://www.ox.ac.uk#this> ;
