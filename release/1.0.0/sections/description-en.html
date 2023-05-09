@@ -1,4 +1,13 @@
 <h2 id="desc" class="list">The Emission Conversion Factor Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+  The next figure shows an overview of the ECFO ontology. ECFO considers Emission Conversion Factors as first class citizens, describing them with rich metadata and provenance.
 
+  <img src="img/ecfo.png"/>
+
+  A conversion factor has an emission source (e.g., burning a gaseous fuel like Butane), which is measured with the ecfo:hasSourceUnit property. Similarly, the ecfo:hasEmissionTarget
+  describes the chemical compund released by the emission (units are captured with ecfo:hasTargetUnit). Units are represented using the quedt ontology. ECFs also have applicable periods
+  (e.g., year 2019), a scope (see scope definitions below) and an applicable location (e.g., the UK). We also annotate ECFs with the dc:publisher responsible for their publication, and
+  the source of data used to obtain the value in the KG (prov:wasDerivedFrom). All ECFs have a value, captured through rdf:value. Finally the ecfo:Tags may be associated with categories
+  aimed at helping finding the source of an emission factor. 
+
+</span>
