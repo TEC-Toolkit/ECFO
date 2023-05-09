@@ -1,4 +1,4 @@
-# ECFO - Emission Conversion Factors Ontology
+# ECFO - Emission Conversion Factors Ontology <img src="Logo ECFO.svg" width=30/>
 
 With the Net Zero agenda gaining significant traction across the world, organisations are often required to report carbon emissions associated with their operation.
 However, calculating emissions is not a trivial task and reported scores can differ depending on the choices made by those performing the calculations or the software used to assist with this task.
@@ -23,9 +23,7 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-## Contributing
-
-Please read [CONTRIBUTING.md](...) for details on our code of conduct, and the process for submitting pull requests to us. -->
+ -->
 
 ## Versioning
 
@@ -57,4 +55,11 @@ This project is licensed under the Creative Commons Attribution 4.0 Internationa
 * [Conversion factor SPARQL endpoint](https://sparql.cf.linkeddata.es/)  
   SPARQL endpoint with the current conversion factors loaded.
 
-This ontology is part of the [TEC-Toolkit](https://github.com/TEC-Toolkit).
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on the process for submitting pull requests to us. Remember that the last version of the ontology can be found in the `development` folder
+
+
+This ontology is part of the [TEC-Toolkit](https://github.com/TEC-Toolkit). <img src="Logo TEC.svg" width=40/>
+
+
