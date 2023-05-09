@@ -1,4 +1,5 @@
 # ECFO - Emission Conversion Factors Ontology <img src="Logo ECFO.svg" width=30/>
+[![DOI](https://zenodo.org/badge/566369718.svg)](https://zenodo.org/badge/latestdoi/566369718)
 
 With the Net Zero agenda gaining significant traction across the world, organisations are often required to report carbon emissions associated with their operation.
 However, calculating emissions is not a trivial task and reported scores can differ depending on the choices made by those performing the calculations or the software used to assist with this task.
