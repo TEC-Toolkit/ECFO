@@ -26,8 +26,9 @@
                          rdfs:comment "1.0.0 release of the Emission Conversion Factor Ontology"@en ;
                          owl:priorVersion <https://w3id.org/ecfo/0.0.2> ;
                          owl:versionInfo "1.0.0"@en ;
+                         <https://schema.org/image> <https://raw.githubusercontent.com/TEC-Toolkit/ECFO/21b4380e1f84f85f7cbc59f724157498e9d72094/Logo%20ECFO.svg> ;
                          <https://schema.org/includedInDataCatalog> <https://lov.linkeddata.es/dataset/lov/vocabs/ecfo> ;
-                         <https://schema.org/logo> <https://raw.githubusercontent.com/TEC-Toolkit/Emission-Conversion-Factors-Ontology/main/logos/Logo%20ECFO.png?token=GHSAT0AAAAAACCJOK27ICC6PGICWLTTLJDIZCZG76Q> .
+                         <https://schema.org/logo> <https://raw.githubusercontent.com/TEC-Toolkit/ECFO/21b4380e1f84f85f7cbc59f724157498e9d72094/Logo%20ECFO.svg> .
 
 #################################################################
 #    Annotation properties
@@ -100,6 +101,10 @@
 
 ###  http://xmlns.com/foaf/0.1/name
 <http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/image
+<https://schema.org/image> rdf:type owl:AnnotationProperty .
 
 
 ###  https://schema.org/includedInDataCatalog

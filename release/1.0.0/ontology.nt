@@ -18,8 +18,9 @@
 <https://w3id.org/ecfo> <http://www.w3.org/2000/01/rdf-schema#comment> "1.0.0 release of the Emission Conversion Factor Ontology"@en .
 <https://w3id.org/ecfo> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/ecfo/0.0.2> .
 <https://w3id.org/ecfo> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0"@en .
+<https://w3id.org/ecfo> <https://schema.org/image> <https://raw.githubusercontent.com/TEC-Toolkit/ECFO/21b4380e1f84f85f7cbc59f724157498e9d72094/Logo%20ECFO.svg> .
 <https://w3id.org/ecfo> <https://schema.org/includedInDataCatalog> <https://lov.linkeddata.es/dataset/lov/vocabs/ecfo> .
-<https://w3id.org/ecfo> <https://schema.org/logo> <https://raw.githubusercontent.com/TEC-Toolkit/Emission-Conversion-Factors-Ontology/main/logos/Logo%20ECFO.png?token=GHSAT0AAAAAACCJOK27ICC6PGICWLTTLJDIZCZG76Q> .
+<https://w3id.org/ecfo> <https://schema.org/logo> <https://raw.githubusercontent.com/TEC-Toolkit/ECFO/21b4380e1f84f85f7cbc59f724157498e9d72094/Logo%20ECFO.svg> .
 # 
 # 
 # #################################################################
@@ -80,6 +81,9 @@
 # 
 # http://xmlns.com/foaf/0.1/name
 <http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/image
+<https://schema.org/image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # https://schema.org/includedInDataCatalog
 <https://schema.org/includedInDataCatalog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

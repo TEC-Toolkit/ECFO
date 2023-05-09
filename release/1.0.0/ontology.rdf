@@ -34,8 +34,9 @@
         <rdfs:comment xml:lang="en">1.0.0 release of the Emission Conversion Factor Ontology</rdfs:comment>
         <owl:priorVersion rdf:resource="https://w3id.org/ecfo/0.0.2"/>
         <owl:versionInfo xml:lang="en">1.0.0</owl:versionInfo>
+        <schema:image rdf:resource="https://raw.githubusercontent.com/TEC-Toolkit/ECFO/21b4380e1f84f85f7cbc59f724157498e9d72094/Logo%20ECFO.svg"/>
         <schema:includedInDataCatalog rdf:resource="https://lov.linkeddata.es/dataset/lov/vocabs/ecfo"/>
-        <schema:logo rdf:resource="https://raw.githubusercontent.com/TEC-Toolkit/Emission-Conversion-Factors-Ontology/main/logos/Logo%20ECFO.png?token=GHSAT0AAAAAACCJOK27ICC6PGICWLTTLJDIZCZG76Q"/>
+        <schema:logo rdf:resource="https://raw.githubusercontent.com/TEC-Toolkit/ECFO/21b4380e1f84f85f7cbc59f724157498e9d72094/Logo%20ECFO.svg"/>
     </owl:Ontology>
     
 
@@ -170,6 +171,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- https://schema.org/image -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/image"/>
     
 
 

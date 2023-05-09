@@ -327,6 +327,9 @@
     "@value" : "Daniel Garijo"
   } ]
 }, {
+  "@id" : "https://schema.org/image",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "https://schema.org/includedInDataCatalog",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -414,11 +417,14 @@
     "@language" : "en",
     "@value" : "1.0.0"
   } ],
+  "https://schema.org/image" : [ {
+    "@id" : "https://raw.githubusercontent.com/TEC-Toolkit/ECFO/21b4380e1f84f85f7cbc59f724157498e9d72094/Logo%20ECFO.svg"
+  } ],
   "https://schema.org/includedInDataCatalog" : [ {
     "@id" : "https://lov.linkeddata.es/dataset/lov/vocabs/ecfo"
   } ],
   "https://schema.org/logo" : [ {
-    "@id" : "https://raw.githubusercontent.com/TEC-Toolkit/Emission-Conversion-Factors-Ontology/main/logos/Logo%20ECFO.png?token=GHSAT0AAAAAACCJOK27ICC6PGICWLTTLJDIZCZG76Q"
+    "@id" : "https://raw.githubusercontent.com/TEC-Toolkit/ECFO/21b4380e1f84f85f7cbc59f724157498e9d72094/Logo%20ECFO.svg"
   } ]
 }, {
   "@id" : "https://w3id.org/ecfo#ChemicalCompound",
