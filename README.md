@@ -1,5 +1,12 @@
-# ECFO - Emission Conversion Factors Ontology <img src="Logo ECFO.svg" width=30/>
+<div style="text-align: center">
+
+  <img src="https://tec-toolkit.github.io/assets/Logo%20ECFO.svg" alt="ECFO Logo" width=20% />
+
+# ECFO - Emission Conversion Factors Ontology
+
 [![DOI](https://zenodo.org/badge/566369718.svg)](https://zenodo.org/badge/latestdoi/566369718)
+
+</div>
 
 With the Net Zero agenda gaining significant traction across the world, organisations are often required to report carbon emissions associated with their operation.
 However, calculating emissions is not a trivial task and reported scores can differ depending on the choices made by those performing the calculations or the software used to assist with this task.
@@ -12,7 +19,7 @@ This ontology is available at [https://w3id.org/ecfo#](https://w3id.org/ecfo#) w
 
 To download the ontology in different serializations, you can use a curl command like:
 
-```
+```sh
 curl -sH "Accept:text/turtle" -L https://w3id.org/ecfo#
 ```
 
@@ -60,7 +67,12 @@ This project is licensed under the Creative Commons Attribution 4.0 Internationa
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on the process for submitting pull requests to us. Remember that the last version of the ontology can be found in the `development` folder
 
+---
 
-This ontology is part of the [TEC-Toolkit](https://github.com/TEC-Toolkit). <img src="Logo TEC.svg" width=40/>
+<div style="text-align: center">
 
+  This ontology is part of the [TEC-Toolkit](https://github.com/TEC-Toolkit).
 
+  <img src="https://tec-toolkit.github.io/assets/Logo%20TEC.svg" alt="TEC-Toolkit Logo" width=10%/>
+
+</div>
