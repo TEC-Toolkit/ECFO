@@ -1,6 +1,6 @@
 <div style="text-align: center">
 
-  <img src="https://tec-toolkit.github.io/assets/Logo%20ECFO.svg" alt="ECFO Logo" width=20% />
+  <img src="https://tec-toolkit.github.io/assets/Logo%20ECFO.svg" alt="ECFO Logo" width=10% />
 
 # ECFO - Emission Conversion Factors Ontology
 
@@ -73,6 +73,6 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on the process for su
 
   This ontology is part of the [TEC-Toolkit](https://github.com/TEC-Toolkit).
 
-  <img src="https://tec-toolkit.github.io/assets/Logo%20TEC.svg" alt="TEC-Toolkit Logo" width=10%/>
+  <img src="https://tec-toolkit.github.io/assets/Logo%20TEC.svg" alt="TEC-Toolkit Logo" width=5%/>
 
 </div>
