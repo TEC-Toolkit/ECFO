@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this resource, please cite it as below."
+authors:
+- family-names: "Markovic"
+  given-names: "Milan"
+  orcid: "https://orcid.org/0000−0002−5477−287X"
+- family-names: "Garijo"
+  given-names: "Daniel"
+  orcid: "https://orcid.org/0000−0003−0454−7145"
+- family-names: "Germano"
+  given-names: "Stefano"
+  orcid: "https://orcid.org/0000-0001-6993-0618"
+- family-names: "Naja"
+  given-names: "Iman"
+  orcid: "https://orcid.org/0000−0001−6634−3266"
+title: "ECFO - Emission Conversion Factors Ontology"
+version: 1.0.0
+doi: 10.5281/zenodo.7916079
+date-released: 2023-05-09
+url: "https://w3id.org/ecfo"
