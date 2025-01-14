@@ -376,14 +376,14 @@ foaf:Organization rdf:type owl:Class .
      rdfs:label "Tag" .
 
 ###  https://w3id.org/ecfo#GWPConversionFactor
-:CF_gwp rdf:type owl:Class ;
+:GlobalWarmingPotentialConversionFactor rdf:type owl:Class ;
         rdfs:comment "Concept representing a coeficient value used to transform chemical sustances according to their Global Warming Potencial"@en ;
         rdfs:label "GWP Conversion Factor"@en .
 
 ### https://w3id.org/ecfo#hasGWP
-:GWP rdf:type owl:ObjectProperty ;
+:gwp rdf:type owl:ObjectProperty ;
         rdfs:domain :EmissionConversionFactor ;
-        rdfs:range :CF_gwp ;
+        rdfs:range :GlobalWarmingPotentialConversionFactor ;
         rdfs:comment "GWP property"@en ;
         rdfs:label "has GWP"@en .
 
