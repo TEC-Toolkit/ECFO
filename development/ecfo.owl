@@ -375,6 +375,17 @@ foaf:Organization rdf:type owl:Class .
      rdfs:comment "A generic class to describe a category/tag that ecfo:EmissionFactor. Use ecfo:hasTag to link the category/tag and rdf:value to provide the name of the category. A single ecfo:EmissionFactor may refer to multiple tags. To identify individual conversion factors a union of tags should be considered." ;
      rdfs:label "Tag" .
 
+###  https://w3id.org/ecfo#GWPConversionFactor
+:GlobalWarmingPotentialConversionFactor rdf:type owl:Class ;
+        rdfs:comment "Concept representing a coeficient value used to transform chemical sustances according to their Global Warming Potencial"@en ;
+        rdfs:label "GWP Conversion Factor"@en .
+
+### https://w3id.org/ecfo#hasGWP
+:gwp rdf:type owl:ObjectProperty ;
+        rdfs:domain :EmissionConversionFactor ;
+        rdfs:range :GlobalWarmingPotentialConversionFactor ;
+        rdfs:comment "GWP property"@en ;
+        rdfs:label "has GWP"@en .
 
 #################################################################
 #    Individuals
