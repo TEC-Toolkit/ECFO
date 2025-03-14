@@ -1,0 +1,607 @@
+@prefix : <https://w3id.org/ecfo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/ecfo> .
+
+<https://w3id.org/ecfo> rdf:type owl:Ontology ;
+                         owl:versionIRI <https://w3id.org/ecfo/2.0.0> ;
+                         <http://purl.org/dc/elements/1.1/description> "This ontology defines a vocabulary for describing carbon emission conversion factors (CF). These are values typically used to calculate carbon emissions where the CF multiplies a quantified estimate of the energy (e.g., kWh of electricity, litters of fuel, etc.) used by a particular activity."@en ;
+                         <http://purl.org/dc/elements/1.1/title> "The Emission Conversion Factor Ontology"@en ;
+                         <http://purl.org/dc/terms/abstract> "With the Net Zero agenda gaining significant traction across the world, organisations are often required to report carbon emissions associated with their operation. However, calculating emissions is a non-trivial task and reported scores can differ depending on the choices made by those performing the calculations or the software used to assist with this task. Emission conversion factors are used to calculate greenhouse emissions for different business operations. This ontology aims to describe these conversion factors and their associated properties (e.g., origin, applicable location, etc.) to enhance the transparency of the carbon footprint calculations."@en ;
+                         <http://purl.org/dc/terms/created> "April 20th, 2023"@en ;
+                         <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-6634-3266> ,
+                                                            <https://orcid.org/0000-0001-6993-0618> ,
+                                                            <https://orcid.org/0000-0002-5477-287X> ,
+                                                            <https://orcid.org/0000-0003-0454-7145> ;
+                         <http://purl.org/dc/terms/issued> "May 8th, 2023"@en ;
+                         <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                         <http://purl.org/dc/terms/modified> "May 8th, 2023"@en ;
+                         <http://purl.org/dc/terms/publisher> "TEC-Toolkit on Github"@en ;
+                         <http://purl.org/ontology/bibo/status> "TEC Toolkit specification (stable)"@en ;
+                         <http://purl.org/vocab/vann/preferredNamespacePrefix> "ecfo"@en ;
+                         <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/ecfo#" ;
+                         rdfs:comment "2.0.0 release of the Emission Conversion Factor Ontology"@en ;
+                         owl:priorVersion <https://w3id.org/ecfo/0.0.2> ;
+                         owl:versionInfo "1.0.0"@en ;
+                         <https://schema.org/image> <https://raw.githubusercontent.com/TEC-Toolkit/ECFO/21b4380e1f84f85f7cbc59f724157498e9d72094/Logo%20ECFO.svg> ;
+                         <https://schema.org/includedInDataCatalog> <https://lov.linkeddata.es/dataset/lov/vocabs/ecfo> ;
+                         <https://schema.org/logo> <https://raw.githubusercontent.com/TEC-Toolkit/ECFO/21b4380e1f84f85f7cbc59f724157498e9d72094/Logo%20ECFO.svg> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2008/05/skos#prefLabel
+<http://www.w3.org/2008/05/skos#prefLabel> rdf:type owl:AnnotationProperty ;
+                                           rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/ns/org#memberOf
+<http://www.w3.org/ns/org#memberOf> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/homepage
+<http://xmlns.com/foaf/0.1/homepage> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/image
+<https://schema.org/image> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/includedInDataCatalog
+<https://schema.org/includedInDataCatalog> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/logo
+<https://schema.org/logo> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML
+rdf:HTML rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/publisher
+<http://purl.org/dc/elements/1.1/publisher> rdf:type owl:ObjectProperty ;
+                                            rdfs:comment "An entity responsible for making the resource available."@en ;
+                                            rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                            rdfs:label "publisher"@en .
+
+
+###  http://www.w3.org/2006/time#hasBeginning
+<http://www.w3.org/2006/time#hasBeginning> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://www.w3.org/2006/time#TemporalEntity> ;
+                                           rdfs:range <http://www.w3.org/2006/time#Instant> ;
+                                           rdfs:comment "Beginning of a temporal entity."^^xsd:anyURI ;
+                                           rdfs:isDefinedBy <http://www.w3.org/2006/time> ;
+                                           rdfs:label "has beginning"^^xsd:anyURI .
+
+
+###  http://www.w3.org/2006/time#hasEnd
+<http://www.w3.org/2006/time#hasEnd> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain <http://www.w3.org/2006/time#TemporalEntity> ;
+                                     rdfs:range <http://www.w3.org/2006/time#Instant> ;
+                                     rdfs:comment "End of a temporal entity."@en ;
+                                     rdfs:isDefinedBy <http://www.w3.org/2006/time> ;
+                                     rdfs:label "has end"@en .
+
+
+###  http://www.w3.org/ns/prov#atLocation
+<http://www.w3.org/ns/prov#atLocation> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain <http://www.w3.org/ns/prov#Entity> ;
+                                       rdfs:range <http://www.w3.org/ns/prov#Location> ;
+                                       rdfs:comment "A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth."@en ;
+                                       rdfs:isDefinedBy <https://www.w3.org/ns/prov-o> ;
+                                       rdfs:label "atLocation"@en .
+
+
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+<http://www.w3.org/ns/prov#wasDerivedFrom> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://www.w3.org/ns/prov#Entity> ;
+                                           rdfs:range <http://www.w3.org/ns/prov#Entity> ;
+                                           rdfs:comment "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity."@en ;
+                                           rdfs:isDefinedBy <http://www.w3.org/ns/prov#> ;
+                                           rdfs:label "was derived from"@en .
+
+
+###  https://w3id.org/ecfo#coversLifecycleStage
+:coversLifecycleStage rdf:type owl:ObjectProperty ;
+                      rdfs:domain :EmissionConversionFactor ;
+                      rdfs:range :LifecycleStage ;
+                      rdfs:label "covers lifecycle stage" .
+
+
+###  https://w3id.org/ecfo#hasApplicableLocation
+:hasApplicableLocation rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf <http://www.w3.org/ns/prov#atLocation> ;
+                       rdfs:domain :EmissionConversionFactor ;
+                       rdfs:comment "A geographic area (e.g., a country) or a physical location (e.g., a farm) to which a specific ecfo:ConversionFactor may be applied."@en ;
+                       rdfs:label "has applicable location"@en .
+
+
+###  https://w3id.org/ecfo#hasApplicablePeriod
+:hasApplicablePeriod rdf:type owl:ObjectProperty ;
+                     rdfs:domain :EmissionConversionFactor ;
+                     rdfs:range <http://www.w3.org/2006/time#TemporalEntity> ;
+                     rdfs:comment "A time period for which the emission conversion factor is considered to be most relevant."@en ;
+                     rdfs:label "has applicable period"@en .
+
+
+###  https://w3id.org/ecfo#hasFractionalConversionFactor
+:hasFractionalConversionFactor rdf:type owl:ObjectProperty ;
+                               rdfs:domain :EmissionConversionFactor ;
+                               rdfs:range :GHGEmissionConversionFactor ;
+                               rdfs:label "has fractional conversion factor" .
+
+
+###  https://w3id.org/ecfo#hasGWP
+:hasGWP rdf:type owl:ObjectProperty ;
+        rdfs:domain :ComparativeEmissionConversionFactor ;
+        rdfs:range :GlobalWarmingPotentialConversionFactor ;
+        rdfs:comment "The conversion ratio used to calculate carbon dioxide equivalence of the source gas - i.e., Geenhouse Gas linked to this conversion factor via ecfo:hasSource property" ;
+        rdfs:label "has GWP" .
+
+
+###  https://w3id.org/ecfo#hasScope
+:hasScope rdf:type owl:ObjectProperty ;
+          rdfs:domain :EmissionConversionFactor ;
+          rdfs:range :Scope ;
+          rdfs:comment "A property linking conversion factor to the description of the emission scope."@en ;
+          rdfs:label "has scope"@en .
+
+
+###  https://w3id.org/ecfo#hasSource
+:hasSource rdf:type owl:ObjectProperty ;
+           rdfs:domain :EmissionConversionFactor ;
+           rdfs:range :ConversionEntity ;
+           rdfs:comment "Links conversion entitiy representing  the input to the transformation process defined by a conversion factor."@en ;
+           rdfs:label "has source"@en .
+
+
+###  https://w3id.org/ecfo#hasSourceUnit
+:hasSourceUnit rdf:type owl:ObjectProperty ;
+               rdfs:domain :EmissionConversionFactor ;
+               rdfs:range <http://qudt.org/schema/qudt/Unit> ;
+               rdfs:comment "The unit corresponding to the source data that is multiplied by the ecfo:ConversionFactor"@en ;
+               rdfs:label "has source unit"@en .
+
+
+###  https://w3id.org/ecfo#hasTag
+:hasTag rdf:type owl:ObjectProperty ;
+        rdfs:domain :EmissionConversionFactor ;
+        rdfs:range :Category ;
+        rdfs:comment "A property to assign a specific category/tag to ecfo:ConversionFactor."@en ;
+        rdfs:label "has tag"@en .
+
+
+###  https://w3id.org/ecfo#hasTarget
+:hasTarget rdf:type owl:ObjectProperty ;
+           rdfs:domain :EmissionConversionFactor ;
+           rdfs:range :ConversionEntity ;
+           rdfs:comment "Links conversion entitiy representing the output of a transformation process defined by a conversion factor (e.g., CO2e). The target conversion entity is associated with the target unit"@en ;
+           rdfs:label "has target"@en .
+
+
+###  https://w3id.org/ecfo#hasTargetUnit
+:hasTargetUnit rdf:type owl:ObjectProperty ;
+               rdfs:domain :EmissionConversionFactor ;
+               rdfs:range <http://qudt.org/schema/qudt/Unit> ;
+               rdfs:comment "The unit corresponding to the result of multiplying input data by the ecfo:ConversionFactor"@en ;
+               rdfs:label "has target unit"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://qudt.org/schema/qudt/abbreviation
+<http://qudt.org/schema/qudt/abbreviation> rdf:type owl:DatatypeProperty ;
+                                           rdfs:range xsd:string ;
+                                           rdfs:comment "An abbreviation for a unit is a short ASCII string that is used in place of the full name for the unit in contexts where non-ASCII characters would be problematic, or where using the abbreviation will enhance readability. When a power of abase unit needs to be expressed, such as squares this can be done using abbreviations rather than symbols. For example, sq ft means square foot, and cu ft means cubic foot."@en ;
+                                           rdfs:isDefinedBy <https://qudt.org/schema/qudt/> ;
+                                           rdfs:label "abbreviation"@en .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#value
+rdf:value rdf:type owl:DatatypeProperty ;
+          rdfs:comment "Idiomatic property used for structured values"@en ;
+          rdfs:isDefinedBy rdf: ;
+          rdfs:label "value"@en .
+
+
+###  http://www.w3.org/2006/time#inXSDDate
+<http://www.w3.org/2006/time#inXSDDate> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <http://www.w3.org/2006/time#Instant> ;
+                                        rdfs:range xsd:date ;
+                                        rdfs:comment "Position of an instant, expressed using xsd:date" ;
+                                        rdfs:isDefinedBy "http://www.w3.org/2006/time" ;
+                                        rdfs:label "in XSD date" .
+
+
+###  https://schema.org/molecularFormula
+<https://schema.org/molecularFormula> rdf:type owl:DatatypeProperty ;
+                                      rdfs:comment "The empirical formula is the simplest whole number ratio of all the atoms in a molecule."@en ;
+                                      rdfs:isDefinedBy <https://schema.org/> ;
+                                      rdfs:label "molecular formula"@en .
+
+
+###  https://w3id.org/ecfo#hasAdditionalContext
+:hasAdditionalContext rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :EmissionConversionFactor ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment """Conversion factors often have subtelties that contextualize the emission source. For example the emission source may be a transportation method (car), but additional context may indicate that the CF is for \"large cars\", or lars with more than 120 horse power.
+These subteltlies are captured in the \"hasAdditionalContext\" property"""@en ;
+                      rdfs:label "has additional context"@en .
+
+
+###  https://w3id.org/ecfo#hasUsageNotes
+:hasUsageNotes rdf:type owl:DatatypeProperty ;
+               rdfs:domain :EmissionConversionFactor ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Property used to describe any limitations, disclaimers or usage notes associated with a CF. For example \"This CF is an estimation based on local data and should be superseeded by governmental sources\""@en ;
+               rdfs:label "has usage notes"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://qudt.org/schema/qudt/Unit
+<http://qudt.org/schema/qudt/Unit> rdf:type owl:Class ;
+                                   rdfs:comment "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\\\(Q = nU\\\\)." ;
+                                   rdfs:isDefinedBy <http://qudt.org/schema/qudt/> ;
+                                   rdfs:label "Unit" .
+
+
+###  http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> rdf:type owl:Class ;
+                                      rdfs:comment "A temporal entity with zero extent or duration" ;
+                                      rdfs:isDefinedBy <http://www.w3.org/2006/time> ;
+                                      rdfs:label "Time instant" .
+
+
+###  http://www.w3.org/2006/time#TemporalEntity
+<http://www.w3.org/2006/time#TemporalEntity> rdf:type owl:Class ;
+                                             rdfs:comment "A temporal interval or instant."^^xsd:anyURI ;
+                                             rdfs:isDefinedBy <http://www.w3.org/2006/time> ;
+                                             rdfs:label "Temporal entity"^^xsd:anyURI .
+
+
+###  http://www.w3.org/2008/05/skos#Concept
+<http://www.w3.org/2008/05/skos#Concept> rdf:type owl:Class ;
+                                         rdfs:comment "An abstract idea or notion; a unit of thought." ;
+                                         rdfs:isDefinedBy <http://www.w3.org/2008/05/skos> ;
+                                         rdfs:label "Concept" .
+
+
+###  http://www.w3.org/ns/prov#Agent
+<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class ;
+                                  rdfs:comment "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity." ;
+                                  rdfs:isDefinedBy <https://www.w3.org/ns/prov-o> ;
+                                  rdfs:label "Agent" .
+
+
+###  http://www.w3.org/ns/prov#Entity
+<http://www.w3.org/ns/prov#Entity> rdf:type owl:Class ;
+                                   rdfs:comment "An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary." ;
+                                   rdfs:isDefinedBy <https://www.w3.org/ns/prov-o> ;
+                                   rdfs:label "Entity" .
+
+
+###  http://www.w3.org/ns/prov#Location
+<http://www.w3.org/ns/prov#Location> rdf:type owl:Class ;
+                                     rdfs:comment "A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth." ;
+                                     rdfs:isDefinedBy <https://www.w3.org/ns/prov-o> ;
+                                     rdfs:label "Location" .
+
+
+###  http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> rdf:type owl:Class .
+
+
+###  https://w3id.org/ecfo#ActivityData
+:ActivityData rdf:type owl:Class ;
+              rdfs:subClassOf :ConversionEntity ;
+              rdfs:comment """Data on the magnitude of a human activity resulting in emissions or removals taking place during a given period
+of time. Data on energy use, metal production, land areas, management systems, lime and fertilizer use and
+waste arisings are examples of activity data.  Source:https://www.ipcc-nggip.iges.or.jp/public/2006gl/pdf/0_Overview/V0_2_Glossary.pdf""" ;
+              rdfs:label "Activity Data" .
+
+
+###  https://w3id.org/ecfo#Category
+:Category rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.w3.org/2008/05/skos#Concept> ;
+          rdfs:comment "A generic class to describe a category/tag that ecfo:EmissionFactor. Use ecfo:hasTag to link the category/tag and rdf:value to provide the name of the category. A single ecfo:EmissionFactor may refer to multiple tags. To identify individual conversion factors a union of tags should be considered." ;
+          rdfs:label "Category" .
+
+
+###  https://w3id.org/ecfo#ComparativeEmissionConversionFactor
+:ComparativeEmissionConversionFactor rdf:type owl:Class ;
+                                     rdfs:subClassOf :EmissionConversionFactor ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasTarget ;
+                                                       owl:allValuesFrom :ComparativeMeassure
+                                                     ] ;
+                                     owl:disjointWith :GHGEmissionConversionFactor .
+
+
+###  https://w3id.org/ecfo#ComparativeMeassure
+:ComparativeMeassure rdf:type owl:Class ;
+                     rdfs:subClassOf :ConversionEntity ;
+                     rdfs:comment "A measure used to compare different greenhouse gases based on their contribution to radiative forcing." ;
+                     rdfs:label "Comparative Meassure" .
+
+
+###  https://w3id.org/ecfo#ConversionEntity
+:ConversionEntity rdf:type owl:Class ;
+                  rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+                  rdfs:comment """A quantifiable entity that participates in a transformation process defined by a conversion factor. 
+
+For example, X kWh of electricity (conversion entity) converted to Y kg of CO2e emissions, X l of fuel converted to Y J of energy, etc.""" ;
+                  rdfs:label "Conversion Entity" .
+
+
+###  https://w3id.org/ecfo#ConversionFactor
+:ConversionFactor rdf:type owl:Class ;
+                  rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
+
+
+###  https://w3id.org/ecfo#EmissionConversionFactor
+:EmissionConversionFactor rdf:type owl:Class ;
+                          rdfs:subClassOf :ConversionFactor ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :hasSource ;
+                                            owl:allValuesFrom :ActivityData
+                                          ] ;
+                          rdfs:comment "A concept representing the coefficient value used in greenhouse gas (GHG) emission calculations (activity data x emission conversion factor = GHG emissions)  and additional metadata (e.g., applicable location, publisher, etc.)." ;
+                          rdfs:label "Emission Conversion Factor" .
+
+
+###  https://w3id.org/ecfo#GHGEmissionConversionFactor
+:GHGEmissionConversionFactor rdf:type owl:Class ;
+                             rdfs:subClassOf :EmissionConversionFactor ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasTarget ;
+                                               owl:allValuesFrom :GreenhouseGas
+                                             ] .
+
+
+###  https://w3id.org/ecfo#GWPTimeHorizon
+:GWPTimeHorizon rdf:type owl:Class ;
+                rdfs:label "GWP Time Horizon" .
+
+
+###  https://w3id.org/ecfo#GlobalWarmingPotentialConversionFactor
+:GlobalWarmingPotentialConversionFactor rdf:type owl:Class ;
+                                        rdfs:subClassOf :ConversionFactor ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasSource ;
+                                                          owl:allValuesFrom :GreenhouseGas
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasTarget ;
+                                                          owl:allValuesFrom :ComparativeMeassure
+                                                        ] ;
+                                        rdfs:comment """Global Warming Potentials (GWP) are calculated as the ratio of the radiative forcing of one kilogramme
+greenhouse gas emitted to the atmosphere to that from one kilogramme CO2 over a period of time (e.g., 100
+years).
+
+https://www.ipcc-nggip.iges.or.jp/public/2006gl/pdf/0_Overview/V0_2_Glossary.pdf""" ;
+                                        rdfs:label "GWP Conversion Factor" .
+
+
+###  https://w3id.org/ecfo#GreenhouseGas
+:GreenhouseGas rdf:type owl:Class ;
+               rdfs:subClassOf :ConversionEntity ;
+               rdfs:comment """A gas that contributes to the natural greenhouse effect. The Kyoto Protocol covers a basket of six greenhouse gases (GHGs) produced by human activities: carbon dioxide, methane, nitrous oxide, hydrofluorocarbons, perfluorocarbons and sulphur hexafluoride. 
+
+https://www.eea.europa.eu/help/glossary/eea-glossary/greenhouse-gas""" ;
+               rdfs:label "Greenhouse Gas" .
+
+
+###  https://w3id.org/ecfo#LifecycleStage
+:LifecycleStage rdf:type owl:Class ;
+                rdfs:comment "Some conversion factors such as those used in LCA analysis are designed to cover specific lifecycle stages of a product - e.g., manufacturing, distribution, use, etc." ;
+                rdfs:label "Lifecycle Stage" .
+
+
+###  https://w3id.org/ecfo#Scope
+:Scope rdf:type owl:Class ;
+       rdfs:comment "Type of emissions a company creates in its own operations and in its wider 'value chain'. Typically emissions fall under three categories - Scope 1, Scope 2 and Scope 3." ;
+       rdfs:label "Scope" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/ecfo#Carbon_Dioxide
+:Carbon_Dioxide rdf:type owl:NamedIndividual ,
+                         :GreenhouseGas ;
+                rdfs:label "Carbon Dioxide" .
+
+
+###  https://w3id.org/ecfo#GWP100
+:GWP100 rdf:type owl:NamedIndividual ,
+                 :GWPTimeHorizon ;
+        rdfs:comment "Global Warming Potential over 100 years" ;
+        rdfs:label "GWP 100" .
+
+
+###  https://w3id.org/ecfo#GWP20
+:GWP20 rdf:type owl:NamedIndividual ,
+                :GWPTimeHorizon ;
+       rdfs:comment "Global Warming Potential over 20 years." ;
+       rdfs:label "GWP 20" .
+
+
+###  https://w3id.org/ecfo#GWP500
+:GWP500 rdf:type owl:NamedIndividual ,
+                 :GWPTimeHorizon ;
+        rdfs:comment "Global warming potential over 500 years" ;
+        rdfs:label "GWP 500" .
+
+
+###  https://w3id.org/ecfo#Methane
+:Methane rdf:type owl:NamedIndividual ,
+                  :GreenhouseGas ;
+         rdfs:label "Methane" .
+
+
+###  https://w3id.org/ecfo#Nitrous_Oxide
+:Nitrous_Oxide rdf:type owl:NamedIndividual ,
+                        :GreenhouseGas ;
+               rdfs:label "Nitrous Oxide" .
+
+
+###  https://w3id.org/ecfo#Scope1
+:Scope1 rdf:type owl:NamedIndividual ,
+                 :Scope ;
+        rdfs:comment "Scope 1 (direct emissions) emissions are those from activities owned or controlled by your organisation. Examples of Scope 1 emissions include emissions from combustion in owned or controlled boilers, furnaces and vehicles; and emissions from chemical production in owned or controlled process equipment." ;
+        rdfs:label "scope 1" .
+
+
+###  https://w3id.org/ecfo#Scope2
+:Scope2 rdf:type owl:NamedIndividual ,
+                 :Scope ;
+        rdfs:comment "Scope 2 (energy indirect) emissions are those released into the atmosphere that are associated with your consumption of purchased electricity, heat, steam and cooling. These indirect emissions are a consequence of your organisation’s energy use, but occur at sources you do not own or control." ;
+        rdfs:label "scope 2" .
+
+
+###  https://w3id.org/ecfo#Scope3
+:Scope3 rdf:type owl:NamedIndividual ,
+                 :Scope ;
+        rdfs:comment "Scope 3 (other indirect) emissions are a consequence of your actions that occur at sources you do not own or control and are not classed as Scope 2 emissions. Examples of Scope 3 emissions are business travel by means not owned or controlled by your organisation, waste disposal, materials or fuels your organisation purchases. Deciding if emissions from a vehicle, office or factory that you use are Scope 1 or Scope 3 may depend on how you define your operational boundaries. Scope 3 emissions can be from activities that are upstream or downstream of your organisation. More information on Scope 3 and other aspects of reporting can be found in the Greenhouse Gas Protocol Corporate Standard." ;
+        rdfs:label "scope 3" .
+
+
+###  https://w3id.org/ecfo#co2e
+:co2e rdf:type owl:NamedIndividual ,
+               :ComparativeMeassure ;
+      rdfs:comment """A measure used to compare different greenhouse gases based on their contribution to radiative forcing. The
+UNFCCC currently (2005) uses global warming potentials (GWPs) as factors to calculate carbon dioxide
+equivalent. 
+
+https://www.ipcc-nggip.iges.or.jp/public/2006gl/pdf/0_Overview/V0_2_Glossary.pdf""" ;
+      rdfs:label "carbon dioxide equivalent" .
+
+
+###  https://www.abdn.ac.uk#this
+<https://www.abdn.ac.uk#this> rdf:type owl:NamedIndividual ,
+                                       <http://xmlns.com/foaf/0.1/Organization> ;
+                              <http://xmlns.com/foaf/0.1/homepage> "https://www.abdn.ac.uk/" ;
+                              <http://xmlns.com/foaf/0.1/name> "University of Aberdeen" .
+
+
+###  https://www.open.ac.uk#this
+<https://www.open.ac.uk#this> rdf:type owl:NamedIndividual ,
+                                       <http://xmlns.com/foaf/0.1/Organization> ;
+                              <http://xmlns.com/foaf/0.1/homepage> "https://www.open.ac.uk" ;
+                              <http://xmlns.com/foaf/0.1/name> "The Open University" .
+
+
+###  https://www.ox.ac.uk#this
+<https://www.ox.ac.uk#this> rdf:type owl:NamedIndividual ,
+                                     <http://xmlns.com/foaf/0.1/Organization> ;
+                            <http://xmlns.com/foaf/0.1/homepage> "https://www.ox.ac.uk/" ;
+                            <http://xmlns.com/foaf/0.1/name> "University of Oxford" .
+
+
+###  https://www.upm.es#this
+<https://www.upm.es#this> rdf:type owl:NamedIndividual ,
+                                   <http://xmlns.com/foaf/0.1/Organization> ;
+                          <http://xmlns.com/foaf/0.1/homepage> "https://www.upm.es" ;
+                          <http://xmlns.com/foaf/0.1/name> "Universidad Politécnica de Madrid" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<https://orcid.org/0000-0001-6634-3266> <http://www.w3.org/ns/org#memberOf> <https://www.open.ac.uk#this> ;
+                                        <http://xmlns.com/foaf/0.1/name> "Iman Naja"@en .
+
+
+<https://orcid.org/0000-0001-6993-0618> <http://www.w3.org/ns/org#memberOf> <https://www.ox.ac.uk#this> ;
+                                        <http://xmlns.com/foaf/0.1/name> "Stefano Germano"@en .
+
+
+<https://orcid.org/0000-0002-5477-287X> <http://www.w3.org/ns/org#memberOf> <https://www.abdn.ac.uk#this> ;
+                                        <http://xmlns.com/foaf/0.1/name> "Milan Markovic"@en .
+
+
+<https://orcid.org/0000-0003-0454-7145> <http://xmlns.com/foaf/0.1/name> "Daniel Garijo"@en ;
+                                        <http://www.w3.org/ns/org#memberOf> <https://www.upm.es#this> .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
