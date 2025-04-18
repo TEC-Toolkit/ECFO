@@ -5,7 +5,8 @@
 ### ecfo:ConversionEntity
 
 We introduce new concept ecfo:ConversionEntity that is a subclass of prov:Entitiy and qudt:Quantity. 
-```mermaid classDiagram graph TD
+```mermaid
+ graph TD
     A[ecfo:ConversionEntity]
     B[prov:Entity]
     C[qudt:Quantity]
@@ -18,7 +19,8 @@ We introduce new concept ecfo:ConversionEntity that is a subclass of prov:Entiti
 
 previous properties ecfo:hasEmissionSource and ecfo:hasEmissionTarget have been renamed to ecfo:converetsFrom and ecfo:convertsTo
 
-```mermaid conversionEntityUssage graph TD
+```mermaid
+ graph TD
     CF[ecfo:ConversionFactor]
     CE[ecfo:ConversionEntity]
 
@@ -27,8 +29,8 @@ previous properties ecfo:hasEmissionSource and ecfo:hasEmissionTarget have been 
    ```
 
 ### Subclasses of ecfo:ConversionEntity
-```
-mermaid conversionEntitySubclasses graph TD
+```mermaid 
+graph TD
     CE[ecfo:ConversionEntity]
     AD[ecfo:ActivityData]
     GHG[ecfo:GreenhouseGas]
