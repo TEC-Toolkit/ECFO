@@ -99,26 +99,26 @@ graph TD
 
 The ecfo:hasCategory property links the ecfo:ConversionValue to the description of the substance/concept the quantiy represents (i.e., quantity of what). The property replaces the ecfo:hasTag property and also changes the domain from ecfo:EmissionConversionFactor to qudt:Quantity. 
 
-### ecfo:requiresCategory
+### ecfo:requiresQuantityType
 
-The property links ecfo:ConversionContext to the expected category of the quantity value that the conversion factor can be used to convert from and to (i.e., determined by the links ecfo:convertsFrom and ecfo:convertsTo)
+The property links ecfo:ConversionContext to the expected type of the quantity value that the conversion factor can be used to convert from and to (i.e., determined by the links ecfo:convertsFrom and ecfo:convertsTo)
 
 Example: 
 
-A conversion factor that converts from activity data representing Natural Gas to CO2equivalent
+A conversion factor that converts from activity data to CO2equivalent
 
 ```mermaid
 graph TD
     CF[ecfo:EmissionConversionFactor]
     CE[ecfo:ActivityDataConversionContext]
-    EX[ex:NaturalGas]
+    EX[ecfo:ActivityData]
     EX1[ex:CF1]
     EX2[ex:CC1]
 
  EX1 -- "rdf:type" --> CF
   EX2 -- "rdf:type" --> CE
     EX1 -- "ecfo:convertsFrom" --> EX2
-    EX2 -- "ecfo:requiresCategory" -->  EX
+    EX2 -- "ecfo:requiresQuantityType" -->  EX
 ```
 
 ```mermaid
@@ -132,8 +132,29 @@ graph TD
  EX1 -- "rdf:type" --> CF
   EX2 -- "rdf:type" --> CE
     EX1 -- "ecfo:convertsTo" --> EX2
-    EX2 -- "ecfo:requiresCategory" -->  EX
+    EX2 -- "ecfo:requiresQuantityType" -->  EX
 ```
+
+### 
+
+### ecfo:meassurementOf
+
+The propery links the ConversionValue to the concept representing what the value meassures - i.e. quantity of X. QUDT ontology does not provide any suitable properies to represent this as the QuantityKind (used by ECFO v1) is actually supposed to represent the physical property of the quantity - e.g., mass, lenght, etc. 
+
+****Potential problem (See PECO ussage later in the document): calculation entities taht are not conversion values will not be able to be annotated with this property ****
+
+```mermaid
+graph TD
+    CE[ecfo:ConversionValue]
+    AD[skos:Concept]
+
+
+    CE -- "ecfo:meassurementOf" --> AD
+```
+
+### ecfo:requiresMeassurementOf
+
+The property links ecfo:ConversionContext to the concept representing what the value (to which this conversion factor can be applied to) meassures.
 
 ### Rationale
 
