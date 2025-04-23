@@ -184,6 +184,24 @@ This property links `ecfo:ConversionContext` to a `QuantityKind` defined in the 
 
 ---
 
+```mermaid
+graph TD
+CF[ecfo:EmissionConversionFactor]
+CE[ecfo:ConversionContext]
+EX[ecfo:CarbonDioxideEquivalentEmissionEstimate]
+EX1[ex:CF1]
+EX2[ex:CC2]
+QK[qudt-kind:Mass]
+UN[qudt-unit:KiloGM]
+
+EX1 -->|rdf:type| CF
+EX2 -->|rdf:type| CE
+EX1 -->|ecfo:convertsTo| EX2
+EX2 -->|ecfo:requiresQuantityType| EX
+EX2 -->|ecfo:requiresQuantityKind| QK
+EX2 -->|ecfo:requiresUnit| UN
+```
+
 ### Usage with PECO
 
 Calculation inputs and outputs linked to the conversion process are of type `peco:CalculationEntity` (a subclass of `prov:Entity` and `sosa:Observation`). These include intermediary steps and not all represent emission values or activity data. Entities that do represent such values should be annotated with appropriate `ecfo:ConversionValue` subclasses.
