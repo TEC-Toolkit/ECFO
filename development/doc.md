@@ -148,7 +148,7 @@ Linking quantity value to a category:
 
 ```mermaid
 graph TD
-CE[ecfo:ConversionValue]
+CE[ecfo:ActivityData]
 EX1[ex:Value2]
 EX2[ex:Fuels_GaseousFuels_CNG_EnergyGrossCVC]
 EX3[ex:Fuels_GaseousFuels_CNG]
@@ -180,7 +180,7 @@ This property links `ecfo:ConversionContext` to a `QuantityKind` defined in the 
 
 ### ecfo:requiresUnit
 
-(Section description missing.)
+This property links `ecfo:ConversionContext` to a `Unit` defined in the QUDT ontology (e.g., mass, volume, count).
 
 ---
 
@@ -193,6 +193,8 @@ EX1[ex:CF1]
 EX2[ex:CC2]
 QK[qudt-kind:Mass]
 UN[qudt-unit:KiloGM]
+MO[wd:Q1997]
+
 
 EX1 -->|rdf:type| CF
 EX2 -->|rdf:type| CE
@@ -200,6 +202,28 @@ EX1 -->|ecfo:convertsTo| EX2
 EX2 -->|ecfo:requiresQuantityType| EX
 EX2 -->|ecfo:requiresQuantityKind| QK
 EX2 -->|ecfo:requiresUnit| UN
+EX2 -->|ecfo:requiresMeassurementOf| MO
+```
+
+```mermaid
+graph TD
+CF[ecfo:EmissionConversionFactor]
+CE[ecfo:ConversionContext]
+EX[ecfo:ActivityData]
+EX1[ex:CF1]
+EX2[ex:CC3]
+QK[qudt-kind:Mass]
+UN[qudt-unit:KiloGM]
+MO[ex:Fuels_GaseousFuels_CNG_EnergyGrossCVC]
+
+
+EX1 -->|rdf:type| CF
+EX2 -->|rdf:type| CE
+EX1 -->|ecfo:convertsFrom| EX2
+EX2 -->|ecfo:requiresQuantityType| EX
+EX2 -->|ecfo:requiresQuantityKind| QK
+EX2 -->|ecfo:requiresUnit| UN
+EX2 -->|ecfo:requiresMeassurementOf| MO
 ```
 
 ### Usage with PECO
@@ -207,6 +231,39 @@ EX2 -->|ecfo:requiresUnit| UN
 Calculation inputs and outputs linked to the conversion process are of type `peco:CalculationEntity` (a subclass of `prov:Entity` and `sosa:Observation`). These include intermediary steps and not all represent emission values or activity data. Entities that do represent such values should be annotated with appropriate `ecfo:ConversionValue` subclasses.
 
 ---
+
+```mermaid
+graph TD
+AD[ecfo:ActivityData]
+EX[ex:Data]
+CA[peco:EmissionCalculationActivity]
+AC[ex:Calculation]
+ECFT[ecfo:EmissionConversionFactor]
+ECF[ex:CF1]
+RES[ex:Result]
+REST[ecfo:CarbonDioxideEquivalentEmissionEstimate]
+QK[qudt-kind:Mass]
+UN[qudt-unit:KiloGM]
+MO[wd:Q1997]
+MO2[ex:Fuels_GaseousFuels_CNG_EnergyGrossCVC]
+
+EX -->|rdf:type| AD
+AC -->|rdf:type| CA
+ECF -->|rdf:type| ECFT
+RES -->|rdf:type| REST
+
+EX -->|qudt:unit| UN
+EX -->|qudt:hasQuantityKind| QK
+EX-->|ecfo:meassurementOf| MO2
+
+ AC -->|prov:used| EX
+ AC -->|prov:used| ECF
+
+RES -->|prov:wasGeneratedBy| AC
+RES -->|qudt:unit| UN
+RES-->|qudt:hasQuantityKind| QK
+RES-->|ecfo:meassurementOf| MO
+```
 
 ### Placeholder Sections
 
@@ -216,3 +273,5 @@ Calculation inputs and outputs linked to the conversion process are of type `pec
 - Uncertainty
 - Modelling aggregate conversion factors
 - Open energy ontology alignments
+
+### Alignment of Quantity Values
