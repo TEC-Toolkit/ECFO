@@ -140,7 +140,7 @@ EX1[ex:Value1]
 EX[wd:Q1997]
 
 EX1 -->|rdf:type| CE
-CE -->|ecfo:meassurementOf| EX
+EX1 -->|ecfo:meassurementOf| EX
 EX -->|rdfs:label| LABEL["carbon dioxide"]
 ```
 
@@ -155,7 +155,7 @@ EX3[ex:Fuels_GaseousFuels_CNG]
 EX4[ex:Fuels_GaseousFuels_]
 
 EX1 -->|rdf:type| CE
-CE -->|ecfo:meassurementOf| EX2
+EX1 -->|ecfo:meassurementOf| EX2
 EX2 -->|skos:broader| EX3
 EX3 -->|skos:broader| EX4
 ```
