@@ -265,13 +265,67 @@ RES-->|qudt:hasQuantityKind| QK
 RES-->|ecfo:meassurementOf| MO
 ```
 
+### ecfo: GHGImpactMetric
+
+This is a top level class to describe different impact metrics that can be used to calculate comparative values to assess impact accross different GHG gasses. 
+
+A subclass ecfo:GlobalWarmingPotential defines one of the popular metrics for converting GHG to CO2e. 
+
+Given that for each of the GHG there are multiple values for different GWP we define additional subclasses such as MethaneGWP with instances representing differrent impact values annotated with additional data proporties including ecfo:impactValue, ecfo:impactPeriod (in years) and ecfo:authoritySource
+
+```mermaid
+graph TD
+    IM[ecfo:GHGImpactMetric]
+    GWP[ecfo:GlobalWarmingPotential]
+    ME[ecfo:MethaneGWP]
+    IN[ex:MethaneGWP6thIPCC100]
+
+    GWP -->|subclass of| IM
+    ME -->|subclass of| GWP
+
+    IN -->|rdf:type| ME
+    IN -->|ecfo:impactValue| VAL[27]
+    IN -->|ecfo:impactPeriod| PERIOD[100]
+    IN -->|ecfo:authoritySource| SOURCE["IPCC Sixth Assessment Report"]
+```
+
 ### Placeholder Sections
 
 - ecfo:ImpactMetric
 - ecfo:OperationalBoundary
 - ecfo:LifecycleStage
 - Uncertainty
-- Modelling aggregate conversion factors
-- Open energy ontology alignments
+- Modelling aggregate conversion factor
 
-### Alignment of Quantity Values
+### Open energy ontology alignments
+
+##### Alignment of Quantity Values
+
+This section lists a potential alignments between ECFO and Open Energy Ontology 
+
+Prefix: oeo:http://openenergy-platform.org/ontology/oeo/
+
+1)
+oeo:OEO_00000350 (quantity value) 
+ecfo:ConversionValue
+
+2)
+oeo:OEO_00140083 (carbon dioxide equivalent quantity value)
+ecfo: CarbonDioxideEquivalentEmissionEstimate
+
+NOTE: OEO defines this value as "A carbon dioxide equivalent quantity is a greenhouse gas emission value that quantifies the combined effect of all emitted greenhouse gases by giving an equivalent amount of CO2 which would have the same effect on the climate." 
+
+This might suggest that they model only value where all emissions of other gasses (e.g. CH4, N2O) are combined under one value using multiple corresponding GWP. 
+
+3)
+ecfo:GreenhouseGasEmissionEstimate
+oeo:OEO_00340065 (greem house gas emission value)
+
+Note: OEO also defines a subclass for CO2 emission value. We shoudl mayb econsider defining subclasses for other GHG types in our ontology. 
+
+4)
+
+oeo:OEO_00000148 (Emisison Factor)
+ecfo:EmissionConversionFactor
+
+Note: oeo:OEO_00000148 is a process attribute. we need to better understand what is the relationship between OEO process concept and ECFO concepts
