@@ -25,7 +25,7 @@
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/ecfo#" ;
                          rdfs:comment "2.0.0 release of the Emission Conversion Factor Ontology"@en ;
                          owl:priorVersion <https://w3id.org/ecfo/0.0.2> ;
-                         owl:versionInfo "1.0.0"@en ;
+                         owl:versionInfo "2.0.0"@en ;
                          <https://schema.org/image> <https://raw.githubusercontent.com/TEC-Toolkit/ECFO/21b4380e1f84f85f7cbc59f724157498e9d72094/Logo%20ECFO.svg> ;
                          <https://schema.org/includedInDataCatalog> <https://lov.linkeddata.es/dataset/lov/vocabs/ecfo> ;
                          <https://schema.org/logo> <https://raw.githubusercontent.com/TEC-Toolkit/ECFO/21b4380e1f84f85f7cbc59f724157498e9d72094/Logo%20ECFO.svg> .
@@ -174,6 +174,22 @@ xsd:date rdf:type rdfs:Datatype .
                                            rdfs:label "was derived from"@en .
 
 
+###  https://w3id.org/ecfo#convertsFrom
+:convertsFrom rdf:type owl:ObjectProperty ;
+              rdfs:domain :ConversionFactor ;
+              rdfs:range :ConversionContext ;
+              rdfs:comment "Links conversion context representing  the input to the transformation process defined by a conversion factor."@en ;
+              rdfs:label "converts from"@en .
+
+
+###  https://w3id.org/ecfo#convertsTo
+:convertsTo rdf:type owl:ObjectProperty ;
+            rdfs:domain :ConversionFactor ;
+            rdfs:range :ConversionContext ;
+            rdfs:comment "Links conversion context representing the output of a transformation process defined by a conversion factor."@en ;
+            rdfs:label "converts to"@en .
+
+
 ###  https://w3id.org/ecfo#coversLifecycleStage
 :coversLifecycleStage rdf:type owl:ObjectProperty ;
                       rdfs:domain :EmissionConversionFactor ;
@@ -220,14 +236,6 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:label "has scope"@en .
 
 
-###  https://w3id.org/ecfo#hasSource
-:hasSource rdf:type owl:ObjectProperty ;
-           rdfs:domain :EmissionConversionFactor ;
-           rdfs:range :ConversionEntity ;
-           rdfs:comment "Links conversion entitiy representing  the input to the transformation process defined by a conversion factor."@en ;
-           rdfs:label "has source"@en .
-
-
 ###  https://w3id.org/ecfo#hasSourceUnit
 :hasSourceUnit rdf:type owl:ObjectProperty ;
                rdfs:domain :EmissionConversionFactor ;
@@ -242,14 +250,6 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:range :Category ;
         rdfs:comment "A property to assign a specific category/tag to ecfo:ConversionFactor."@en ;
         rdfs:label "has tag"@en .
-
-
-###  https://w3id.org/ecfo#hasTarget
-:hasTarget rdf:type owl:ObjectProperty ;
-           rdfs:domain :EmissionConversionFactor ;
-           rdfs:range :ConversionEntity ;
-           rdfs:comment "Links conversion entitiy representing the output of a transformation process defined by a conversion factor (e.g., CO2e). The target conversion entity is associated with the target unit"@en ;
-           rdfs:label "has target"@en .
 
 
 ###  https://w3id.org/ecfo#hasTargetUnit
@@ -389,7 +389,7 @@ waste arisings are examples of activity data.  Source:https://www.ipcc-nggip.ige
 :ComparativeEmissionConversionFactor rdf:type owl:Class ;
                                      rdfs:subClassOf :EmissionConversionFactor ,
                                                      [ rdf:type owl:Restriction ;
-                                                       owl:onProperty :hasTarget ;
+                                                       owl:onProperty :convertsTo ;
                                                        owl:allValuesFrom :ComparativeMeassure
                                                      ] ;
                                      owl:disjointWith :GHGEmissionConversionFactor .
@@ -400,6 +400,12 @@ waste arisings are examples of activity data.  Source:https://www.ipcc-nggip.ige
                      rdfs:subClassOf :ConversionEntity ;
                      rdfs:comment "A measure used to compare different greenhouse gases based on their contribution to radiative forcing." ;
                      rdfs:label "Comparative Meassure" .
+
+
+###  https://w3id.org/ecfo#ConversionContext
+:ConversionContext rdf:type owl:Class ;
+                   rdfs:comment "A utility concept describing the quantities that the conversion factor converts and the quantities representing the results of the conversion. This applies to both inputs and outputs of the conversion process." ;
+                   rdfs:label "Coversion Context" .
 
 
 ###  https://w3id.org/ecfo#ConversionEntity
@@ -413,14 +419,16 @@ For example, X kWh of electricity (conversion entity) converted to Y kg of CO2e 
 
 ###  https://w3id.org/ecfo#ConversionFactor
 :ConversionFactor rdf:type owl:Class ;
-                  rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
+                  rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+                  rdfs:comment "A concept representing the coefficient value used in calculations converting quantities from one set of units to another." ;
+                  rdfs:label "Conversion Factor" .
 
 
 ###  https://w3id.org/ecfo#EmissionConversionFactor
 :EmissionConversionFactor rdf:type owl:Class ;
                           rdfs:subClassOf :ConversionFactor ,
                                           [ rdf:type owl:Restriction ;
-                                            owl:onProperty :hasSource ;
+                                            owl:onProperty :convertsFrom ;
                                             owl:allValuesFrom :ActivityData
                                           ] ;
                           rdfs:comment "A concept representing the coefficient value used in greenhouse gas (GHG) emission calculations (activity data x emission conversion factor = GHG emissions)  and additional metadata (e.g., applicable location, publisher, etc.)." ;
@@ -431,7 +439,7 @@ For example, X kWh of electricity (conversion entity) converted to Y kg of CO2e 
 :GHGEmissionConversionFactor rdf:type owl:Class ;
                              rdfs:subClassOf :EmissionConversionFactor ,
                                              [ rdf:type owl:Restriction ;
-                                               owl:onProperty :hasTarget ;
+                                               owl:onProperty :convertsTo ;
                                                owl:allValuesFrom :GreenhouseGas
                                              ] .
 
@@ -445,11 +453,11 @@ For example, X kWh of electricity (conversion entity) converted to Y kg of CO2e 
 :GlobalWarmingPotentialConversionFactor rdf:type owl:Class ;
                                         rdfs:subClassOf :ConversionFactor ,
                                                         [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasSource ;
+                                                          owl:onProperty :convertsFrom ;
                                                           owl:allValuesFrom :GreenhouseGas
                                                         ] ,
                                                         [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasTarget ;
+                                                          owl:onProperty :convertsTo ;
                                                           owl:allValuesFrom :ComparativeMeassure
                                                         ] ;
                                         rdfs:comment """Global Warming Potentials (GWP) are calculated as the ratio of the radiative forcing of one kilogramme

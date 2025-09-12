@@ -1,5 +1,71 @@
 # ECFO V2
 
+
+
+Not addressed in V1 : 
+
+1) Intermediate conversion factors converting from one activity data from to another before the conversion factor can be applied
+
+Context: 
+
+In greenhouse gas (GHG) accounting, energy statistics, and other environmental reporting systems, **activity data** refers to quantitative measures of human activities that lead to emissions or impacts — for example:
+
+- **Fuel consumed** (liters of diesel, m³ of natural gas)
+
+- **Distance traveled** (vehicle-km, passenger-km)
+
+- **Electricity consumed** (kWh)
+
+- **Production output** (tons of steel, number of widgets)
+
+Sometimes you may have one form of activity data but need another form to apply the correct emission factor. In such cases, **conversion factors can be applied**. Examples:
+
+- **Volume → Energy content:**  
+  Convert liters of gasoline into gigajoules using its net calorific value (e.g., ~34.2 MJ/L).
+
+- **Mass → Energy content:**  
+  Convert tons of coal into TJ based on coal’s energy density.
+
+- **Vehicle-km → Passenger-km:**  
+  Multiply by average vehicle occupancy.
+
+- **Production units → Mass:**  
+  Convert number of items produced to total weight (if emissions factor is per kg).
+
+These are essentially "activity-to-activity" conversions — not emissions factors, but intermediate conversions to express data in the units required for your inventory.
+
+Relevant competency questions: 
+
+Which conversion factor converts activity data from one set of units to another?
+
+2. Incorrect use of qudt:hasQuantityKind
+   
+   TBA
+
+3. Not recording the GWP values and the description of the specific GHG being meassured for factors converting into Co2e 
+
+Context: 
+
+Without this information:
+
+- It is unclear which GHG the factor applies to (e.g., CH₄, N₂O, SF₆).
+
+- Please note that it must be possible to describe multiple GHG to cover the cases of aggregate conversion factors combining estimates of multiple gases into single CO2e result value 
+
+- Users cannot verify or adjust conversions if GWP values are updated (e.g., between IPCC AR4, AR5, AR6).
+
+Competency questions: 
+
+If the result of the conversion is expressed in a comparative metric (e.g., CO₂e), which specific greenhouse gas (GHG) does this result estimate?
+
+If the result of the conversion is expressed in a comparative metric (e.g., CO₂e), which Global Warming Potential (GWP) values were used by this conversion factor for each individual GHG?
+
+
+
+
+
+
+
 New or Amended Concepts
 
 ### ecfo:ConversionFactor
@@ -20,6 +86,8 @@ EC -->|subclass of| CF
 
 This is a utility concept that describes the quantities that the conversion factor converts and the quantities representing the results of the conversion. This applies to both inputs and outputs of the conversion process.
 
+Daniel: doesn't like conversion context
+
 ```mermaid
 graph TD
 TH[owl:Thing]  
@@ -29,6 +97,8 @@ CC -->|subclass of| TH
 ```
 
 Previous properties `ecfo:hasEmissionSource` and `ecfo:hasEmissionTarget` have been renamed to `ecfo:convertsFrom` and `ecfo:convertsTo`, and are now linked to the conversion context.
+
+Rationale: hasSource can be confused with link to the source of the conversion factor (i.e. provenance). Converts from and converts to should be clearer. 
 
 ```mermaid
 graph TD
