@@ -1,10 +1,54 @@
 # ECFO V2
 
+Motivating Scenarios: 
 
+<u>**Scenario 1**</u>
+
+Alice is responsible for collecting, verifying, and reporting the greenhouse gas emissions of ACME Company. To do this, she maintains a detailed list of activity data that quantify the company’s operations — such as the amount of petrol used by the car fleet, the electricity consumed by machinery, and other relevant resource usage across facilities. All of this information is manually recorded and organized in spreadsheets, which serve as the primary source for ACME’s emissions reporting. To prepare her report, Alice needs to determine which emission conversion factors can be applied to the data she already has; if no direct match exists, she must figure out what transformations or unit conversions are necessary so that her data aligns with the most recent regionally approved conversion factors. To support this task, she decides to use a semantic matching system powered by a conversion factors knowledge graph, modeled using the ECFO ontology. With this system, the units and types of her activity data are automatically mapped to the most relevant existing conversion factors, and in cases where intermediate data transformations are needed, the system suggests the appropriate conversions to make her data compatible. The candidate factors can also be filtered based on their key properties, such as issuing organization, regional context, or date of publication, ensuring that Alice applies the most suitable factors for her reporting context.
+
+Potential CQs: 
+
+- Which conversion factors can be applied to a given activity data record?
+
+- What transformations or unit conversions are needed for my activity data to match the latest approved conversion factors?
+
+- Which conversion factors are relevant for a specific region, issuing organization, or date of publication?
+
+- Are there activity data records that do not have any suitable conversion factor available?
+
+<u>**Scenario 2**</u>
+
+Bob works for a regulatory body responsible for providing guidance to businesses on the proper use of emission conversion factors. His role involves reviewing and updating approved conversion factors, ensuring they reflect the latest scientific knowledge, regional policies, and methodological standards. Bob needs to identify instances where there have been significant changes in annually released conversion factors, as well as cases where different issuing organizations report substantially divergent values for the same year. Additionally, he wants to create comparative reports showing how the same conversion factors are applied across different countries — for example, comparing values used in Scotland versus New Zealand — to better understand regional variations and support harmonized guidance for international reporting.
+
+Potential CQs: 
+
+- Which conversion factors have changed significantly compared to the previous year?
+
+- Which conversion factors differ substantially between issuing organizations for the same year?
+
+- What are the properties of a given conversion factor (issuing organization, region, publication date, GWP assumptions)?
+
+- How do conversion factors for the same activity compare across different countries (e.g., Scotland vs New Zealand)?
+
+<u>**Scenario 3**</u>
+
+Jack is responsible for analyzing the emissions reports submitted by businesses. These reports express emissions in CO₂-equivalent (CO₂e) values, but Jack wants to understand what portion of the reported results were calculated using conversion factors that convert from other greenhouse gases, such as methane or nitrous oxide. Where values were reported using aggregate conversion factors (e.g., combining different GHG) he want's to be able to quickly see the estimates for individual GHG portions recalculated using the associated conversion factors for single GHG. To ensure consistency in reporting, he also needs to verify that all these conversion factors were applied using the same Global Warming Potential (GWP) values. This enables Jack to detect discrepancies, identify potential misapplications of factors, and ensure that emissions comparisons across companies and regions are accurate and meaningful.
+
+Potential CQs (these would also require full provenance of calculations (e.g., described using PECO) but let's assume we can pull a list of all CFs used in the report and we can link them to thier inputs and calculated results) : 
+
+- What portion of reported CO₂e emissions comes from activity data converted from other GHGs (e.g., methane, nitrous oxide)?
+
+- Which conversion factors were used for each GHG in the submitted reports?
+
+- Were the same GWP values consistently applied across all conversion factors used in a report?
+
+- Are there discrepancies in emissions calculations across reports for the same type of activity data?
+
+- Which activity data or conversion factors could be responsible for anomalies in total reported CO₂e?
 
 Not addressed in V1 : 
 
-1) Intermediate conversion factors converting from one activity data from to another before the conversion factor can be applied
+1) **Intermediate conversion factors converting from one activity data to another before the conversion factor can be applied**
 
 Context: 
 
@@ -34,15 +78,19 @@ Sometimes you may have one form of activity data but need another form to apply 
 
 These are essentially "activity-to-activity" conversions — not emissions factors, but intermediate conversions to express data in the units required for your inventory.
 
-Relevant competency questions: 
+<u>**Relevant competency questions**</u>: 
 
 Which conversion factor converts activity data from one set of units to another?
 
-2. Incorrect use of qudt:hasQuantityKind
+Which conversion factor converts from actvity data to emission estimates? 
+
+Are there more relevant emission conversion conversion factors (e.g., based on geographic scope, date, etc. ) availabe if this activity data was converted into another set of units?   
+
+2. **Incorrect use of qudt:hasQuantityKind**
    
    TBA
 
-3. Not recording the GWP values and the description of the specific GHG being meassured for factors converting into Co2e 
+3. **Not recording the GWP values and the description of the specific GHG being meassured for factors converting into Co2e** 
 
 Context: 
 
@@ -60,11 +108,7 @@ If the result of the conversion is expressed in a comparative metric (e.g., CO�
 
 If the result of the conversion is expressed in a comparative metric (e.g., CO₂e), which Global Warming Potential (GWP) values were used by this conversion factor for each individual GHG?
 
-
-
-
-
-
+4. TBA
 
 New or Amended Concepts
 
@@ -135,6 +179,33 @@ CO2e[ecfo:CarbonDioxideEquivalentEmissionEstimate]
 AD -->|subclass of| CE
 GHG -->|subclass of| CE
 CO2e -->|subclass of| CE
+```
+
+Note: As the purpose of this structure is just to support Scenario 1 i.e. to differentiate between different conversion factors maybe it would make sense to have this rather as subclasses of conversion factor: 
+
+```mermaid
+graph TD
+CE[ecfo:ConversionFactor]
+AD[ecfo:ActivityDataToActivityDataConversionFactor]
+ECF[ecfo:EmissionConversionFactor]
+GHG[ecfo:ActivityDataToGreenhouseGasEmissionConversionFactor]
+GHG1[ecfo:ActivityDataToCarbonDioxideEmissionConversionFactor]
+GH2[ecfo: ...]
+GH3[ecfo: ActivityDataMultipleGHGEmissionConversionFactor]
+CO2e[ecfo:CarbonDioxideEquivalentEmissionConversionFactor]
+CO2e1[ecfo:ActivityDataToCarbonDioxideInCarbonDioxideEquivalentEmissionConversionFactor]
+CO2e2[ecfo: ...]
+CO2e3[ecfo:ActivityDataToMultipleGHGInCarbonDioxideEquivalentEmissionConversionFactor]
+AD -->|subclass of| CE
+ECF -->|subclass of| CE
+GHG -->|subclass of| ECF
+GHG1 -->|subclass of| GHG
+GH2 -->|subclass of| GHG
+GH3 -->|subclass of| GHG
+CO2e -->|subclass of| ECF
+CO2e1 -->|subclass of| CO2e
+CO2e2 -->|subclass of| CO2e
+CO2e3 -->|subclass of| CO2e
 ```
 
 #### ecfo:ActivityData
