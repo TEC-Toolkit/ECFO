@@ -208,6 +208,8 @@ CO2e2 -->|subclass of| CO2e
 CO2e3 -->|subclass of| CO2e
 ```
 
+Rationale for keeping the distinction between aggregate and single conversion factor at the class level -> if the distinction would be based on how many gasses are linked to the conversion factor and then the query would have to evaluate (e.g., via NOT Exists)  whetehr the CF covnerts only one or more GHG then thsi could affect scalability
+
 #### ecfo:ActivityData
 
 A measure of the magnitude of a human activity resulting in emissions or removals taking place during a given period of time. Data on energy use, metal production, land areas, management systems, lime and fertilizer use, and waste arisings are examples of activity data.  
