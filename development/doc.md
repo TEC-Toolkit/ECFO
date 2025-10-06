@@ -44,25 +44,22 @@ Potential CQs (these would also require full provenance of calculations (e.g., d
 
 - Are there discrepancies in emissions calculations across reports for the same type of activity data? 
 
--  Which activity data or conversion factors could be responsible for anomalies in total reported CO₂e?
+- Which activity data or conversion factors could be responsible for anomalies in total reported CO₂e?
   
-  | Questions                                                                                                                                         | ECFO v1                                           | ECFO v2 |
-  | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- | ------- |
-  | Which conversion factors can be applied to a given activity data record?                                                                          | ❌                                                 |         |
-  | What transformations or unit conversions are needed for my activity data to match the latest conversion factors for this specific region?                         | ❌                                                 |         |
-  | Which conversion factors are relevant for a specific region, issuing organization, or date of publication?                                        | ✅                                                 |         |
-  | What activity data do not have any suitable conversion factor available for this region?                                                        | ❌                                                 |         |
-  | Which conversion factors have changed significantly compared to the previous year?                                                                | ✅ (but discovering related CFs still problematic) |         |
-  | Which conversion factors for a specific year differ substantially between issuing organizations in the same region?                                                    | ❌ (difficult to determine whether the CFs are the same if published by different authorities)                                                |         |
-  | What are the properties of a given conversion factor (issuing organization, region, publication date, GWP assumptions)?                           | no GWP support                                    |         |
-  | How do conversion factors for the same activity compare across different countries (e.g., Scotland vs New Zealand)?                               | ❌                                                 |         |
-   | What comparative metric (e.g., Co2e) has been applied to calculate results for multiple GH gasses? | ❌
-       |         |
-  | If the results are reported using a comparative metric (e.g., CO₂e), which specific greenhouse gas (GHG) does this result estimate? | ❌                                             
-                                               |         |
-  | Were the same GWP values consistently applied across all conversion factors used in a report?                                                     | ❌                                                 |         |
-  | Are the same conversion factors used across reports for the same type of activity data?                                              | ✅                                                 |         |
- 
+  | Questions                                                                                                                                 | ECFO v1                                                                                       | ECFO v2 |
+  | ----------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ------- |
+  | Which conversion factors can be applied to a given activity data record?                                                                  | ❌                                                                                             |         |
+  | What transformations or unit conversions are needed for my activity data to match the latest conversion factors for this specific region? | ❌                                                                                             |         |
+  | Which conversion factors are relevant for a specific region, issuing organization, or date of publication?                                | ✅                                                                                             |         |
+  | What activity data do not have any suitable conversion factor available for this region?                                                  | ❌                                                                                             |         |
+  | Which conversion factors have changed significantly compared to the previous year?                                                        | ✅ (but discovering related CFs still problematic)                                             |         |
+  | Which conversion factors for a specific year differ substantially between issuing organizations in the same region?                       | ❌ (difficult to determine whether the CFs are the same if published by different authorities) |         |
+  | What are the properties of a given conversion factor (issuing organization, region, publication date, GWP assumptions)?                   | no GWP support                                                                                |         |
+  | How do conversion factors for the same activity compare across different countries (e.g., Scotland vs New Zealand)?                       | ❌                                                                                             |         |
+  | What comparative metric (e.g., CO₂e) has been applied to calculate results for multiple GHG gases?                                        | ❌                                                                                             |         |
+  | If the results are reported using a comparative metric (e.g., CO₂e), which specific greenhouse gas (GHG) does this result estimate?       | ❌                                                                                             |         |
+  | Were the same GWP values consistently applied across all conversion factors used in a report?                                             | ❌                                                                                             |         |
+  | Are the same conversion factors used across reports for the same type of activity data?                                                   | ✅                                                                                             |         |
 
 Not addressed in V1 : 
 
