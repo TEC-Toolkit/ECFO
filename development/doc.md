@@ -56,7 +56,6 @@ Potential CQs (these would also require full provenance of calculations (e.g., d
   | Which conversion factors for a specific year differ substantially between issuing organizations in the same region?                                                    | ❌ (difficult to determine whether the CFs are the same if published by different authorities)                                                |         |
   | What are the properties of a given conversion factor (issuing organization, region, publication date, GWP assumptions)?                           | no GWP support                                    |         |
   | How do conversion factors for the same activity compare across different countries (e.g., Scotland vs New Zealand)?                               | ❌                                                 |         |
- 
    | What comparative metric (e.g., Co2e) has been applied to calculate results for multiple GH gasses? | ❌
        |         |
   | If the results are reported using a comparative metric (e.g., CO₂e), which specific greenhouse gas (GHG) does this result estimate? | ❌                                             
